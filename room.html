@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>room</title>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-room-component/dist/aframe-room-component.min.js"></script>
+</head>
+
+<body>
+
+<a-scene>
+
+
+    <!-- Eingangsraum -->
+    <rw-room position="-2 0 -2" material="color:#866">
+        <rw-wall position="4 0 0" material="color:#848484">
+            <rw-doorhole id="holeAB"></rw-doorhole>
+            <rw-doorlink from="#holeAB" to="#holeBA" position="2 0 0" doorlink="width: 1.5; height: 1.5"></rw-doorlink>
+        </rw-wall>
+        <rw-wall position="4 0 4" material="color:#848484"></rw-wall>
+        <rw-wall position="0 0 4" material="color:#848484">
+            <rw-doorhole id="holeBC"></rw-doorhole>
+            <rw-doorlink from="#holeBC" to="#holeCB" position="2 0 0" doorlink="width: 1.5; height: 1.5"></rw-doorlink>
+        </rw-wall>
+        <rw-wall position="0 0 0" material="color:#848484">
+            <rw-doorhole id="holeA"></rw-doorhole>
+            <rw-doorlink from="#holeA" to="#holeB" position="2 0 0" doorlink="width: 1.5; height: 1.5"></rw-doorlink>
+        </rw-wall>
+        <rw-ceiling material="color:#848484"></rw-ceiling>
+        <!--<rw-floor material="color:#848484"></rw-floor> -->
+    </rw-room>
+
+    <!-- Raum hinten -->
+    <rw-room position="0 0 -3">
+        <rw-wall position=" 1 0 -1" material="color:#848484"></rw-wall>
+        <rw-wall position=" 1 0  1" material="color:#848484">
+            <rw-doorhole id="holeB"></rw-doorhole>
+        </rw-wall>
+        <rw-wall position="-1 0  1" material="color:#848484"></rw-wall>
+        <rw-wall position="-1 0 -1" material="color:#848484"></rw-wall>
+        <rw-ceiling material="color:#848484"></rw-ceiling>
+    </rw-room>
+
+    <!-- Raum rechts -->
+    <rw-room position="2 0 -1" material="color:#866">
+        <rw-wall position="3 0 0" material="color:#848484"></rw-wall>
+        <rw-wall position="3 0 2" material="color:#848484"></rw-wall>
+        <rw-wall position="0 0 2" material="color:#848484">
+            <rw-doorhole id="holeBA"></rw-doorhole>
+        </rw-wall>
+        <rw-wall position="0 0 0" material="color:#848484"></rw-wall>
+        <rw-ceiling material="color:#848484"></rw-ceiling>
+    </rw-room>
+
+    <!-- Raum links -->
+    <rw-room position="-5 0 -1" material="color:#866">
+        <rw-wall position="3 0 0" material="color:#848484">
+            <rw-doorhole id="holeCB"></rw-doorhole>
+        </rw-wall>
+        <rw-wall position="3 0 2" material="color:#848484"></rw-wall>
+        <rw-wall position="0 0 2" material="color:#848484"></rw-wall>
+        <rw-wall position="0 0 0" material="color:#848484"></rw-wall>
+        <rw-ceiling material="color:#848484"></rw-ceiling>
+    </rw-room>
+
+
+    <!-- skybox-->
+    <a-sky color="black"></a-sky>
+
+
+    <a-camera position='0 0 3' user-height='1.2'></a-camera>
+
+</a-scene>
+
+</body>
+
+</html>
