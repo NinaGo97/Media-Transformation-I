@@ -6,7 +6,11 @@
     <title>Gravity</title>
 </head>
 <body>
+
+
 <a-scene>
+
+
     <!-- Camera/ Cursor-->
     <a-entity id="Camera"
               position ="0 0 3"
@@ -66,14 +70,31 @@
             <a-asset-item id="Spaceship-obj" src="Spaceship.obj"></a-asset-item>
             <a-asset-item id="Spaceship-mtl" src="Spaceship.mtl"></a-asset-item>
         </a-assets>
-        <a-entity obj-model="obj: #Spaceship-obj; mtl: #Spaceship-mtl"  position="-3.685 0 -4.062" rotation="-20 220 10" scale="1 1 1"></a-entity>
+        <a-entity obj-model="obj: #Spaceship-obj; mtl: #Spaceship-mtl"  position="-3.685 0 -4.062" rotation="-20 220 10" scale="1 1 1">
+            <!--POSITION ÄNDERN
+            <a-animation attribute="position"
+                         dur="2000"
+                         from="-1.5 0 -1.5"
+                         to="-1.3 0.2 -1.3"
+                         direction="alternate"
+                         repeat="indefinite"></a-animation>-->
+        </a-entity>
 
     <!--Spacestation-->
     <a-assets>
         <a-asset-item id="Spacestation-obj" src="Spacestation.obj"></a-asset-item>
         <a-asset-item id="Spacestation-mtl" src="Spacestation.mtl"></a-asset-item>
     </a-assets>
-    <a-entity obj-model="obj: #Spacestation-obj; mtl: #Spacestation-mtl"  position="-7.979 0.692 2.097" rotation="0 110 0" scale="1 1 1"></a-entity>
+    <a-entity obj-model="obj: #Spacestation-obj; mtl: #Spacestation-mtl"  position="-7.979 0.692 2.097" rotation="0 110 0" scale="1 1 1">
+        <!-- POSITION ÄNDERN
+        <a-animation attribute="position"
+                     delay="1000"
+                     dur="2000"
+                     from="-8 0.6 2.1"
+                     to="-7.8 0.8 2.3"
+                     direction="alternate"
+                     repeat="indefinite"></a-animation> -->
+    </a-entity>
 
    <!--Astronaut-->
     <a-assets>
@@ -82,8 +103,36 @@
     </a-assets>
     <a-entity collada-model="#astronaut" link="href: room.html" position="-0.324 -2.148 -1.024" rotation="-20 0 0" scale="0.6 0.6 0.6"></a-entity>
 
+    <!-- Schnurr-->
+    <a-assets>
+        <a-asset-item id="schnur" src="Schnur.dae"></a-asset-item>
+
+    </a-assets>
+    <a-entity collada-model="#schnur"  position="-0.324 -2.148 3.335" rotation="90 270 0" scale="0.6 0.6 0.6"></a-entity>
+
+
+
+
+
+    <!-- camera look controls
+
+
+    <a-entity position="-0.346 0.151 3.036" rotation="-28.12 15.700 0">
+        <a-camera></a-camera>
+    </a-entity>
+
+    <a-entity camera look-controls > <a-entity
+            collada-model="#astronaut" position="-0.324 -1.989 3.076" rotation="0 200 0" scale="0.6 0.6 0.6"></a-entity></a-entity>
+
+    <a-entity camera look-controls>
+        <a-entity geometry="primitive: plane; height: 1; width: 0.1" position="0 0 -1"
+                  material="color: white; opacity: 0.5"></a-entity>
+    </a-entity>
+-->
+
 </a-scene>
 
 </body>
 </html>
+
 
