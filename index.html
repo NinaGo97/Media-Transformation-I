@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
-    <script src="JS-hyperlink.js"></script>
-    <script src="href.js"></script>
     <title>Gravity</title>
 </head>
 <body>
@@ -109,10 +107,7 @@
 
 
    <!--Astronaut-->
-    <a-entity id="astro" href="room.html" collada-model="#astronaut" position="0.5 -2.148 -0.5" rotation="-20 0 0" scale="0.6 0.6 0.6"></a-entity>
-    <!-- <a-link href="room.html" title="my home"></a-link> -->
-    <!-- onClick="location.href='https://google.com'" -->
-    <!-- <a-entity link="href: index.html -->
+    <a-entity id="astro" link="href: room.html" collada-model="#astronaut" position="0.5 -2.148 -0.5" rotation="-20 0 0" scale="0.6 0.6 0.6"></a-entity>
     <a-assets>
         <a-asset-item id="astronaut" src="astronaut.dae"></a-asset-item>
     </a-assets>
