@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <title>Gravity</title>
+</head>
+<body>
+
+    <a-scene>
+
+        <!-- Kamera -->
+        <a-entity id="kamera"
+                  position ="-19,79 4 -0.116"
+                  rotation ="0 270 0"
+                  wall-animate=""
+                  camera
+                  look-controls wasd-controls>
+            <a-cursor></a-cursor>
+        </a-entity>
+
+
+        <!-- Licht -->
+        <!-- Licht hinten -->
+        <a-light light="type: point; color: #fff; intensity: 1.25; penumbra: 0.10; angle: 60.00"
+                 position="21.257 4.15 0.046"
+                 rotation="9.17 0.57 -2.86"
+                 decay=" 1.00"
+                 distance="0.00">
+        </a-light>
+        <a-light light="type: point; color: #fff; intensity: 1.25; penumbra: 0.10; angle: 60.00"
+                 position="18.5 4.15 0.046"
+                 rotation="9.17 0.57 -2.86"
+                 decay=" 1.00"
+                 distance="0.00">
+        </a-light>
+
+        <!-- Licht vorne -->
+        <a-light light="type: point; color: #fff; intensity: 1.25; penumbra: 0.10; angle: 60.00"
+                 position="-27 4.15 0.046"
+                 rotation="9.17 90 -2.86"
+                 decay=" 1.00"
+                 distance="0.00"
+                 intensity="0.1">
+        </a-light>
+
+
+        <!--Spacestation ROOM-->
+        <a-assets>
+            <a-asset-item id="Room_Spacestation-obj" src="Room_Spacestation.obj"></a-asset-item>
+            <a-asset-item id="Room_Spacestation-mtl" src="Room_Spacestation.mtl"></a-asset-item>
+        </a-assets>
+        <a-entity obj-model="obj: #Room_Spacestation-obj; mtl: #Room_Spacestation-mtl"  position="0 0 0" rotation="0 0 0" scale="0.1 0.1 0.1">
+        </a-entity>
+
+
+    </a-scene>
+
+</body>
+</html>
