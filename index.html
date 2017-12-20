@@ -98,21 +98,22 @@
 
    <!--Astronaut-->
     <a-assets>
-        <a-asset-item id="astronaut" src="astronaut0.dae"></a-asset-item>
+        <a-asset-item id="astronaut" src="astronautmitschnur2.dae"></a-asset-item>
 
     </a-assets>
-    <a-entity id="astro" link="href: space_room.html" collada-model="#astronaut" event-animate="target:#astroweg; aevent:astrowegnow" position="-0.324 -2.148 -1.024" rotation="-20 0 0" scale="0.6 0.6 0.6">
+    <a-entity collada-model="#astronaut" link="href: space_room.html" event-animate="target:#astroweg; aevent:astrowegnow" position="-0.324 -2.148 -1.024" rotation="-20 0 0" scale="0.6 0.6 0.6">
 
-        <a-animation
-            id="astroweg"
-            attribute="position"
-            from="-0.324 -2.148 -1.024"
-            to="-0.324 -2.148 -22.559"
-            begin="astrowegnow"
-            dur="6000">
-        </a-animation>
+    <a-animation
+    id="astroweg"
+    attribute="position"
+    from="-0.324 -2.148 -1.024"
+    to="-0.324 -2.148 -22.559"
+    begin="astrowegnow"
+    dur="6000"
+    ></a-animation>
 
     </a-entity>
+
 
     <!-- Schnur
     <a-assets>
