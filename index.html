@@ -13,17 +13,17 @@
 
 
     <!-- Camera/ Cursor-->
-    <a-entity id="Camera"
+    <a-entity id="camera"
               position ="0 0 3"
               rotation ="0 0 0"
               wall-animate=""
               camera look-controls wasd-controls>
         <a-cursor material="color: white"></a-cursor>
     </a-entity>
+    <!-- <a-camera position='0 0 3' user-height='0'></a-camera> -->
 
     <!-- skybox-->
     <a-sky color="black"></a-sky>
-    <a-camera position='0 0 3' user-height='0'></a-camera>
 
     <!-- Weltkugel-->
     <a-sphere src="Welt.jpg" radius="2" height="53" position="1.897 -1.123 -3.51" rotation="0 0 0">
@@ -101,16 +101,16 @@
         <a-asset-item id="astronaut" src="astronaut0.dae"></a-asset-item>
 
     </a-assets>
-    <a-entity id="astro" link="href: Space_room.html" collada-model="#astronaut" event-animate="target:#astroweg; aevent:astrowegnow" position="-0.324 -2.148 -1.024" rotation="-20 0 0" scale="0.6 0.6 0.6">
+    <a-entity id="astro" link="href: space_room.html" collada-model="#astronaut" event-animate="target:#astroweg; aevent:astrowegnow" position="-0.324 -2.148 -1.024" rotation="-20 0 0" scale="0.6 0.6 0.6">
 
-    <a-animation
-    id="astroweg"
-    attribute="position"
-    from="-0.324 -2.148 -1.024"
-    to="-0.324 -2.148 -22.559"
-    begin="astrowegnow"
-    dur="6000"
-    ></a-animation>
+        <a-animation
+            id="astroweg"
+            attribute="position"
+            from="-0.324 -2.148 -1.024"
+            to="-0.324 -2.148 -22.559"
+            begin="astrowegnow"
+            dur="6000">
+        </a-animation>
 
     </a-entity>
 
@@ -126,8 +126,8 @@
                 from="-0.324 -2.148 3.335"
                 to="-0.324 -2.148 -19.559"
                 begin="5000"
-                dur="6000"
-        ></a-animation>
+                dur="6000">
+        </a-animation>
 
     </a-entity>
 
