@@ -11,8 +11,8 @@
 
         <!-- Kamera -->
         <a-entity id="kamera"
-                  position ="-19,79 4 -0.116"
-                  rotation ="0 270 0"
+                  position ="21.9 4 -0.116"
+                  rotation ="0 449.5 0"
                   wall-animate=""
                   camera
                   look-controls wasd-controls>
@@ -21,28 +21,45 @@
 
 
         <!-- Licht -->
-        <!-- Licht hinten -->
-        <a-light light="type: point; color: #fff; intensity: 1.25; penumbra: 0.10; angle: 60.00"
+        <!--
+        <!-- Licht hinten --
+        <a-light light="type: point; color: #fff; intensity: 0.5; penumbra: 0.10; angle: 60.00"
                  position="21.257 4.15 0.046"
                  rotation="9.17 0.57 -2.86"
                  decay=" 1.00"
                  distance="0.00">
         </a-light>
-        <a-light light="type: point; color: #fff; intensity: 1.25; penumbra: 0.10; angle: 60.00"
+        <a-light light="type: point; color: #fff; intensity: 0.5; penumbra: 0.10; angle: 60.00"
                  position="18.5 4.15 0.046"
                  rotation="9.17 0.57 -2.86"
                  decay=" 1.00"
                  distance="0.00">
         </a-light>
 
-        <!-- Licht vorne -->
-        <a-light light="type: point; color: #fff; intensity: 1.25; penumbra: 0.10; angle: 60.00"
+        <!-- Licht vorne --
+        <a-light light="type: point; color: #fff; intensity: 0.5; penumbra: 0.10; angle: 60.00"
                  position="-27 4.15 0.046"
                  rotation="9.17 90 -2.86"
                  decay=" 1.00"
                  distance="0.00"
                  intensity="0.1">
         </a-light>
+        -->
+
+        <!-- rotes Alarmlicht -->
+        <a-light light="type: point; color: red; intensity: 0.5; penumbra: 0.10; angle: 60.00"
+                 position="15 7.5 0"
+                 rotation="0 0 0"
+                 decay=" 1.00"
+                 distance="0.00"
+                 intensity="0.1"
+                 visible="false">
+            <a-animation attribute="visible" begin="1000" dur="1000" from="true" to="false" repeat="indefinite"> </a-animation>
+        </a-light>
+
+
+        <!-- Sound -->
+        <a-entity sound="src:sound_sirene.mp3; autoplay: true"></a-entity>
 
 
         <!--Spacestation ROOM-->
@@ -52,6 +69,151 @@
         </a-assets>
         <a-entity obj-model="obj: #Room_Spacestation-obj; mtl: #Room_Spacestation-mtl"  position="0 0 0" rotation="0 0 0" scale="0.1 0.1 0.1">
         </a-entity>
+
+
+        <!--Feuerloescher-->
+        <a-assets>
+            <a-asset-item id="feuerloescher" src="Feuerloescher.dae"></a-asset-item>
+        </a-assets>
+        <a-entity collada-model="#feuerloescher" position="16.5 3.6 1" rotation="10 90 -15" scale="0.2 0.2 0.2" >
+            <a-animation attribute="position"
+                         dur="2000"
+                         from="16.5 3.6 1"
+                         to="16.5 4.1 1"
+                         direction="alternate"
+                         repeat="indefinite">
+            </a-animation>
+           <!-- <a-animation attribute="rotation"
+                         dur="10000"
+                         fill="forwards"
+                         to="360 0 0"
+                         repeat="indefinite">
+            </a-animation> -->
+        </a-entity>
+
+        <!--Flasche-->
+        <a-assets>
+            <a-asset-item id="flasche" src="Flasche.dae"></a-asset-item>
+        </a-assets>
+        <a-entity collada-model="#flasche" position="-15.187 3.686 -1.5" scale="0.2 0.2 0.2">
+            <!-- Animation Flasche fliegt nach vorne-->
+            <a-animation attribute="position"
+                         dur="6000"
+                         from="-15 3.686 -1.5"
+                         to="20 3.686 -1.5"
+                         direction="alternate"
+                         repeat="indefinite">
+            </a-animation>
+            <a-animation attribute="rotation"
+                         dur="7000"
+                         fill="forwards"
+                         to="360 360 0"
+                         repeat="indefinite">
+            </a-animation>
+        </a-entity>
+
+
+        <!--Bleistift-->
+        <a-assets>
+            <a-asset-item id="bleistift" src="Bleistift.dae"></a-asset-item>
+        </a-assets>
+        <a-entity collada-model="#bleistift" position="-7 3.6 1" scale="0.2 0.2 0.2">
+            <a-animation attribute="position"
+                         dur="5000"
+                         from="-7 2.5 1"
+                         to="-7 5.5 1"
+                         direction="alternate"
+                         repeat="indefinite">
+            </a-animation>
+            <a-animation attribute="rotation"
+                         dur="7000"
+                         fill="forwards"
+                         to="360 360 0"
+                         repeat="indefinite">
+            </a-animation>
+        </a-entity>
+
+        <!--Kugelschreiber
+        <a-assets>
+            <a-asset-item id="kugelschreiber" src="Kugelschreiber.dae"></a-asset-item>
+        </a-assets>
+        <a-entity collada-model="#kugelschreiber" position="-15.187 3.686 -0.576" scale="0.2 0.2 0.2">
+        </a-entity>
+        -->
+
+        <!-- Wegweiser Pfeile -->
+        <!-- Pfeil 1 -->
+        <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="16.5 1.596 -0.08" rotation="270 90 0" material="color : red">
+            <a-animation attribute="material.color"
+                         from="red"
+                         to="white"
+                         dur="1000"
+                         repeat="indefinite">
+            </a-animation>
+        </a-entity>
+        <a-entity geometry="primitive: plane; height: 0.5; width: 0.5" position="15.88 1.6 -0.08" rotation="270 90 45" scale="1.1 1.1 1.1" material="color: red">
+            <a-animation attribute="material.color"
+                         from="red"
+                         to="white"
+                         dur="1000"
+                         repeat="indefinite">
+            </a-animation>
+        </a-entity>
+
+        <!-- Pfeil 2 -->
+        <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="11.5 1.596 -0.08" rotation="270 90 0" material="color : red">
+            <a-animation attribute="material.color"
+                         from="red"
+                         to="white"
+                         dur="1000"
+                         repeat="indefinite">
+            </a-animation>
+        </a-entity>
+        <a-entity geometry="primitive: plane; height: 0.5; width: 0.5" position="10.88 1.6 -0.08" rotation="270 90 45" scale="1.1 1.1 1.1" material="color: red">
+            <a-animation attribute="material.color"
+                         from="red"
+                         to="white"
+                         dur="1000"
+                         repeat="indefinite">
+            </a-animation>
+        </a-entity>
+
+        <!-- Pfeil 3 -->
+        <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="6.5 1.596 -0.08" rotation="270 90 0" material="color : red">
+            <a-animation attribute="material.color"
+                         from="red"
+                         to="white"
+                         dur="1000"
+                         repeat="indefinite">
+            </a-animation>
+        </a-entity>
+        <a-entity geometry="primitive: plane; height: 0.5; width: 0.5" position="5.88 1.6 -0.08" rotation="270 90 45" scale="1.1 1.1 1.1" material="color: red">
+            <a-animation attribute="material.color"
+                         from="red"
+                         to="white"
+                         dur="1000"
+                         repeat="indefinite">
+            </a-animation>
+        </a-entity>
+
+        <!-- Pfeil 4 -->
+        <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="1.5 1.596 -0.08" rotation="270 90 0" material="color : red">
+            <a-animation attribute="material.color"
+                         from="red"
+                         to="white"
+                         dur="1000"
+                         repeat="indefinite">
+            </a-animation>
+        </a-entity>
+        <a-entity geometry="primitive: plane; height: 0.5; width: 0.5" position="0.88 1.6 -0.08" rotation="270 90 45" scale="1.1 1.1 1.1" material="color: red">
+            <a-animation attribute="material.color"
+                         from="red"
+                         to="white"
+                         dur="1000"
+                         repeat="indefinite">
+            </a-animation>
+        </a-entity>
+
 
 
     </a-scene>
