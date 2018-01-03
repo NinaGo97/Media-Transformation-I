@@ -26,10 +26,9 @@
     <!-- skybox-->
     <a-sky src="stars_sky.jpg"></a-sky>
     <a-image src="milchstrasse.jpg" position="-2.1 10.9 -4.8" scale="30 30 30" rotation="90 0 0"></a-image>
-    <!--<a-entity particle-system="preset: snow" position="0 0 -10"></a-entity>-->
-    <!-- Sternenschauer -->
+    <!-- Sternenschauer
     <a-entity id="rain" particle-system="preset: rain; color: white; particleCount: 5000" rotation="270 0 0"></a-entity>
-
+    -->
 
     <!-- Weltkugel-->
     <a-sphere src="Welt.jpg" radius="2" height="53" position="3.5 -1.123 -3.51" rotation="0 0 0">
@@ -85,12 +84,13 @@
                          repeat="indefinite"></a-animation>-->
         </a-entity>
 
+
     <!--Spacestation-->
     <a-assets>
         <a-asset-item id="Spacestation-obj" src="Spacestation.obj"></a-asset-item>
         <a-asset-item id="Spacestation-mtl" src="Spacestation.mtl"></a-asset-item>
     </a-assets>
-    <a-entity obj-model="obj: #Spacestation-obj; mtl: #Spacestation-mtl"  position="-29.2 -2 -27.4" rotation="-7 160.9 18" scale="2 2 2">
+    <a-entity link="href: space_room.html" obj-model="obj: #Spacestation-obj; mtl: #Spacestation-mtl"  position="-29.2 -2 -27.4" rotation="-7 160.9 18" scale="2 2 2">
             <a-animation attribute="position"
                          delay="1000"
                          dur="2000"
@@ -99,6 +99,10 @@
                          direction="alternate"
                          repeat="indefinite"></a-animation>
         </a-entity>
+    <!-- open door sign -->
+    <a-image src="open_door.png" position="-22.8 0.64 -25.2" rotation="0 60 0" scale="0.7 0.7 0.7" visible="false">
+        <a-animation attribute="visible" begin="300" dur="800" from="true" to="false" repeat="indefinite"></a-animation>
+    </a-image>
 
 
     <!--Astronaut-->
