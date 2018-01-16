@@ -16,4 +16,4 @@ AFRAME.registerComponent('event-animate', {
 
         });
     }
-});
+}); 
