@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <script src="javascript.js" type="text/javascript"></script>
     <title>Gravity</title>
 </head>
@@ -10,13 +10,21 @@
 
 <a-scene>
 
+    <a-assets>
+        <a-asset-item id="Room_Spacestation-obj" src="Objekte/Room_Spacestation.obj"></a-asset-item>
+        <a-asset-item id="Room_Spacestation-mtl" src="Objekte/Room_Spacestation.mtl"></a-asset-item>
+        <a-asset-item id="feuerloescher" src="Objekte/Feuerloescher.dae"></a-asset-item>
+        <a-asset-item id="flasche" src="Objekte/Flasche.dae"></a-asset-item>
+        <a-asset-item id="bleistift" src="Objekte/Bleistift.dae"></a-asset-item>
+        <a-image id="img-exit" src="bilder/exit.png"></a-image>
+    </a-assets>
+
+
     <!-- Kamera -->
     <a-entity id="kamera"
               position ="21.9 4 -0.116"
               rotation ="0 449.5 0"
-              wall-animate=""
-              camera
-              look-controls wasd-controls>
+              camera look-controls wasd-controls>
         <a-cursor></a-cursor>
         <a-animation begin="cameraPos1"
                      attribute="position"
@@ -27,8 +35,14 @@
     </a-entity>
 
     <!-- Exit -->
-    <a-image src="bilder/exit.png" position="-21.5 4.7 -0.14" rotation="0 90 0" scale="2 2 2" visible="false" event-animate="target:#kamera; aevent:cameraPos1">
-        <a-animation attribute="visible" begin="300" dur="800" from="true" to="false" repeat="indefinite"></a-animation>
+    <a-image src="#img-exit" position="-21.5 4.7 -0.14" rotation="0 90 0" scale="2 2 2" visible="false" event-animate="target:#kamera; aevent:cameraPos1">
+        <a-animation attribute="visible"
+                     begin="300"
+                     dur="800"
+                     from="true"
+                     to="false"
+                     repeat="indefinite">
+        </a-animation>
     </a-image>
 
 
@@ -74,18 +88,11 @@
 
 
     <!--Spacestation ROOM-->
-    <a-assets>
-        <a-asset-item id="Room_Spacestation-obj" src="Objekte/Room_Spacestation.obj"></a-asset-item>
-        <a-asset-item id="Room_Spacestation-mtl" src="Objekte/Room_Spacestation.mtl"></a-asset-item>
-    </a-assets>
     <a-entity obj-model="obj: #Room_Spacestation-obj; mtl: #Room_Spacestation-mtl"  position="0 0 0" rotation="0 0 0" scale="0.1 0.1 0.1">
     </a-entity>
 
 
     <!--Feuerloescher-->
-    <a-assets>
-        <a-asset-item id="feuerloescher" src="Objekte/Feuerloescher.dae"></a-asset-item>
-    </a-assets>
     <a-entity collada-model="#feuerloescher" position="16.5 3.6 1" rotation="10 90 -15" scale="0.2 0.2 0.2" >
         <a-animation attribute="position"
                      dur="2000"
@@ -103,9 +110,6 @@
     </a-entity>
 
     <!--Flasche-->
-    <a-assets>
-        <a-asset-item id="flasche" src="Objekte/Flasche.dae"></a-asset-item>
-    </a-assets>
     <a-entity collada-model="#flasche" position="-15.187 3.686 -1.5" scale="0.2 0.2 0.2">
         <!-- Animation Flasche fliegt nach vorne-->
         <a-animation attribute="position"
@@ -125,9 +129,6 @@
 
 
     <!--Bleistift-->
-    <a-assets>
-        <a-asset-item id="bleistift" src="Objekte/Bleistift.dae"></a-asset-item>
-    </a-assets>
     <a-entity collada-model="#bleistift" position="-7 3.6 1" scale="0.2 0.2 0.2">
         <a-animation attribute="position"
                      dur="5000"
