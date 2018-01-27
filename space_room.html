@@ -17,6 +17,7 @@
         <a-asset-item id="flasche" src="Objekte/Flasche.dae"></a-asset-item>
         <a-asset-item id="bleistift" src="Objekte/Bleistift.dae"></a-asset-item>
         <a-image id="img-exit" src="bilder/exit.png"></a-image>
+        <audio id="sirene" src="sounds/sound_sirene.mp3" preload="auto"></audio>
     </a-assets>
 
 
@@ -123,7 +124,7 @@
 
 
     <!-- Sound -->
-    <a-entity sound="src:sounds/sound_sirene.mp3; autoplay: true"></a-entity>
+    <a-entity sound="src:#sirene; autoplay: true"></a-entity>
 
 
     <!--Spacestation ROOM-->
@@ -194,7 +195,7 @@
 
     <!-- Wegweiser Pfeile -->
     <!-- Pfeil 1 -->
-    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="16.5 1.596 -0.08" rotation="270 90 0" material="color : red" event-animate="target:#kamera; aevent:cameraPos1">
+    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="16.5 1.596 -0.08" rotation="270 90 0" material="color : red" look-animate="target:#kamera; aevent:cameraPos1">
         <a-animation attribute="material.color"
                      from="red"
                      to="white"
@@ -212,7 +213,7 @@
     </a-entity>
 
     <!-- Pfeil 2 -->
-    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="11.5 1.596 -0.08" rotation="270 90 0" material="color : red" event-animate="target:#kamera; aevent:cameraPos2">
+    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="11.5 1.596 -0.08" rotation="270 90 0" material="color : red" look-animate="target:#kamera; aevent:cameraPos2">
         <a-animation attribute="material.color"
                      from="red"
                      to="white"
@@ -230,7 +231,7 @@
     </a-entity>
 
     <!-- Pfeil 3 -->
-    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="6.5 1.596 -0.08" rotation="270 90 0" material="color : red" event-animate="target:#kamera; aevent:cameraPos3">
+    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="6.5 1.596 -0.08" rotation="270 90 0" material="color : red" look-animate="target:#kamera; aevent:cameraPos3">
         <a-animation attribute="material.color"
                      from="red"
                      to="white"
@@ -248,7 +249,7 @@
     </a-entity>
 
     <!-- Pfeil 4 -->
-    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="1.5 1.596 -0.08" rotation="270 90 0" material="color : red" event-animate="target:#kamera; aevent:cameraPos4">
+    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="1.5 1.596 -0.08" rotation="270 90 0" material="color : red" look-animate="target:#kamera; aevent:cameraPos4">
         <a-animation attribute="material.color"
                      from="red"
                      to="white"
@@ -266,7 +267,7 @@
     </a-entity>
 
     <!-- Pfeil 5 -->
-    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="-4.5 1.596 -0.08" rotation="270 90 0" material="color : red" event-animate="target:#kamera; aevent:cameraPos5">
+    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="-4.5 1.596 -0.08" rotation="270 90 0" material="color : red" look-animate="target:#kamera; aevent:cameraPos5">
         <a-animation attribute="material.color"
                      from="red"
                      to="white"
@@ -284,7 +285,7 @@
     </a-entity>
 
     <!-- Pfeil 6 -->
-    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="-9.5 1.596 -0.08" rotation="270 90 0" material="color : red" event-animate="target:#kamera; aevent:cameraPos6">
+    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="-9.5 1.596 -0.08" rotation="270 90 0" material="color : red" look-animate="target:#kamera; aevent:cameraPos6">
         <a-animation attribute="material.color"
                      from="red"
                      to="white"
@@ -302,7 +303,7 @@
     </a-entity>
 
     <!-- Pfeil 7 -->
-    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="-14.5 1.596 -0.08" rotation="270 90 0" material="color : red" event-animate="target:#kamera; aevent:cameraPos7">
+    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="-14.5 1.596 -0.08" rotation="270 90 0" material="color : red" look-animate="target:#kamera; aevent:cameraPos7">
         <a-animation attribute="material.color"
                      from="red"
                      to="white"
