@@ -2,6 +2,7 @@ AFRAME.registerComponent('event-animate', {
     schema: {
         target: {type: 'selector'},
         target2: {type: 'selector'},
+        target3: {type: 'selector'},
         aevent: {default: 'animation1'},
         triggeraction: {default: 'click' }
     },
@@ -12,17 +13,20 @@ AFRAME.registerComponent('event-animate', {
 
         this.el.addEventListener(data.triggeraction, function () {
             data.target.emit(data.aevent);
+            data.target2.emit(data.aevent);
+            data.target3.emit(data.aevent);
         });
     }
 });
 
-/*
+
 var tick = 0;
 
 AFRAME.registerComponent('look-animate', {
     schema: {
         target: {type: 'selector'},
         target2: {type: 'selector'},
+        target3: {type: 'selector'},
         aevent: {default: 'animation1'}
     },
 
@@ -49,10 +53,12 @@ AFRAME.registerComponent('look-animate', {
     },
     tick: function() {
         var data= this.data;
-        if(tick>=6) {
+        if(tick>=8) {
             data.target.emit(data.aevent);
             data.target2.emit(data.aevent);
+            data.target3.emit(data.aevent);
         }
     }
 });
-*/
+
+
