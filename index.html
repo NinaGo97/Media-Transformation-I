@@ -27,7 +27,7 @@
         <a-sphere id="img-venus" src="bilder/venus.jpg"></a-sphere>
         <a-sky id="sky" src="bilder/stars_sky.jpg"></a-sky>
         <a-image id="img-exit" src="bilder/exit.png"></a-image>
-       <audio id="start" src="sounds/Start.mp3" preload="auto"></audio>
+        <audio id="start" src="sounds/Start.mp3" preload="auto"></audio>
         <audio id="abbrechen" src="sounds/abbrechen.mp3" preload="auto"></audio>
         <audio id="sichtkontakt" src="sounds/Sichtkontakt.mp3" preload="auto"></audio>
         <audio id="panik" src="sounds/Panik.mp3" preload="auto"></audio>
@@ -151,20 +151,23 @@
     </a-entity>
     <!-- link="href: space_room.html" in entity -->
     <!-- open door sign -->
-    <a-image src="#img-opendoor" id="img_opendoor" link="href: space_room.html" position="-28.654 -0.941 -27.414" rotation="0 60 0" scale="0.7 0.7 0.7" visible="false">
+    <a-image src="#img-opendoor" id="img_opendoor"  position="-28.317 -0.941 -27.101" rotation="0 60 0" scale="0.8 0.8 0.8" visible="false">
         <a-animation attribute="visible"
                      delay="300"
                      dur="800"
-                     from="true"
-                     to="false"
+                     from="false"
+                     to="true"
                      begin="zumraumschiff"
                      repeat="indefinite">
         </a-animation>
     </a-image>
+    <a-image src="#img-opendoor" id="img_opendoor"  link="href: space_room.html" position="-28.068 -0.941 -26.985" rotation="0 60 0" scale="0.8 0.8 0.8" visible="false">
+    </a-image>
 
 
 
-    <a-image src="#img-exit" position="0.110 -2.148 -1.024" rotation="0 0 0" scale="2 2 2" visible="false" event-animate="target:#astroanimation; target2:#astrorota; target3:#bildrs; aevent:astrowegnow" sound="src: #ausklinkenzwei; on: click">
+
+    <a-image src="#img-exit" position="0.110 -2.148 -1.024" rotation="0 0 0" scale="2 2 2" visible="false" look-animate="target:#astroanimation; target2:#astrorota; target3:#bildrs; aevent:astrowegnow" sound="src: #ausklinkenzwei; on: click">
         <a-animation attribute="visible"
                      begin="0"
                      to="false"
@@ -216,17 +219,17 @@
 
     <!-- animation zum Raumschiff-->
 
-    <a-image src="#img-exit" position="-8.195 0 -7.503" rotation="0 0 0" scale="0 0 0" visible="true" event-animate="target:#kamera; target2:#img_opendoor; aevent:zumraumschiff">
+    <a-image src="#img-exit" position="-10.001 -0.328 -7.503" rotation="0 0 0" scale="0 0 0" visible="false" look-animate-two="target:#kamera; target2:#img_opendoor; target3:#bildrsweg; aevent:zumraumschiff">
         <a-animation
                 id="bildrs"
                 attribute="scale"
                 begin="astrowegnow"
                 dur="2000"
-                to="2 2 2">
+                to="3 3 3">
 
         </a-animation>
         <a-animation
-                id="img_opendoor"
+                id="bildrsweg"
                 attribute="scale"
                 begin="zumraumschiff"
                 dur="2000"
@@ -250,4 +253,5 @@
 
 </body>
 </html>
+
 
