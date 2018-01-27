@@ -53,12 +53,54 @@ AFRAME.registerComponent('look-animate', {
     },
     tick: function() {
         var data= this.data;
-        if(tick>=8) {
+        if(tick>=4) {
             data.target.emit(data.aevent);
             data.target2.emit(data.aevent);
             data.target3.emit(data.aevent);
         }
     }
+});
+
+var ticktwo = 0;
+
+AFRAME.registerComponent('look-animate-two', {
+    schema: {
+        target: {type: 'selector'},
+        target2: {type: 'selector'},
+        target3: {type: 'selector'},
+        aevent: {default: 'animation1'}
+    },
+
+    init: function() {
+        console.log('starting component look-animate-two..');
+
+        var data= this.data;
+        var ontwo = 0;
+
+
+        this.el.addEventListener('mouseenter', function () {
+            ontwo = 1;
+            setInterval(function () {
+                if(ontwo ===1 ) ticktwo++;
+                console.log('Tick: ' + ticktwo);
+            }, 1000);
+        });
+
+        this.el.addEventListener('mouseleave', function () {
+            ontwo = 0;
+            ticktwo = 0;
+            console.log('Tick: ' + ticktwo);
+        });
+    },
+    tick: function() {
+        var data= this.data;
+        if(ticktwo>=4) {
+            data.target.emit(data.aevent);
+            data.target2.emit(data.aevent);
+            data.target3.emit(data.aevent);
+        }
+    }
+});
 });
 
 
