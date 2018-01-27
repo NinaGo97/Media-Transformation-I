@@ -5,7 +5,7 @@
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <title>Gravity</title>
     <script src="javascript.js" type="text/javascript"></script>
-    <script src="https://unpkg.com/aframe-particle-system-component@1.0.9/dist/aframe-particle-system-component.min.js"></script>
+    <!--<script src="https://unpkg.com/aframe-particle-system-component@1.0.9/dist/aframe-particle-system-component.min.js"></script>-->
 </head>
 <body>
 
@@ -20,13 +20,26 @@
         <a-asset-item id="Spaceship-mtl" src="Objekte/Spaceship.mtl"></a-asset-item>
         <a-image id="img-interface" src="bilder/interface.png"></a-image>
         <a-image id="img-milchstrasse" src="bilder/milchstrasse.jpg"></a-image>
-        <a-image id="img-opendoor" src="bilder/open_door.png"></a-image>
+        <a-image id="img-opendoor" src="bilder/opendoor.png"></a-image>
         <a-sphere id="img-welt" src="bilder/Welt.jpg"></a-sphere>
         <a-sphere id="img-mars" src="bilder/Mars.jpg"></a-sphere>
         <a-sphere id="img-mond" src="bilder/mond.jpg"></a-sphere>
         <a-sphere id="img-venus" src="bilder/venus.jpg"></a-sphere>
         <a-sky id="sky" src="bilder/stars_sky.jpg"></a-sky>
+        <a-image id="img-exit" src="bilder/exit.png"></a-image>
+       <audio id="start" src="sounds/Start.mp3" preload="auto"></audio>
+        <audio id="abbrechen" src="sounds/abbrechen.mp3" preload="auto"></audio>
+        <audio id="sichtkontakt" src="sounds/Sichtkontakt.mp3" preload="auto"></audio>
+        <audio id="panik" src="sounds/Panik.mp3" preload="auto"></audio>
+        <audio id="ausklinken" src="sounds/ausklinken.mp3" preload="auto"></audio>
+        <audio id="mayday" src="sounds/mayday.mp3" preload="auto"></audio>
+        <audio id="ausklinkenzwei" src="sounds/ausklinken2.mp3" preload="auto"></audio>
+        <audio id="bittemelden" src="sounds/bitte%20melden.mp3" preload="auto"></audio>
+
     </a-assets>
+
+    <a-entity sound="src: #start; autoplay: true"></a-entity>
+
 
 
     <!-- Kamera/ Cursor-->
@@ -35,6 +48,7 @@
               rotation ="-20 0 0"
               camera look-controls wasd-controls>
         <a-cursor material="color: white"></a-cursor>
+
         <a-image src="#img-interface" scale="0.6 0.6 0.6" position="1 -0.5 -1" visible="false">
             <a-animation attribute="visible"
                          delay="600"
@@ -46,7 +60,19 @@
         </a-image>
         <a-entity geometry="primitive: ring; radiusInner: 2.95; radiusOuter: 4"
                   material="side: double; color: #1a1a1a" position="0 0 -2" >
+
         </a-entity>
+
+        <a-animation begin="zumraumschiff"
+                     attribute="position"
+                     from="0 0 3"
+                     to="-25.600 -1.480 -24.287"
+                     dur="40000">
+        </a-animation>
+
+
+
+
     </a-entity>
 
 
@@ -65,6 +91,7 @@
                      ease="linear"
                      repeat="indefinite">
         </a-animation>
+
     </a-sphere>
 
     <!--Mars-->
@@ -107,6 +134,7 @@
                      to="-3.9685 -2.25 -1.5"
                      direction="alternate"
                      repeat="indefinite"></a-animation>
+
     </a-entity>
 
 
@@ -123,45 +151,89 @@
     </a-entity>
     <!-- link="href: space_room.html" in entity -->
     <!-- open door sign -->
-    <a-image src="#img-opendoor" link="href: space_room.html" position="-22.8 0.64 -25.2" rotation="0 60 0" scale="0.7 0.7 0.7" visible="false">
+    <a-image src="#img-opendoor" id="img_opendoor" link="href: space_room.html" position="-28.654 -0.941 -27.414" rotation="0 60 0" scale="0.7 0.7 0.7" visible="false">
         <a-animation attribute="visible"
                      delay="300"
                      dur="800"
                      from="true"
                      to="false"
+                     begin="zumraumschiff"
                      repeat="indefinite">
         </a-animation>
     </a-image>
 
 
-    <!--Astronaut-->
-    <a-entity collada-model="#astronaut" event-animate="target:#astroweg; target2:#astrorotation; aevent:astrowegnow" position="0.110 -2.148 -1.024" rotation="-20 10 0" scale="0.6 0.6 0.6">
 
+    <a-image src="#img-exit" position="0.110 -2.148 -1.024" rotation="0 0 0" scale="2 2 2" visible="false" event-animate="target:#astroanimation; target2:#astrorota; target3:#bildrs; aevent:astrowegnow" sound="src: #ausklinkenzwei; on: click">
+        <a-animation attribute="visible"
+                     begin="0"
+                     to="false"
+                     repeat="indefinite">
+        </a-animation>
         <a-animation
-                id="astroweg"
+                id="astroanimation"
+                attribute="scale"
+                begin="astrowegnow"
+                dur="2000"
+                to="0 0 0">
+
+        </a-animation>
+
+    </a-image>
+
+    <!--Astronaut-->
+    <a-entity id="astronaut1" collada-model="#astronaut"  position="0.110 -2.148 -1.024" rotation="-20 10 0" scale="0.6 0.6 0.6" >
+
+       <a-animation
+                begin="astrowegnow"
+                id="astroanimation"
                 attribute="position"
                 from="0.110 -2.148 -1.024"
                 to="-0.324 -2.148 -22.559"
-                begin="astrowegnow"
                 dur="6000">
         </a-animation>
+
         <a-animation
-                id="astrorotation"
+                id="astrorota"
                 attribute="rotation"
                 dur="6000"
                 to="0 0 360"
                 begin="astrowegnow">
         </a-animation>
-        <!--<a-animation
-                id="astrorotation"
+        <a-animation
+                id="astroanimation"
                 attribute="scale"
                 begin="astrowegnow"
                 dur="8000"
                 to="0 0 0">
-        </a-animation> -->
 
-        <!-- link="href: space_room.html" IN ENTITY -->
+        </a-animation>
+
+
+
     </a-entity>
+
+
+    <!-- animation zum Raumschiff-->
+
+    <a-image src="#img-exit" position="-8.195 0 -7.503" rotation="0 0 0" scale="0 0 0" visible="true" event-animate="target:#kamera; target2:#img_opendoor; aevent:zumraumschiff">
+        <a-animation
+                id="bildrs"
+                attribute="scale"
+                begin="astrowegnow"
+                dur="2000"
+                to="2 2 2">
+
+        </a-animation>
+        <a-animation
+                id="img_opendoor"
+                attribute="scale"
+                begin="zumraumschiff"
+                dur="2000"
+                to="0 0 0">
+
+        </a-animation>
+    </a-image>
 
 
 
@@ -178,3 +250,4 @@
 
 </body>
 </html>
+
