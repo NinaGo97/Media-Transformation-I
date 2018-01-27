@@ -17,6 +17,7 @@
         <a-asset-item id="flasche" src="Objekte/Flasche.dae"></a-asset-item>
         <a-asset-item id="bleistift" src="Objekte/Bleistift.dae"></a-asset-item>
         <a-image id="img-exit" src="bilder/exit.png"></a-image>
+        <audio id="sirene" src="sounds/sound_sirene.mp3" preload="auto"></audio>
     </a-assets>
 
 
@@ -84,7 +85,7 @@
 
 
     <!-- Sound -->
-    <a-entity sound="src:sounds/sound_sirene.mp3; autoplay: true"></a-entity>
+    <a-entity sound="src:#sirene; autoplay: true"></a-entity>
 
 
     <!--Spacestation ROOM-->
