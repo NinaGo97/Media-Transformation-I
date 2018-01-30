@@ -275,7 +275,74 @@
         </a-animation>
     </a-entity> -->
 
+    <!-- animation Trümmerteile-->
+    <a-image src="#img-exit" position="-10.001 -0.328 -7.503" rotation="0 0 0" scale="0 0 0" visible="false" look-animate-two="target:#kamera; target2:#img_opendoor; target3:#bildrsweg; aevent:zumraumschiff">
+        <a-animation
+                id="bildrs"
+                attribute="scale"
+                begin="astrowegnow"
+                dur="2000"
+                to="3 3 3">
 
+        </a-animation>
+        <a-animation
+                id="bildrsweg"
+                attribute="scale"
+                begin="zumraumschiff"
+                dur="2000"
+                to="0 0 0">
+
+        </a-animation>
+    </a-image>
+
+
+    <a-sphere radius="0.05" height="53" position="-336.511 -1.209 -1.003" rotation="0 0 0">
+        <a-animation attribute="position"
+                     dur="2000"
+                     from="-336.511 -1.209 -6.668"
+                     to="8.2020 -0.164 -1.457"
+                     repeat="indefinite"></a-animation>
+    </a-sphere>
+
+    <a-sphere radius="0.03" height="53" position="-56.490 -0.470 -0.457" rotation="0 0 0">
+        <a-animation attribute="position"
+                     dur="2000"
+                     from="-56.490 -0.470 -0.457"
+                     to="8.2020 -1.164 -1.457"
+                     repeat="indefinite"></a-animation>
+    </a-sphere>
+
+    <a-sphere radius="0.05" height="53" position="-7.669 -2.965 -0.432" rotation="0 0 0">
+        <a-animation attribute="position"
+                     dur="2000"
+                     from="-7.669 -2.965 -0.432"
+                     to="8.2020 -2.164 -1.457"
+                     repeat="indefinite"></a-animation>
+    </a-sphere>
+
+    <a-sphere radius="0.035" height="53" position="-60.621 -3.995 -0.432" rotation="0 0 0">
+        <a-animation attribute="position"
+                     dur="2000"
+                     from="-60.621 -3.995 -0.432"
+                     to="8.2020 -1.164 -1.457"
+                     repeat="indefinite"></a-animation>
+    </a-sphere>
+
+    <a-sphere radius="0.045" height="53" position="-400.934 -3.979 -0.432" rotation="0 0 0">
+        <a-animation attribute="position"
+                     dur="2000"
+                     from="-400.934 -3.979 -0.432"
+                     to="8.2020 -0.164 -1.457"
+                     repeat="indefinite"></a-animation>
+    </a-sphere>
+
+    <a-sphere radius="0.025" height="53" position="-9000.662 4.084 -0.432" rotation="0 0 0">
+        <a-animation attribute="position"
+                     dur="2000"
+                     from="-9000.662 4.084 -0.432"
+                     to="8.2020 -2.164 -1.457"
+                     repeat="indefinite"></a-animation>
+    </a-sphere>
 
 
     <!-- Glow Effekt
