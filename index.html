@@ -41,7 +41,7 @@
 
     </a-assets>
 
-    <!--<a-entity sound="src: #start; autoplay: true"></a-entity>-->
+    <a-entity sound="src: #start; autoplay: true"></a-entity>
 
 
 
@@ -71,9 +71,17 @@
                      attribute="position"
                      from="0 0 3"
                      to="-25.600 -1.480 -24.287"
-                     dur="40000">
+                     dur="30000">
         </a-animation>
 
+        <!-- Kamera Rotation -->
+        <a-animation begin="astrowegnow"
+                     id="kamerarot"
+                     attribute="rotation"
+                     to="0 0 -360"
+                     dur="6000"
+                     delay="3500">
+        </a-animation>
 
 
 
@@ -87,8 +95,14 @@
     <a-entity id="rain" particle-system="preset: rain; color: white; particleCount: 5000" rotation="270 0 0"></a-entity>
     -->
 
-    <!-- Lensflare -->
-    <a-image src="#img-lensflare" position="8.448 2.295 -11.476" scale="3 3 3"></a-image>
+    <!-- Lensflare Sonne-->
+    <a-image src="#img-lensflare" position="8.448 1.5 -11.476" scale="3 3 3">
+        <a-animation attribute="position"
+                     from="8.448 1.5 -11.476"
+                     to="8.448 2.5 -11.476"
+                     dur="25000">
+        </a-animation>
+    </a-image>
 
     <!-- Weltkugel-->
     <a-sphere src="#img-welt" radius="2" height="53" position="3.5 -1.123 -3.51" rotation="0 0 0">
@@ -145,8 +159,8 @@
 
     </a-entity>
 
+    <!-- Animation Sound -->
     <a-image src="#img-exit" position="-3.591 -1.86 -0.695" scale="2.5 0.8 0.8" visible="false" sound="src: #suprise; on: click"></a-image>
-
 
 
     <!--Spacestation-->
@@ -164,7 +178,7 @@
 
     <!-- Animation zum Raumstation-->
 
-    <a-image src="#img-exit" position="-10.001 -0.328 -7.503" rotation="0 0 0" scale="0 0 0" visible="false" event-animate="target:#kamera; target2:#img_opendoor; target3:#bildrsweg; target4:#szwechsel;  aevent:zumraumschiff">
+    <a-image src="#img-exit" position="-10.001 -0.328 -7.503" rotation="0 0 0" scale="0 0 0" visible="false" event-animate="target:#kamera; target2:#img_opendoor; target3:#bildrsweg; target4:#szwechsel; aevent:zumraumschiff" sound="src: #bittemelden; on: click">
 
         <a-animation
                 id="bildrs"
@@ -200,13 +214,13 @@
 
     <!-- Transblock für Szenenwechsel -->
     <a-image src="#img-opendoor" id="img_opendoor"  link="href: space_room.html" position="-28.068 -0.941 -26.985" rotation="0 60 0" scale="0 0 0" visible="false">
-    <a-animation
-        attribute="scale"
-        to="0.8 0.8 0.8"
-        begin="zumraumschiff"
-        dur="4000"
-        id="szwechsel">
-    </a-animation>
+        <a-animation
+                attribute="scale"
+                to="0.8 0.8 0.8"
+                begin="zumraumschiff"
+                dur="4000"
+                id="szwechsel">
+        </a-animation>
 
     </a-image>
 
@@ -216,7 +230,7 @@
     <!--Astronaut-->
     <a-entity id="astronaut1" collada-model="#astronaut"  position="0.110 -2.148 -1.024" rotation="-20 10 0" scale="0.6 0.6 0.6" >
 
-       <a-animation
+        <a-animation
                 begin="astrowegnow"
                 delay="3000"
                 id="astroanimation"
@@ -247,25 +261,24 @@
     </a-entity>
 
     <!-- Transblock Astronaut Animation -->
-    <!-- <a-image src="#img-transblock" position="0.110 -2.148 -1.024" rotation="0 0 0" scale="2 2 2" event-animate="target:#astroanimation; target2:#astrorota; target3:#bildrs; aevent:astrowegnow" sound="src: #ausklinkenzwei; on: click">
-
+    <a-image src="#img-exit" position="0.110 -2.148 -1.024" rotation="0 0 0" scale="0 0 0" visible="false" event-animate="target:#astroanimation; target2:#astrorota; target3:#bildrs; target4:#scaleimg; target5:#kamerarot; aevent:astrowegnow" sound="src: #ausklinkenzwei; on: click">
         <a-animation
-                begin="astrowegnow"
-                id="astroanimation"
-                attribute="visible"
-                from="true"
-                to="false">
+                id="scaleimgbegi"
+                attribute="scale"
+                begin="30000"
+                dur="2000"
+                to="2 2 2">
+
         </a-animation>
-
-    </a-image> -->
-
-    <a-image src="#img-exit" position="0.110 -2.148 -1.024" rotation="0 0 0" scale="2 2 2" visible="false" event-animate="target:#astroanimation; target2:#astrorota; target3:#bildrs;target4:#scaleimg; aevent:astrowegnow" sound="src: #ausklinkenzwei; on: click">
         <a-animation
                 id="scaleimg"
                 attribute="scale"
                 begin="astrowegnow"
                 dur="2000"
                 to="0 0 0">
+
+        </a-animation>
+
     </a-image>
 
     <!--<a-entity sound="src: #ausklinkenzwei; on: click">
@@ -275,27 +288,8 @@
         </a-animation>
     </a-entity> -->
 
+
     <!-- animation Trümmerteile-->
-    <a-image src="#img-exit" position="-10.001 -0.328 -7.503" rotation="0 0 0" scale="0 0 0" visible="false" look-animate-two="target:#kamera; target2:#img_opendoor; target3:#bildrsweg; aevent:zumraumschiff">
-        <a-animation
-                id="bildrs"
-                attribute="scale"
-                begin="astrowegnow"
-                dur="2000"
-                to="3 3 3">
-
-        </a-animation>
-        <a-animation
-                id="bildrsweg"
-                attribute="scale"
-                begin="zumraumschiff"
-                dur="2000"
-                to="0 0 0">
-
-        </a-animation>
-    </a-image>
-
-
     <a-sphere radius="0.05" height="53" position="-336.511 -1.209 -1.003" rotation="0 0 0">
         <a-animation attribute="position"
                      dur="2000"
@@ -343,6 +337,8 @@
                      to="8.2020 -2.164 -1.457"
                      repeat="indefinite"></a-animation>
     </a-sphere>
+
+
 
 
     <!-- Glow Effekt
