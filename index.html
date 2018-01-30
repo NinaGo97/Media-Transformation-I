@@ -38,6 +38,7 @@
         <audio id="mayday" src="sounds/mayday.mp3" preload="auto"></audio>
         <audio id="ausklinkenzwei" src="sounds/ausklinken2.mp3" preload="auto"></audio>
         <audio id="bittemelden" src="sounds/bitte%20melden.mp3" preload="auto"></audio>
+        <audio id="suprise" src="sounds/Suprise.mp3" preload="auto"></audio>
 
     </a-assets>
 
@@ -134,6 +135,7 @@
 
 
     <!--Spaceship-->
+
     <a-entity obj-model="obj: #Spaceship-obj; mtl: #Spaceship-mtl"  position="-3.9685 -2.6 -1.5" rotation="-20 220 10" scale="1 1 1">
         <a-animation attribute="position"
                      dur="4000"
@@ -143,6 +145,8 @@
                      repeat="indefinite"></a-animation>
 
     </a-entity>
+
+    <a-image src="#img-exit" position="-3.591 -1.86 -0.695" scale="2.5 0.8 0.8" visible="false" sound="src: #suprise; on: click"></a-image>
 
 
 
@@ -159,7 +163,7 @@
     <!-- link="href: space_room.html" in entity -->
 
 
-    <!-- Animation zum Raumschiff-->
+    <!-- Animation zum Raumstation-->
 
     <a-image src="#img-exit" position="-10.001 -0.328 -7.503" rotation="0 0 0" scale="0 0 0" visible="false" event-animate="target:#kamera; target2:#img_opendoor; target3:#bildrsweg; target4:#szwechsel;  aevent:zumraumschiff">
 
