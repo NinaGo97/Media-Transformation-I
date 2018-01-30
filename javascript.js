@@ -4,7 +4,7 @@ AFRAME.registerComponent('event-animate', {
         target2: {type: 'selector'},
         target3: {type: 'selector'},
         target4: {type: 'selector'},
-
+        target5: {type: 'selector'},
         aevent: {default: 'animation1'},
         triggeraction: {default: 'click' }
     },
@@ -18,8 +18,7 @@ AFRAME.registerComponent('event-animate', {
             data.target2.emit(data.aevent);
             data.target3.emit(data.aevent);
             data.target4.emit(data.aevent);
-
-
+            data.target5.emit(data.aevent);
         });
     }
 });
