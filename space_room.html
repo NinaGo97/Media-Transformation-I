@@ -22,6 +22,9 @@
     </a-assets>
 
 
+    <!-- skybox -->
+    <a-sky color="white"></a-sky>
+
     <!-- Kamera -->
     <a-entity id="kamera"
               position ="21.9 4 -0.116"
@@ -76,25 +79,28 @@
     </a-entity>
 
     <!-- Exit -->
-    <a-image src="#img-exit" position="-21.5 4.7 -0.14" rotation="0 90 0" scale="2 2 2" visible="false">
-        <a-animation attribute="visible"
+    <a-image src="#img-exit" position="-21.5 4.7 -0.14" rotation="0 90 0" scale="2 2 2" visible="true" event-animate="target:#continued; aevent:continuedvis">
+        <!--<a-animation attribute="visible"
                      begin="300"
                      dur="800"
                      from="true"
                      to="false"
                      repeat="indefinite">
-        </a-animation>
+        </a-animation>-->
     </a-image>
 
 
-    <!-- To be continued Schrift
-    <a-image src="#img-continued" position="-18 5.2 -0.14" rotation="0 90 0" scale="5 5 5" visible="false">
+    <!-- To be continued Schrift-->
+    <a-image src="#img-continued" position="-21.5 4.7 -0.14" rotation="0 90 0" scale="0 0 0" visible="false">
+        <a-animation attribute="scale"
+                     to="2 2 2"
+                     begin="20000"></a-animation>
         <a-animation id="continued"
                      begin="continuedvis"
                      attribute="visible"
                      to="true">
         </a-animation>
-    </a-image> -->
+    </a-image>
 
     <!-- Licht -->
     <!--
@@ -335,3 +341,4 @@
 
 </body>
 </html>
+
