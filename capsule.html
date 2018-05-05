@@ -13,18 +13,25 @@
 
     <a-assets>
 
-        <a-asset-item id="cap-obj" src="Objekte/capsule_inside.obj"></a-asset-item>
-        <a-asset-item id="cap-mtl" src="Objekte/capsule_inside.mtl"></a-asset-item>
+        <a-asset-item id="cap-obj" src="Objekte/capsuleinside.obj"></a-asset-item>
+        <a-asset-item id="cap-mtl" src="Objekte/capsuleinside.mtl"></a-asset-item>
+        <a-asset-item id="chair-obj" src="Objekte/capsulechair.obj"></a-asset-item>
+        <a-asset-item id="chair-mtl" src="Objekte/capsulechair.mtl"></a-asset-item>
         <a-image id="img-warning" src="bilder/warning_signal_word.png"></a-image>
         <a-image id="img-cockpit_screen_01" src="bilder/cockpit_screen_01.jpg"></a-image>
         <a-image id="img-cockpit_screen_02" src="bilder/cockpit_screen_02.jpg"></a-image>
 
     </a-assets>
 
+
     <!-- Capsule -->
     <a-entity obj-model="obj: #cap-obj; mtl: #cap-mtl"  position="1 1 1" scale="0.2 0.2 0.2">
     </a-entity>
 
+
+    <!-- Chair -->
+    <a-entity obj-model="obj: #chair-obj; mtl: #chair-mtl" position="1.508 1 0.169" scale="0.2 0.2 0.2">
+    </a-entity>
 
     <!--bilder-->
     <a-image src="#img-warning" position="1.9 4.2 -4" rotation="-30 0 0" scale="0.8 0.6 0.8">
