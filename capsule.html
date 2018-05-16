@@ -30,8 +30,31 @@
 
 
     <!-- Chair -->
-    <a-entity obj-model="obj: #chair-obj; mtl: #chair-mtl" position="1.508 1 0.169" scale="0.2 0.2 0.2">
+    <a-entity obj-model="obj: #chair-obj; mtl: #chair-mtl" position="2.065 4.351 1.694" scale="0.2 0.2 0.2"
+              event-animate="target:#kamera; aevent:cameraPos1">
     </a-entity>
+
+
+    <!-- Knöpfe mit Animation -->
+    <a-box position="0.864 3.513 -2.372" material="color : red" depth="1" height="1" width="1" scale="0.2 0.2 0.2">
+        <a-animation attribute="material.color"
+                     from="red"
+                     to="white"
+                     dur="1000"
+                     repeat="indefinite">
+        </a-animation>
+    </a-box>
+
+    <a-box position="3.07 3.513 -2.968" material="color : blue" depth="1" height="1" width="1" scale="0.2 0.2 0.2">
+        <a-animation attribute="material.color"
+                     from="blue"
+                     to="white"
+                     dur="1000"
+                     repeat="indefinite">
+        </a-animation>
+    </a-box>
+
+
 
     <!--bilder-->
     <a-image src="#img-warning" position="1.9 4.2 -4" rotation="-30 0 0" scale="0.8 0.6 0.8">
@@ -49,12 +72,20 @@
 
     <!-- Kamera/ Cursor-->
     <a-entity id="kamera"
-              position ="1.9 5.3 1.2"
+              position ="1.9 5.3 3.73"
               rotation ="-6.5 0 0"
               camera look-controls wasd-controls>
         <a-cursor material="color: white"></a-cursor>
 
+    <!-- Animation Kamera zum Stuhl -->
+        <a-animation begin="cameraPos1"
+                     attribute="position"
+                     from="1.9 5.3 3.73"
+                     to="1.9 5.3 1.2"
+                     dur="3000">
+        </a-animation>
 
+    </a-entity>
 
 
 
