@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <script src="javascript.js" type="text/javascript"></script>
-    <title>Gravity</title>
+    <title>Spaceship</title>
 </head>
 <body>
 
@@ -79,7 +79,7 @@
     </a-entity>
 
     <!-- Exit -->
-    <a-image src="#img-exit" position="-21.5 4.7 -0.14" rotation="0 90 0" scale="2 2 2" visible="true" event-animate="target:#continued; aevent:continuedvis">
+    <a-image link="href: capsule.html" src="#img-exit" position="-21.5 4.7 -0.14" rotation="0 90 0" scale="2 2 2" visible="true" event-animate="target:#continued; aevent:continuedvis">
         <!--<a-animation attribute="visible"
                      begin="300"
                      dur="800"
@@ -88,23 +88,8 @@
                      repeat="indefinite">
         </a-animation>-->
     </a-image>
-    <a-image src="#img-exit" position="-21.5 4.7 -0.14" rotation="0 90 0" scale="2 2 2" visible="false" link="href: cockpit.html" event-animate="target:#continued; aevent:continuedvis">
-
-    </a-image>
 
 
-
-    <!-- To be continued Schrift-->
-    <a-image src="#img-continued" position="-21.5 4.7 -0.14" rotation="0 90 0" scale="0 0 0" visible="false">
-        <a-animation attribute="scale"
-                     to="2 2 2"
-                     begin="20000"></a-animation>
-        <a-animation id="continued"
-                     begin="continuedvis"
-                     attribute="visible"
-                     to="true">
-        </a-animation>
-    </a-image>
 
     <!-- Licht -->
     <!--
