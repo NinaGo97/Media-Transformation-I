@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <title>House</title>
+    <script src="javascript.js" type="text/javascript"></script>
+</head>
+<body>
+
+
+<a-scene>
+
+    <a-assets>
+
+        <a-asset-item id="housein-obj" src="Objekte/houseinside.obj"></a-asset-item>
+        <a-asset-item id="housein-mtl" src="Objekte/houseinside.mtl"></a-asset-item>
+        <a-asset-item id="bett" src="Objekte/bett.dae"></a-asset-item>
+        <a-asset-item id="lampe" src="Objekte/lampe.dae"></a-asset-item>
+        <a-asset-item id="stuhl" src="Objekte/stuhl.dae"></a-asset-item>
+        <a-asset-item id="teppich" src="Objekte/teppich.dae"></a-asset-item>
+        <a-asset-item id="tisch" src="Objekte/tisch.dae"></a-asset-item>
+
+    </a-assets>
+
+
+    <!-- House -->
+    <a-entity obj-model="obj: #housein-obj; mtl: #housein-mtl"  position="0 0 0" scale="0.3 0.3 0.3"></a-entity>
+
+    <!-- Bett -->
+    <a-entity id="bett" collada-model="#bett" position="8.41 0.551 -4.466" rotation="180 180 0"></a-entity>
+
+    <!-- Lampe -->
+    <a-entity id="lampe" collada-model="#lampe" position="8.988 -0.944 -2.188" scale="2 2 2"></a-entity>
+
+    <!-- stuhl -->
+    <a-entity id="stuhl" collada-model="#stuhl" position="-7.371 2.178 -2.018" scale="0.7 0.7 0.7" rotation="0 -90 0"></a-entity>
+
+    <!-- Teppich -->
+    <a-entity id="teppich" collada-model="#teppich" position="-1.609 0.937 1.576" scale="10 10 10" rotation="0 90 0"></a-entity>
+
+    <!-- tisch -->
+    <a-entity id="tisch" collada-model="#tisch" position="-9.802 0.092 -4.054" scale="2 2 2"></a-entity>
+
+
+    <!-- Kamera/ Cursor-->
+    <a-entity id="kamera"
+              position="-7.398 3.647 5.016"
+              camera look-controls wasd-controls>
+        <a-cursor material="color: white"></a-cursor>
+    </a-entity>
+
+
+    <!-- Licht -->
+    <a-light light="type: point; color: white; intensity: 0.5; penumbra: 0.10; angle: 60.00"
+             position="1.229 6.5 0"
+             rotation="0 0 0"
+             decay=" 1.00"
+             distance="0.00"
+             intensity="0.5">
+
+</a-scene>
+
+</body>
+</html>
