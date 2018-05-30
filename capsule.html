@@ -19,14 +19,21 @@
         <a-asset-item id="chair-mtl" src="Objekte/capsulechair.mtl"></a-asset-item>
         <a-image id="img-warning" src="bilder/warning_signal_word.png"></a-image>
         <a-image id="img-landing" src="bilder/landing.png"></a-image>
+        <a-image id="img-radio" src="bilder/radio.png"></a-image>
         <!--<a-image id="img-cockpit_screen_01" src="bilder/cockpit_screen_01.jpg"></a-image>-->
         <a-image id="img-ring" src="bilder/ring.png"></a-image>
         <a-image id="img-cockpit_screen_02" src="bilder/cockpit_screen_02.jpg"></a-image>
-        <a-image id="img-earth2" src="bilder/earth2.jpg"></a-image>
+        <!--<a-image id="img-earth2" src="bilder/earth2.jpg"></a-image>-->
         <a-video id="vid-earth" src="bilder/googleearth.mp4" autoplay loop="true"></a-video>
+        <audio id="bombe" src="sounds/bombetimer.mp3" preload="auto"></audio>
+        <audio id="funk" src="sounds/funkkontakt.mp3"></audio>
 
     </a-assets>
 
+
+
+    <!-- Sound -->
+    <a-entity sound="src:#bombe; autoplay: true"></a-entity>
 
     <!-- Skybox -->
     <a-sky color="black"></a-sky>
@@ -91,6 +98,10 @@
                      repeat="indefinite">
         </a-animation>
     </a-image>
+
+    <a-image src="#img-radio" position="-2.109 5.511 -3.682" rotation="0 45 0" scale="0.8 0.6 0.8"
+             sound="src: #funk; on: click"></a-image>
+
 
     <a-image src="#img-ring" position="-3 5.54 -2.77" rotation="0 45 0" scale="1.5 1.5 1.5"></a-image>
     <a-image src="#img-cockpit_screen_02" position="6.54 5.6 -3" rotation="0 -45 0" scale="1.5 1.5 1.5"></a-image>
