@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <title>Capsule</title>
     <script src="javascript.js" type="text/javascript"></script>
 </head>
@@ -13,10 +13,8 @@
 
     <a-assets>
 
-        <a-asset-item id="cap-obj" src="Objekte/capsuleinside.obj"></a-asset-item>
-        <a-asset-item id="cap-mtl" src="Objekte/capsuleinside.mtl"></a-asset-item>
-        <a-asset-item id="chair-obj" src="Objekte/capsulechair.obj"></a-asset-item>
-        <a-asset-item id="chair-mtl" src="Objekte/capsulechair.mtl"></a-asset-item>
+        <a-asset-item id="capsuleinside" src="Objekte/capsuleinside.dae"></a-asset-item>
+        <a-asset-item id="chair" src="Objekte/capsulechair.dae"></a-asset-item>
         <a-image id="img-warning" src="bilder/warning_signal_word.png"></a-image>
         <a-image id="img-landing" src="bilder/landing.png"></a-image>
         <a-image id="img-radio" src="bilder/radio.png"></a-image>
@@ -39,12 +37,12 @@
     <a-sky color="black"></a-sky>
 
     <!-- Capsule -->
-    <a-entity obj-model="obj: #cap-obj; mtl: #cap-mtl"  position="1 1 1" scale="0.2 0.2 0.2">
+    <a-entity collada-model="#capsuleinside"  position="1 1 1" scale="0.2 0.2 0.2">
     </a-entity>
 
 
     <!-- Chair -->
-    <a-entity obj-model="obj: #chair-obj; mtl: #chair-mtl" position="2.065 4.351 1.694" scale="0.2 0.2 0.2"
+    <a-entity collada-model="#chair" position="2.065 4.351 1.694" scale="0.2 0.2 0.2"
               event-animate="target:#kamera; aevent:cameraPos1">
     </a-entity>
 
