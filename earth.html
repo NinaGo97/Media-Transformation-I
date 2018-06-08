@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Erde</title>
-    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <script src="javascript.js" type="text/javascript"></script>
 </head>
 <body>
@@ -11,14 +11,14 @@
 <a-scene>
 
     <a-assets>
+
         <a-asset-item id="treeone" src="Objekte/treeone.dae"></a-asset-item>
         <a-asset-item id="treetwo" src="Objekte/treetwo.dae"></a-asset-item>
         <a-asset-item id="treethree" src="Objekte/treethree.dae"></a-asset-item>
         <a-asset-item id="plane" src="Objekte/plane.dae"></a-asset-item>
-        <a-asset-item id="house-obj" src="Objekte/house.obj"></a-asset-item>
-        <a-asset-item id="house-mtl" src="Objekte/house.mtl"></a-asset-item>
-
+        <a-asset-item id="house" src="Objekte/house.dae"></a-asset-item>
         <img id="sky" src="bilder/sky2.jpg">
+
     </a-assets>
 
     <!-- skybox-->
@@ -72,7 +72,7 @@
     <a-entity id="plane" collada-model="#plane"  position="0 0 0" scale="2 1 2" > </a-entity>
 
     <!-- house -->
-    <a-entity obj-model="obj: #house-obj; mtl: #house-mtl"  id="house" position="9.080 0 -8.125" rotation="0 -20 0"  scale="0.05 0.05 0.05">
+    <a-entity collada-model="#house" position="9.080 0 -8.125" rotation="0 -20 0"  scale="0.05 0.05 0.05">
 
 
 
