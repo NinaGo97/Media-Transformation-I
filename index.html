@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <title>Gravity</title>
     <script src="javascript.js" type="text/javascript"></script>
     <script src="https://unpkg.com/aframe-lensflare-component/dist/aframe-lensflare-component.min.js"></script>
@@ -15,10 +15,8 @@
 
     <a-assets>
         <a-asset-item id="astronaut" src="Objekte/astronautmitschnur2.dae"></a-asset-item>
-        <a-asset-item id="Spacestation-obj" src="Objekte/Spacestation.obj"></a-asset-item>
-        <a-asset-item id="Spacestation-mtl" src="Objekte/Spacestation.mtl"></a-asset-item>
-        <a-asset-item id="Spaceship-obj" src="Objekte/Spaceship.obj"></a-asset-item>
-        <a-asset-item id="Spaceship-mtl" src="Objekte/Spaceship.mtl"></a-asset-item>
+        <a-asset-item id="Spacestation" src="Objekte/Spacestation.dae"></a-asset-item>
+        <a-asset-item id="Spaceship" src="Objekte/Spaceship.dae"></a-asset-item>
         <a-image id="img-interface" src="bilder/interface.png"></a-image>
         <a-image id="img-milchstrasse" src="bilder/milchstrasse.jpg"></a-image>
         <a-image id="img-opendoor" src="bilder/open_door.png"></a-image>
@@ -152,7 +150,7 @@
 
     <!--Spaceship-->
 
-    <a-entity obj-model="obj: #Spaceship-obj; mtl: #Spaceship-mtl"  position="-3.9685 -2.6 -1.5" rotation="-20 220 10" scale="1 1 1">
+    <a-entity collada-model="#Spaceship"  position="-3.9685 -2.6 -1.5" rotation="-20 220 10" scale="1 1 1">
         <a-animation attribute="position"
                      dur="4000"
                      from="-3.9685 -2.6 -1.5"
@@ -167,7 +165,7 @@
 
 
     <!--Spacestation-->
-    <a-entity obj-model="obj: #Spacestation-obj; mtl: #Spacestation-mtl"  position="-29.2 -2 -27.4" rotation="-7 160.9 18" scale="2 2 2">
+    <a-entity collada-model="#Spacestation"  position="-29.2 -2 -27.4" rotation="-7 160.9 18" scale="2 2 2">
         <a-animation attribute="position"
                      delay="1000"
                      dur="2000"
