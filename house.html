@@ -13,8 +13,7 @@
 
     <a-assets>
 
-        <a-asset-item id="housein-obj" src="Objekte/houseinside.obj"></a-asset-item>
-        <a-asset-item id="housein-mtl" src="Objekte/houseinside.mtl"></a-asset-item>
+        <a-asset-item id="houseinside" src="Objekte/houseinside.dae"></a-asset-item>
         <a-asset-item id="bett" src="Objekte/bett.dae"></a-asset-item>
         <a-asset-item id="lampe" src="Objekte/lampe.dae"></a-asset-item>
         <a-asset-item id="stuhl" src="Objekte/stuhl.dae"></a-asset-item>
@@ -25,7 +24,7 @@
 
 
     <!-- House -->
-    <a-entity obj-model="obj: #housein-obj; mtl: #housein-mtl"  position="0 0 0" scale="0.3 0.3 0.3"></a-entity>
+    <a-entity collada-model="#houseinside"  position="0 0 0" scale="0.3 0.3 0.3"></a-entity>
 
     <!-- Bett -->
     <a-entity id="bett" collada-model="#bett" position="8.41 0.551 -4.466" rotation="180 180 0"></a-entity>
