@@ -16,8 +16,7 @@
         <a-asset-item id="flasche" src="Objekte/Flasche.dae"></a-asset-item>
         <a-asset-item id="bleistift" src="Objekte/Bleistift.dae"></a-asset-item>
         <a-image id="img-exit" src="bilder/exit.png"></a-image>
-        <a-image id="img-continued" src="bilder/continued.png"></a-image>
-        <audio id="sirene" src="sounds/sound_sirene.mp3" preload="auto"></audio>
+        <audio id="sirene" src="sounds/sirene_leave.mp3" preload="auto"></audio>
     </a-assets>
 
 
@@ -78,18 +77,19 @@
     </a-entity>
 
     <!-- Exit -->
-    <a-image src="#img-exit" position="-21.5 4.7 -0.14" rotation="0 90 0" scale="2 2 2" visible="true" event-animate="target:#continued; aevent:continuedvis">
-    <!-- link="href: capsule.html" IN A-IMAGE -->
-        <!--<a-animation attribute="visible"
+    <a-image src="#img-exit" position="-21.5 4.7 -0.14" rotation="0 90 0" scale="2 2 2" visible="true">
+        <a-animation attribute="visible"
                      begin="300"
                      dur="800"
                      from="true"
                      to="false"
                      repeat="indefinite">
-        </a-animation>-->
+        </a-animation>
     </a-image>
 
 
+    <!-- Transblock für Szenenwechsel -->
+    <a-image src="#img-exit" link="href: capsule.html" position="-19 4.7 -0.14" rotation="0 90 0" scale="2 2 2" visible="false"></a-image>
 
     <!-- Licht -->
     <!-- Licht hinten -->
