@@ -2,6 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <title>Capsule</title>
     <script src="javascript.js" type="text/javascript"></script>
@@ -22,12 +23,29 @@
         <a-image id="img-ring" src="bilder/ring.png"></a-image>
         <a-image id="img-cockpit_screen_02" src="bilder/cockpit_screen_02.jpg"></a-image>
         <!--<a-image id="img-earth2" src="bilder/earth2.jpg"></a-image>-->
-        <a-video id="vid-earth" src="video/Erde.mp4" autoplay loop="true"></a-video>
+        <video id="vid-earth" src="video/Erde.mp4" autoplay="true"></video>
         <audio id="bombe" src="sounds/bombetimer.mp3" preload="auto"></audio>
         <audio id="funk" src="sounds/funkkontakt.mp3"></audio>
 
     </a-assets>
 
+
+    <!-- Kamera/ Cursor-->
+    <a-entity id="kamera"
+              position ="1.9 5.3 3.73"
+              rotation ="-6.5 0 0"
+              camera look-controls wasd-controls>
+        <a-cursor material="color: white"></a-cursor>
+
+        <!-- Animation Kamera zum Stuhl -->
+        <a-animation begin="cameraPos1"
+                     attribute="position"
+                     from="1.9 5.3 3.73"
+                     to="1.9 5.3 1.2"
+                     dur="3000">
+        </a-animation>
+
+    </a-entity>
 
 
     <!-- Sound -->
@@ -87,13 +105,13 @@
         </a-animation>
     </a-image>
 
-    <a-image src="#img-landing" position="1.9 4.2 -4" rotation="-30 0 0" scale="0.8 0.6 0.8">
-        <a-animation attribute="visible"
+    <a-image src="#img-landing" position="1.9 4.2 -4" rotation="-30 0 0" scale="0.8 0.6 0.8" video="src: #vid-earth; on: click">
+        <!--<a-animation attribute="visible"
                      begin="300"
                      dur="800"
                      from="true"
                      to="false"
-                     repeat="indefinite">
+                     repeat="indefinite">-->
         </a-animation>
     </a-image>
 
@@ -110,22 +128,7 @@
     <a-video src="#vid-earth" position="1.955 5.658 -4.005" scale="6.3 2 1.8"></a-video>
 
 
-    <!-- Kamera/ Cursor-->
-    <a-entity id="kamera"
-              position ="1.9 5.3 3.73"
-              rotation ="-6.5 0 0"
-              camera look-controls wasd-controls>
-        <a-cursor material="color: white"></a-cursor>
 
-    <!-- Animation Kamera zum Stuhl -->
-        <a-animation begin="cameraPos1"
-                     attribute="position"
-                     from="1.9 5.3 3.73"
-                     to="1.9 5.3 1.2"
-                     dur="3000">
-        </a-animation>
-
-    </a-entity>
 
 
     <!-- Licht -->
@@ -136,7 +139,7 @@
              distance="0.00"
              intensity="0.1"
              visible="false">
-        <a-animation attribute="visible" begin="1000" dur="1000" from="true" to="false" repeat="indefinite"> </a-animation>
+        <a-animation attribute="visible" delay="1000" dur="1000" from="true" to="false" repeat="indefinite"> </a-animation>
     </a-light>
 
     <a-light light="type: point; color: white; intensity: 0.5; penumbra: 0.10; angle: 60.00"
