@@ -22,6 +22,7 @@
         <!--<a-image id="img-cockpit_screen_01" src="bilder/cockpit_screen_01.jpg"></a-image>-->
         <a-image id="img-ring" src="bilder/ring.png"></a-image>
         <a-image id="img-cockpit_screen_02" src="bilder/cockpit_screen_02.jpg"></a-image>
+        <a-image id="img-opendoor" src="bilder/opendoor.png"></a-image>
         <!--<a-image id="img-earth2" src="bilder/earth2.jpg"></a-image>-->
         <video id="vid-earth" src="video/Erde.mp4" autoplay="true"></video>
         <audio id="bombe" src="sounds/bombetimer.mp3" preload="auto"></audio>
@@ -105,7 +106,8 @@
         </a-animation>
     </a-image>
 
-    <a-image src="#img-landing" position="1.9 4.2 -4" rotation="-30 0 0" scale="0.8 0.6 0.8" video="src: #vid-earth; on: click">
+    <!-- VIDEO ON CLICK? video="src: #vid-earth; on: click" -->
+    <a-image src="#img-landing" position="1.9 4.2 -4" rotation="-30 0 0" scale="0.8 0.6 0.8">
         <!--<a-animation attribute="visible"
                      begin="300"
                      dur="800"
@@ -115,8 +117,30 @@
         </a-animation>
     </a-image>
 
+    <!-- Img OpenDoor-->
+    <a-image src="#img-opendoor" position="1.8 5.6 -3.7" scale="1 0.8 1" visible="false">
+        <a-animation
+                attribute="visible"
+                from="false"
+                to="true"
+                delay="30000">
+        </a-animation>
+    </a-image>
+
+    <!-- Transbock OpenDoor zum Szenenwechsel-->
+    <a-image link="href: erde.html" src="#img-opendoor" position="1.8 5.6 -3" scale="1 0.8 1" visible="false">
+        <a-animation
+                attribute="visible"
+                from="false"
+                to="false"
+                delay="30000">
+        </a-animation>
+    </a-image>
+
+
     <a-image src="#img-radio" position="-2.109 5.511 -3.682" rotation="0 45 0" scale="0.8 0.6 0.8"
-             sound="src: #funk; on: click"></a-image>
+             sound="src: #funk; on: click">
+    </a-image>
 
 
     <a-image src="#img-ring" position="-3 5.54 -2.77" rotation="0 45 0" scale="1.5 1.5 1.5"></a-image>
