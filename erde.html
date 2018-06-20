@@ -13,10 +13,13 @@
 
     <a-assets>
 
-        <a-image id="img-sky" src="bilder/skyearth.png"></a-image>
-        <a-image id="sand" src="bilder/sand.jpg"></a-image>
         <a-asset-item id="treethree" src="Objekte/treethree.dae"></a-asset-item>
         <a-asset-item id="kapsel" src="Objekte/kapsel.dae"></a-asset-item>
+        <a-asset-item id="bridge" src="Objekte/bridge.DAE"></a-asset-item>
+        <a-asset-item id="beachhouse" src="Objekte/beachhouse.DAE"></a-asset-item>
+        <a-image id="img-sky" src="bilder/skyearth.png"></a-image>
+        <a-image id="sand" src="bilder/sand.jpg"></a-image>
+        <audio id="waves" src="sounds/waves.mp3" preload="auto"></audio>
 
     </a-assets>
 
@@ -31,6 +34,13 @@
     </a-entity>
 
 
+    <!-- bridge -->
+    <a-entity id="bridge" collada-model="#bridge" position="0 0.15 -11.5" scale="3 2 2"></a-entity>
+
+    <!-- beachhouse -->
+    <a-entity id="beachhouse" collada-model="#beachhouse" position="0 0.15 -19.6" scale="4 4 4"></a-entity>
+
+
     <!--<a-ocean width="200" depth="200" density="40" opacity="1" position="0 -0.4 0"></a-ocean>
     <a-ocean color="aqua" depth="100" width="100"></a-ocean>-->
 
@@ -40,9 +50,21 @@
     <!-- palme -->
     <a-entity id="treethree" collada-model="#treethree" position="3.6 0 -6" scale="0.4 0.4 0.4" rotation="0 30 0"></a-entity>
     <a-entity id="treethree" collada-model="#treethree" position="5.4 0 -6" scale="0.4 0.4 0.4" rotation="0 30 0"></a-entity>
+    <a-entity id="treethree" collada-model="#treethree" position="8.3 0 -0.8" scale="0.4 0.4 0.4" rotation="0 30 0"></a-entity>
+    <a-entity id="treethree" collada-model="#treethree" position="-5.1 0 -5" scale="0.4 0.4 0.4" rotation="0 30 0"></a-entity>
+    <a-entity id="treethree" collada-model="#treethree" position="0.7 0 7.2" scale="0.4 0.4 0.4" rotation="0 30 0"></a-entity>
+    <a-entity id="treethree" collada-model="#treethree" position="-0.7 0 6.8" scale="0.4 0.4 0.4" rotation="0 20 0"></a-entity>
+    <a-entity id="treethree" collada-model="#treethree" position="2.5 0 6"  scale="0.4 0.4 0.4" rotation="0 10 0"></a-entity>
+
 
     <!-- Kapsel -->
     <a-entity id="kapsel" collada-model="#kapsel" position="-1.6 0.8 0 2 0" rotation="180 180 0"></a-entity>
+
+
+    <!-- Sound -->
+    <a-entity sound="src:#waves; autoplay: true"></a-entity>
+
+
 
     <a-ocean
             width="50"
