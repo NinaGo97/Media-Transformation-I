@@ -25,17 +25,32 @@
         <a-asset-item id="letter" src="Objekte/letter.DAE"></a-asset-item>
         <a-image id="img-sky" src="bilder/skyearth.png"></a-image>
         <a-image id="sand" src="bilder/sand.jpg"></a-image>
+        <a-image id="trans" src="bilder/transparent.png"></a-image>
         <audio id="waves" src="sounds/waves.mp3" preload="auto"></audio>
 
     </a-assets>
 
 
-    <!-- Kamera/ Cursor-->
+     <!-- Kamera/ Cursor-->
     <a-entity id="kamera"
               position ="0 1.5 0"
               rotation ="0 0 0"
               camera look-controls wasd-controls>
         <a-cursor material="color: white"></a-cursor>
+        <a-animation
+                id="kamera"
+                attribute="position"
+                to="0 1.5 -4.8"
+                dur="8000"
+                begin="steg"
+        ></a-animation>
+        <a-animation
+                id="kamera"
+                attribute="position"
+                to="4.064 1.5 -1.160"
+                dur="8000"
+                begin="moai"
+        ></a-animation>
 
     </a-entity>
 
@@ -87,6 +102,12 @@
 
     <!-- sign -->
     <a-entity id="sign" collada-model="#sign" position="2.03 0 -1.9" rotation="0 -40 0" scale="0.05 0.05 0.05"></a-entity>
+    
+    <!-- Transparentes Bild fuer Animation zum Steg-->
+    <a-image id="trans" collada-model="#trans" position="1.408 1.426 -1.956" scale="1 0.5 1" visible="false" event-animate="target:#kamera; aevent:steg"></a-image>
+
+    <!-- Transparentes Bild fuer Animation zum Moai-->
+    <a-image id="transzwei" collada-model="#trans" position="2.212 1.530 -1.469" scale="1 0.5 1" visible="false" event-animate="target:#kamera; aevent:moai"></a-image>
 
 
     <!-- Flasche -->
