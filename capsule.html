@@ -11,27 +11,32 @@
 
 
 <a-scene>
-
+<!-- Alle Objekte, Bilder,Sounds und Videos werden geladen-->
     <a-assets>
-
+        <!--Kapsel Innenraum-->
         <a-asset-item id="capsuleinside" src="Objekte/capsuleinside.dae"></a-asset-item>
+        <!--Stuhl -->
         <a-asset-item id="chair" src="Objekte/capsulechair.dae"></a-asset-item>
+        <!-- Bilder im Cockpit-->
         <a-image id="img-warning" src="bilder/warning_signal_word.png"></a-image>
         <a-image id="img-landing" src="bilder/landing.png"></a-image>
         <a-image id="img-radio" src="bilder/radio.png"></a-image>
         <!--<a-image id="img-cockpit_screen_01" src="bilder/cockpit_screen_01.jpg"></a-image>-->
         <a-image id="img-ring" src="bilder/ring.png"></a-image>
         <a-image id="img-cockpit_screen_02" src="bilder/cockpit_screen_02.jpg"></a-image>
+        <!--Bild zum Szenenwechsel-->
         <a-image id="img-opendoor" src="bilder/opendoor.png"></a-image>
         <!--<a-image id="img-earth2" src="bilder/earth2.jpg"></a-image>-->
+        <!-- Video Landung-->
         <video id="vid-earth" src="video/Erde.mp4" autoplay="true"></video>
+        <!--Sounds in der Kapsel-->
         <audio id="bombe" src="sounds/bombetimer.mp3" preload="auto"></audio>
         <audio id="funk" src="sounds/funkkontakt.mp3"></audio>
 
     </a-assets>
 
 
-    <!-- Kamera/ Cursor-->
+    <!-- Kamera/ Cursor -- Startposition -->
     <a-entity id="kamera"
               position ="1.9 5.3 3.73"
               rotation ="-6.5 0 0"
@@ -49,25 +54,26 @@
     </a-entity>
 
 
-    <!-- Sound -->
+    <!-- Sound wird eingebunden-->
     <a-entity sound="src:#bombe; autoplay: true"></a-entity>
 
-    <!-- Skybox -->
+    <!-- Skybox wird eingebunden-->
     <a-sky color="black"></a-sky>
 
-    <!-- Capsule -->
+    <!-- Kapsel Innenraum wird eingebunden-->
     <a-entity collada-model="#capsuleinside"  position="1 1 1" scale="0.2 0.2 0.2">
     </a-entity>
 
 
-    <!-- Chair -->
+    <!-- Stuhl wird eingebunden -->
     <a-entity collada-model="#chair" position="2.065 4.351 1.694" scale="0.2 0.2 0.2"
               event-animate="target:#kamera; aevent:cameraPos1">
     </a-entity>
 
 
-    <!-- Knöpfe mit Animation -->
+    <!-- Knopf mit Animation -->
     <a-box position="0.864 3.513 -2.372" material="color : red" depth="1" height="1" width="1" scale="0.2 0.2 0.2">
+        <!--Farbwechsel/Blinken-->
         <a-animation attribute="material.color"
                      from="red"
                      to="blue"
@@ -75,8 +81,10 @@
                      repeat="indefinite">
         </a-animation>
     </a-box>
-
+    
+    <!-- Knopf mit Animation -->
     <a-box position="3.07 3.513 -2.968" material="color : blue" depth="1" height="1" width="1" scale="0.2 0.2 0.2">
+        <!--Farbwechsel/Blinken-->
         <a-animation attribute="material.color"
                      from="blue"
                      to="red"
@@ -84,8 +92,10 @@
                      repeat="indefinite">
         </a-animation>
     </a-box>
-
+    
+    <!-- Knopf mit Animation -->
     <a-box position="2.285 7.188 -4.121" rotation="30 0 0" material="color : yellow" depth="1" height="1" width="1" scale="0.2 0.2 0.2">
+        <!--Farbwechsel/Blinken-->
         <a-animation attribute="material.color"
                      from="yellow"
                      to="white"
@@ -95,7 +105,7 @@
     </a-box>
 
 
-    <!--bilder-->
+    <!--Bild wird eingebunden und animiert-->
     <a-image src="#img-warning" position="4.419 5.876 -4" scale="0.8 0.4 0.8">
         <a-animation attribute="visible"
                      begin="300"
@@ -106,6 +116,7 @@
         </a-animation>
     </a-image>
 
+    <!-- Bild für die Landung wird eingebunden--> 
     <!-- VIDEO ON CLICK? video="src: #vid-earth; on: click" -->
     <a-image src="#img-landing" position="1.9 4.2 -4" rotation="-30 0 0" scale="0.8 0.6 0.8">
         <!--<a-animation attribute="visible"
@@ -117,7 +128,7 @@
         </a-animation>
     </a-image>
 
-    <!-- Img OpenDoor-->
+    <!-- Bild für Szenenwechsel wird eingebunden-->
     <a-image src="#img-opendoor" position="1.8 5.6 -3.7" scale="1 0.8 1" visible="false">
         <a-animation
                 attribute="visible"
@@ -137,18 +148,18 @@
         </a-animation>
     </a-image>
 
-
+    <!-- Radiosound/ -Bild wird eingebunden-->
     <a-image src="#img-radio" position="-2.109 5.511 -3.682" rotation="0 45 0" scale="0.8 0.6 0.8"
              sound="src: #funk; on: click">
     </a-image>
 
-
+    <!-- Bilder in der Kapsel werden eingebunden-->
     <a-image src="#img-ring" position="-3 5.54 -2.77" rotation="0 45 0" scale="1.5 1.5 1.5"></a-image>
     <a-image src="#img-cockpit_screen_02" position="6.54 5.6 -3" rotation="0 -45 0" scale="1.5 1.5 1.5"></a-image>
     <!--<a-image src="#img-earth2" position="1.955 5.658 -4.005" scale="6.3 2 1.8"></a-image> -->
 
 
-    <!-- Video -->
+    <!-- Video für die Landung wird eingebunden-->
     <a-video src="#vid-earth" position="1.955 5.658 -4.005" scale="6.3 2 1.8"></a-video>
 
 
