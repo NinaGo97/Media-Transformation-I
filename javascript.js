@@ -1,3 +1,4 @@
+// Targets um ein Event auzulösen
 AFRAME.registerComponent('event-animate', {
     schema: {
         target: {type: 'selector'},
@@ -28,6 +29,7 @@ AFRAME.registerComponent('event-animate', {
 
 var tick = 0;
 
+//Targets um eine Animation durch gucken auszulösen
 AFRAME.registerComponent('look-animate', {
     schema: {
         target: {type: 'selector'},
