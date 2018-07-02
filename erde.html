@@ -13,7 +13,7 @@
 <a-scene>
 
     <a-assets>
-
+    <!-- Alle Objekte, Bilder und Sounds werden geladen-->
         <a-asset-item id="treethree" src="Objekte/treethree.dae"></a-asset-item>
         <a-asset-item id="kapsel" src="Objekte/kapsel.dae"></a-asset-item>
         <a-asset-item id="bridge" src="Objekte/bridge.DAE"></a-asset-item>
@@ -31,7 +31,7 @@
     </a-assets>
 
 
-     <!-- Kamera/ Cursor-->
+     <!-- Kamera/ Cursor -- Startposition -->
     <a-entity id="kamera"
               position ="0 1.5 0"
               rotation ="0 0 0"
@@ -55,17 +55,17 @@
     </a-entity>
 
 
-    <!-- bridge -->
+    <!-- Brücke wird eingebunden -->
     <a-entity id="bridge" collada-model="#bridge" position="0 0.15 -11.5" scale="0.05 0.07 0.05"></a-entity>
 
-    <!-- beachhouse -->
+    <!-- Beachhouse wird eingebunden-->
     <a-entity id="beachhouse" collada-model="#beachhouse" position="0 0.15 -14.2" scale="5 4 4"></a-entity>
 
-    <!-- Bett -->
+    <!-- Bett wird eingebunden -->
     <a-entity id="bett" collada-model="#bett" position="0 0.1 -22.5" scale="0.7 0.6 0.5"></a-entity>
 
 
-    <!-- a-ocean -->
+    <!-- a-ocean Komponent -->
     <!--<a-ocean width="200" depth="200" density="40" opacity="1" position="0 -0.4 0"></a-ocean>
     <a-ocean color="aqua" depth="100" width="100"></a-ocean>
     <a-ocean
@@ -79,10 +79,10 @@
             speedVariance="0.2">
     </a-ocean>-->
 
-    <!-- Isand -->
+    <!-- Insel - Bild von Sand wird eingebunden  -->
     <a-circle src="#sand" height="20" width="20" scale="9 9 9" rotation="-90 0 0"></a-circle>
 
-     <!-- palmen -->
+     <!-- Palmen werden eingebunden-->
     <a-entity id="atree" collada-model="#treethree" position="3.6 0 -6" scale="0.4 0.4 0.4" rotation="0 30 0" ></a-entity>
     <a-entity id="btree" collada-model="#treethree" position="5.4 0 -6" scale="0.4 0.4 0.4" rotation="0 30 0"></a-entity>
     <a-entity id="ctree" collada-model="#treethree" position="8.3 0 -0.8" scale="0.4 0.4 0.4" rotation="0 30 0"></a-entity>
@@ -92,15 +92,15 @@
     <a-entity id="gtree" collada-model="#treethree" position="2.5 0 6"  scale="0.4 0.4 0.4" rotation="0 10 0"></a-entity>
 
 
-    <!-- Kapsel -->
+    <!-- Kapsel wird eingebunden-->
     <a-entity id="kapsel" collada-model="#kapsel" position="-1.6 0.8 0 2 0" rotation="180 180 0"></a-entity>
 
 
-    <!-- moai -->
+    <!-- Moai wird eingebunden-->
     <a-entity id="moai" collada-model="#moai" position="6.3 0.8 -2.1" rotation="0 300 0" scale="1.5 1.5 1.5"></a-entity>
 
 
-    <!-- sign -->
+    <!-- Wegweiser wird eingebunden -->
     <a-entity id="sign" collada-model="#sign" position="2.03 0 -1.9" rotation="0 -40 0" scale="0.05 0.05 0.05"></a-entity>
     
     <!-- Transparentes Bild fuer Animation zum Steg-->
@@ -110,13 +110,13 @@
     <a-image id="transzwei" collada-model="#trans" position="2.212 1.530 -1.469" scale="1 0.5 1" visible="false" event-animate="target:#kamera; aevent:moai"></a-image>
 
 
-    <!-- Flasche -->
+    <!-- Flasche wird eingebunden-->
     <a-entity id="flasche" collada-model="#flasche" position="-2.17 0.1 -6.67" scale="0.3 0.3 0.3" rotation="90 0 0"
                 event-animate="target:#letter; aevent: visletter">
     </a-entity>
 
 
-    <!-- letter -->
+    <!-- Brief für Flaschenpost wird eingebunden und animiert -->
     <a-entity id="letter" collada-model="#letter" position="-1.7 0.116 -6.54" rotation="180 -180 120" scale="0.6 0.4 0.4" visible="false">
         <a-animation
                 attribute="visible"
@@ -127,11 +127,11 @@
     </a-entity>
 
 
-    <!-- Sound -->
+    <!-- Sound wird eingebunden-->
     <a-entity sound="src:#waves; autoplay: true"></a-entity>
 
 
-    <!-- Skybox -->
+    <!-- Skybox wird eingebunden-->
     <a-sky src="#img-sky" position="0 -200 0"></a-sky>
 
 
