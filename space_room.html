@@ -9,7 +9,8 @@
 <body>
 
 <a-scene>
-
+    
+    <!--Alle Objekte, Bilder und Sounds werden geladen-->
     <a-assets>
         <a-asset-item id="roomspacestation" src="Objekte/roomspacestation.dae"></a-asset-item>
         <a-asset-item id="feuerloescher" src="Objekte/feuerloescher.dae"></a-asset-item>
@@ -20,7 +21,7 @@
     </a-assets>
 
 
-    <!-- skybox -->
+    <!-- Skybox wird eingebunden-->
     <a-sky color="white"></a-sky>
 
     <!-- Kamera -->
@@ -76,7 +77,7 @@
 
     </a-entity>
 
-    <!-- Exit -->
+    <!-- Bild für Szenenwechsel wird eingebunden-->
     <a-image src="#img-exit" position="-21.5 4.7 -0.14" rotation="0 90 0" scale="2 2 2" visible="true">
         <a-animation attribute="visible"
                      delay="300"
@@ -128,16 +129,16 @@
     </a-light>
 
 
-    <!-- Sound -->
+    <!-- Sound wird eingebunden -->
     <a-entity sound="src:#sirene; autoplay: true"></a-entity>
 
 
-    <!--Spacestation ROOM-->
+    <!--Spacestation ROOM wird eingebunden-->
     <a-entity collada-model="#roomspacestation"  position="0 0 0" rotation="0 0 0" scale="0.1 0.1 0.1">
     </a-entity>
 
 
-    <!--Feuerloescher-->
+    <!--Feuerloescher wird eingebunden und animiert-->
     <a-entity collada-model="#feuerloescher" position="16.5 3.6 1" rotation="10 90 -15" scale="0.2 0.2 0.2" >
         <a-animation attribute="position"
                      dur="2000"
@@ -154,7 +155,7 @@
          </a-animation> -->
     </a-entity>
 
-    <!--Flasche-->
+    <!--Flasche wird eingebunden und animiert-->
     <a-entity collada-model="#flasche" position="-15.187 3.686 -1.5" scale="0.2 0.2 0.2">
         <!-- Animation Flasche fliegt nach vorne-->
         <a-animation attribute="position"
@@ -173,7 +174,7 @@
     </a-entity>
 
 
-    <!--Bleistift-->
+    <!--Bleistift wird eingebunden und animiert-->
     <a-entity collada-model="#bleistift" position="-7 3.6 1" scale="0.2 0.2 0.2">
         <a-animation attribute="position"
                      dur="5000"
@@ -190,7 +191,7 @@
         </a-animation>
     </a-entity>
 
-    <!--Kugelschreiber
+    <!--Kugelschreiber wird eingebunden und animiert
     <a-assets>
         <a-asset-item id="kugelschreiber" src="kugelschreiber.dae"></a-asset-item>
     </a-assets>
@@ -198,7 +199,7 @@
     </a-entity>
     -->
 
-    <!-- Wegweiser Pfeile -->
+    <!-- Wegweiser Pfeile werden eingebunden und animiert -->
     <!-- Pfeil 1 -->
     <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="16.5 1.596 -0.08" rotation="270 90 0" material="color : red" event-animate="target:#kamera; aevent:cameraPos1">
         <a-animation attribute="material.color"
