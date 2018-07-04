@@ -19,6 +19,9 @@
         <a-asset-item id="bridge" src="objekte/bridge.dae"></a-asset-item>
         <a-asset-item id="beachhouse" src="objekte/beachhouse.dae"></a-asset-item>
         <a-asset-item id="bett" src="objekte/bett.dae"></a-asset-item>
+        <a-asset-item id="teppich" src="objekte/teppich.dae"></a-asset-item>
+        <a-asset-item id="stuhl" src="objekte/stuhl.dae"></a-asset-item>
+        <a-asset-item id="tisch" src="objekte/tisch.dae"></a-asset-item>
         <a-asset-item id="moai" src="objekte/moai.DAE"></a-asset-item>
         <a-asset-item id="sign" src="objekte/sign.DAE"></a-asset-item>
         <a-asset-item id="flasche" src="objekte/Flasche.dae"></a-asset-item>
@@ -62,7 +65,17 @@
     <a-entity id="beachhouse" collada-model="#beachhouse" position="0 0.15 -14.2" scale="5 4 4"></a-entity>
 
     <!-- Bett wird eingebunden -->
-    <a-entity id="bett" collada-model="#bett" position="0 0.1 -22.5" scale="0.7 0.6 0.5"></a-entity>
+    <a-entity id="bett" collada-model="#bett" position="0 1 -21.95" scale="0.7 0.6 0.5"></a-entity>
+
+    <!-- Teppich wird eingebunden -->
+    <a-entity id="teppich" collada-model="#teppich" position="0 0.14 -18.3" scale="4 6 6" rotation="0 90 0"></a-entity>
+
+    <!-- Stuhl wird eingebunden-->
+    <a-entity id="stuhl" collada-model="#stuhl" position="-1.88 0.56 -20" rotation="0 -90 0"></a-entity>
+
+    <!-- Tisch wird eingebunden-->
+    <a-entity id="tisch" collada-model="#tisch" position="-9.802 0.092 -4.054" scale="2 2 2"></a-entity>
+
 
 
     <!-- a-ocean Komponent -->
@@ -79,7 +92,7 @@
             speedVariance="0.2">
     </a-ocean>-->
 
-    <!-- Insel - Bild von Sand wird eingebunden  -->
+    <!-- Insel - Plane und Bild vom Sand wird eingebunden  -->
     <a-circle src="#sand" height="20" width="20" scale="9 9 9" rotation="-90 0 0"></a-circle>
 
      <!-- Palmen werden eingebunden-->
