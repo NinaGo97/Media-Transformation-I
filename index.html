@@ -15,17 +15,17 @@
 
     <a-assets>
     <!-- Alle Objekte, Bilder und Sounds werden geladen-->
-        <a-asset-item id="astronaut" src="objekte/astronautmitschnur2.dae"></a-asset-item>
+        <a-asset-item id="astronaut" src="objekte/astronaut.dae"></a-asset-item>
         <a-asset-item id="spacestation" src="objekte/spacestation.dae"></a-asset-item>
         <a-asset-item id="spaceship" src="objekte/spaceship.dae"></a-asset-item>
         <a-image id="img-interface" src="bilder/interface.png"></a-image>
-        <a-image id="img-milchstrasse" src="bilder/milchstrasse.jpg"></a-image>
+        <a-image id="img-milkyway" src="bilder/milkyway.jpg"></a-image>
         <a-image id="img-opendoor" src="bilder/open_door.png"></a-image>
         <a-image id="img-lensflare" src="bilder/lensflare.png"></a-image>
         <a-image id="img-exit" src="bilder/exit.png"></a-image>
-        <a-sphere id="img-welt" src="bilder/welt.jpg"></a-sphere>
+        <a-sphere id="img-earth" src="bilder/earth.jpg"></a-sphere>
         <a-sphere id="img-mars" src="bilder/mars.jpg"></a-sphere>
-        <a-sphere id="img-mond" src="bilder/mond.jpg"></a-sphere>
+        <a-sphere id="img-moon" src="bilder/moon.jpg"></a-sphere>
         <a-sphere id="img-venus" src="bilder/venus.jpg"></a-sphere>
         <a-sky id="sky" src="bilder/stars_sky.jpg"></a-sky>
         <audio id="start" src="sounds/start.mp3" preload="auto"></audio>
@@ -88,7 +88,7 @@
 
     <!-- Skybox wird eingebunden-->
     <a-sky src="#sky"></a-sky>
-    <a-image src="#img-milchstrasse" position="-2.1 10.9 -4.8" scale="30 30 30" rotation="90 0 0"></a-image>
+    <a-image src="#img-milkyway" position="-2.1 10.9 -4.8" scale="30 30 30" rotation="90 0 0"></a-image>
     <!-- Sternenschauer
     <a-entity id="rain" particle-system="preset: rain; color: white; particleCount: 5000" rotation="270 0 0"></a-entity>
     -->
@@ -103,7 +103,7 @@
     </a-image>
 
     <!-- Weltkugel wird eingebunden und animiert -->
-    <a-sphere src="#img-welt" radius="2" height="53" position="3.5 -1.123 -3.51" rotation="0 0 0">
+    <a-sphere src="#img-earth" radius="2" height="53" position="3.5 -1.123 -3.51" rotation="0 0 0">
         <!-- Rotation Planet-->
         <a-animation attribute="rotation"
                      dur="100000"
@@ -126,7 +126,7 @@
     </a-sphere>
 
     <!--Mond wird eingebunden und animiert-->
-    <a-sphere src="#img-mond" radius="2" height="53" position="-23.5 3.8 1.3" scale="2 2 2">
+    <a-sphere src="#img-moon" radius="2" height="53" position="-23.5 3.8 1.3" scale="2 2 2">
         <!-- Rotation Planet-->
         <a-animation attribute="rotation"
                      dur="50000"
