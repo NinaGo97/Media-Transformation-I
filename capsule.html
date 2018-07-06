@@ -19,7 +19,7 @@
         <a-asset-item id="chair" src="objekte/capsulechair.dae"></a-asset-item>
         <!-- Bilder im Cockpit-->
         <a-image id="img-warning" src="bilder/warning_signal_word.png"></a-image>
-        <a-image id="img-landing" src="bilder/landing.png"></a-image>
+        <!--<a-image id="img-landing" src="bilder/landing.png"></a-image>-->
         <a-image id="img-radio" src="bilder/radio.png"></a-image>
         <!--<a-image id="img-cockpit_screen_01" src="bilder/cockpit_screen_01.jpg"></a-image>-->
         <a-image id="img-ring" src="bilder/ring.png"></a-image>
@@ -47,7 +47,7 @@
         <a-animation attribute="position"
                      from="1.9 5.3 3.73"
                      to="1.9 5.3 1.2"
-                     delay="3000"
+                     delay="1000"
                      dur="3000">
         </a-animation>
 
@@ -116,33 +116,33 @@
 
     <!-- Bild für die Landung wird eingebunden--> 
     <!-- VIDEO ON CLICK? video="src: #vid-earth; on: click" -->
-    <a-image src="#img-landing" position="1.9 4.2 -4" rotation="-30 0 0" scale="0.8 0.6 0.8">
-        <!--<a-animation attribute="visible"
+    <!--<a-image src="#img-landing" position="1.9 4.2 -4" rotation="-30 0 0" scale="0.8 0.6 0.8">
+        <a-animation attribute="visible"
                      begin="300"
                      dur="800"
                      from="true"
                      to="false"
-                     repeat="indefinite">-->
+                     repeat="indefinite">
         </a-animation>
-    </a-image>
+    </a-image>-->
 
     <!-- Bild für Szenenwechsel wird eingebunden-->
-    <a-image src="#img-opendoor" position="1.8 5.6 -3.7" scale="1 0.8 1" visible="false">
+    <a-image src="#img-opendoor" position="1.9 4.2 -4" rotation="-30 0 0" scale="0.8 0.6 0.8" visible="false">
         <a-animation
                 attribute="visible"
                 from="false"
                 to="true"
-                delay="30000">
+                delay="52000">
         </a-animation>
     </a-image>
 
     <!-- Transbock OpenDoor zum Szenenwechsel-->
-    <a-image link="href: island.html" src="#img-opendoor" position="1.8 5.6 -3" scale="1 0.8 1" visible="false">
+    <a-image link="href: island.html" src="#img-opendoor" position="1.9 4.3 -3.2" scale="1 1 1" visible="false">
         <a-animation
                 attribute="visible"
                 from="false"
                 to="false"
-                delay="30000">
+                delay="52000">
         </a-animation>
     </a-image>
 
