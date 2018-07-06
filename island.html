@@ -15,6 +15,7 @@
     <a-assets>
     <!-- Alle Objekte, Bilder und Sounds werden geladen-->
         <a-asset-item id="treethree" src="objekte/treethree.dae"></a-asset-item>
+        <a-asset-item id="coconut" src="objekte/coconut.dae"></a-asset-item>
         <a-asset-item id="kapsel" src="objekte/kapsel.dae"></a-asset-item>
         <a-asset-item id="bridge" src="objekte/bridge.dae"></a-asset-item>
         <a-asset-item id="fish" src="objekte/fish.dae"></a-asset-item>
@@ -25,6 +26,7 @@
         <a-asset-item id="tisch" src="objekte/tisch.dae"></a-asset-item>
         <a-asset-item id="moai" src="objekte/moai.dae"></a-asset-item>
         <a-asset-item id="sign" src="objekte/sign.dae"></a-asset-item>
+        <a-asset-item id="sign02" src="objekte/sign02.dae"></a-asset-item>
         <a-asset-item id="flasche" src="objekte/Flasche.dae"></a-asset-item>
         <a-asset-item id="letter" src="objekte/letter.dae"></a-asset-item>
         <a-image id="img-sky" src="bilder/skyearth.png"></a-image>
@@ -44,7 +46,7 @@
         <a-animation
                 id="kamera"
                 attribute="position"
-                to="0 1.5 -4.8"
+                to="0 1.5 -3.4"
                 dur="8000"
                 begin="steg"
         ></a-animation>
@@ -63,7 +65,23 @@
     <a-entity id="bridge" collada-model="#bridge" position="0 0.15 -11.5" scale="0.05 0.07 0.05"></a-entity>
 
     <!-- Fisch wird eingebunden -->
-    <a-entity id="fish" collada-model="#fish" position="2.6 0.2 -11.5" scale="1 1 1"></a-entity>
+    <a-entity id="fish" collada-model="#fish" position="2.6 0.2 -11.5" scale="1 1 1" rotation="0 0 -90">
+        <a-animation
+                attribute="position"
+                dur="6000"
+                from="2.6 -3.0 -11.5"
+                to="2.6 1 -11.5"
+                direction="alternate"
+                repeat="indefinite">
+        </a-animation>
+        <a-animation
+                attribute="rotation"
+                dur="10000"
+                from="0 0 -90"
+                to="0 0 -270"
+                repeat="indefinite">
+        </a-animation>
+    </a-entity>
 
     <!-- Beachhouse wird eingebunden-->
     <a-entity id="beachhouse" collada-model="#beachhouse" position="0 0.15 -14.2" scale="5 4 4"></a-entity>
@@ -109,22 +127,36 @@
     <a-entity id="gtree" collada-model="#treethree" position="2.5 0 6"  scale="0.4 0.4 0.4" rotation="0 10 0"></a-entity>
 
 
+    <!-- Kokosnuss wird eingebunden -->
+    <a-entity id="coconut" collada-model="#coconut" position="2.6 2.2 -5.6" scale="0.8 0.8 0.8" event-animate="target:#coconut; aevent: cocofall">
+        <a-animation
+                attribute="position"
+                begin="cocofall"
+                dur="500"
+                from="2.6 2.2 -5.6"
+                to="2.6 0.12 -5.6">
+        </a-animation>
+    </a-entity>
+
+
     <!-- Kapsel wird eingebunden-->
     <a-entity id="kapsel" collada-model="#kapsel" position="-1.6 0.8 0 2 0" rotation="180 180 0"></a-entity>
 
 
     <!-- Moai wird eingebunden-->
-    <a-entity id="moai" collada-model="#moai" position="6.3 0.8 -2.1" rotation="0 300 0" scale="1.5 1.5 1.5"></a-entity>
+    <a-entity id="moai" collada-model="#moai" position="6.3 1.4 -2.1" rotation="0 300 0" scale="3 3 3"></a-entity>
 
 
-    <!-- Wegweiser wird eingebunden -->
+    <!-- Wegweiser zum Moai und zur Brücke wird eingebunden -->
     <a-entity id="sign" collada-model="#sign" position="2.03 0 -1.9" rotation="0 -40 0" scale="0.05 0.05 0.05"></a-entity>
-    
     <!-- Transparentes Bild fuer Animation zum Steg-->
     <a-image id="trans" collada-model="#trans" position="1.408 1.426 -1.956" scale="1 0.5 1" visible="false" event-animate="target:#kamera; aevent:steg"></a-image>
-
     <!-- Transparentes Bild fuer Animation zum Moai-->
     <a-image id="transzwei" collada-model="#trans" position="2.212 1.530 -1.469" scale="1 0.5 1" visible="false" event-animate="target:#kamera; aevent:moai"></a-image>
+
+
+    <!-- Wegweiser 2 zum Haus wird eingebunden -->
+    <a-entity id="sign02" collada-model="#sign02" position="1.7 0 -6.16" rotation="0 -40 0" scale="0.07 0.07 0.07"></a-entity>
 
 
     <!-- Flasche wird eingebunden-->
