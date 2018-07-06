@@ -64,7 +64,9 @@
 
 
         <!-- Kamerafahrt zur Raumstation -->
-        <a-animation begin="zumraumschiff"
+        <a-animation
+                     id="raumstation"
+                     begin="zumraumschiff"
                      attribute="position"
                      from="0 0 3"
                      to="-25.600 -1.480 -24.287"
@@ -177,7 +179,7 @@
 
     <!-- Animation zur Raumstation-->
 
-    <a-image src="#img-exit" position="-10.001 -0.328 -7.503" rotation="0 0 0" scale="0 0 0" visible="false" event-animate="target:#kamera; target2:#img_opendoor; target3:#bildrsweg; target4:#szwechsel; aevent:zumraumschiff" sound="src: #heartbeat; on: click">
+    <a-image src="#img-exit" position="-10.001 -0.328 -7.503" rotation="0 0 0" scale="0 0 0" visible="false" event-animate="target:#raumstation; target2:#opendoor; target3:#bildrsweg; target4:#szwechsel; aevent:zumraumschiff" sound="src: #heartbeat; on: click">
 
         <a-animation
                 id="bildrs"
@@ -200,7 +202,9 @@
 
     <!-- open door sign wird eingebunden und animiert-->
     <a-image src="#img-opendoor" id="img_opendoor"  position="-28.317 -0.941 -27.101" rotation="0 60 0" scale="0.8 0.8 0.8" visible="false">
-        <a-animation attribute="visible"
+        <a-animation
+                     id="opendoor"
+                     attribute="visible"
                      delay="300"
                      dur="800"
                      from="false"
