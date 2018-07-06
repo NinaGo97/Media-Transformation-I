@@ -44,10 +44,10 @@
         <a-cursor material="color: white"></a-cursor>
 
         <!-- Animation Kamera zum Stuhl -->
-        <a-animation begin="cameraPos1"
-                     attribute="position"
+        <a-animation attribute="position"
                      from="1.9 5.3 3.73"
                      to="1.9 5.3 1.2"
+                     delay="3000"
                      dur="3000">
         </a-animation>
 
@@ -66,9 +66,7 @@
 
 
     <!-- Stuhl wird eingebunden -->
-    <a-entity collada-model="#chair" position="2.065 4.351 1.694" scale="0.2 0.2 0.2"
-              event-animate="target:#kamera; aevent:cameraPos1">
-    </a-entity>
+    <a-entity collada-model="#chair" position="2.065 4.351 1.694" scale="0.2 0.2 0.2"></a-entity>
 
 
     <!-- Knopf mit Animation -->
