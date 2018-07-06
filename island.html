@@ -13,7 +13,7 @@
 <a-scene>
 
     <a-assets>
-    <!-- Alle Objekte, Bilder und Sounds werden geladen-->
+        <!-- Alle Objekte, Bilder und Sounds werden geladen-->
         <a-asset-item id="treethree" src="objekte/treethree.dae"></a-asset-item>
         <a-asset-item id="coconut" src="objekte/coconut.dae"></a-asset-item>
         <a-asset-item id="kapsel" src="objekte/kapsel.dae"></a-asset-item>
@@ -25,7 +25,9 @@
         <a-asset-item id="stuhl" src="objekte/stuhl.dae"></a-asset-item>
         <a-asset-item id="tisch" src="objekte/tisch.dae"></a-asset-item>
         <a-asset-item id="moai" src="objekte/moai.dae"></a-asset-item>
-        <a-asset-item id="sign" src="objekte/sign.dae"></a-asset-item>
+        <a-asset-item id="sign011" src="objekte/sign011.dae"></a-asset-item>
+        <a-asset-item id="sign012" src="objekte/sign012.dae"></a-asset-item>
+        <a-asset-item id="sign013" src="objekte/sign013.dae"></a-asset-item>
         <a-asset-item id="sign02" src="objekte/sign02.dae"></a-asset-item>
         <a-asset-item id="flasche" src="objekte/Flasche.dae"></a-asset-item>
         <a-asset-item id="letter" src="objekte/letter.dae"></a-asset-item>
@@ -37,7 +39,7 @@
     </a-assets>
 
 
-     <!-- Kamera/ Cursor -- Startposition -->
+    <!-- Kamera/ Cursor -- Startposition -->
     <a-entity id="kamera"
               position ="0 1.5 0"
               rotation ="0 0 0"
@@ -63,6 +65,22 @@
                 to="0.0 1.5 -16.7"
                 dur="11000"
                 begin="beachh"
+        ></a-animation>
+        <a-animation
+                id="kamera4"
+                attribute="position"
+                to="0.0 1.5 -22.7"
+                dur="8000"
+                begin="bettpos"
+        ></a-animation>
+        <a-animation
+                id="kamera5"
+                attribute="rotation"
+                from="0 0 0"
+                to="90 180 0"
+                delay="8000"
+                dur="8000"
+                begin="bettpos"
         ></a-animation>
 
     </a-entity>
@@ -94,7 +112,8 @@
     <a-entity id="beachhouse" collada-model="#beachhouse" position="0 0.15 -14.2" scale="5 4 4"></a-entity>
 
     <!-- Bett wird eingebunden -->
-    <a-entity id="bett" collada-model="#bett" position="0 1 -21.95" scale="0.7 0.6 0.5"></a-entity>
+    <a-entity id="bett" collada-model="#bett" position="0 1 -21.95" scale="0.7 0.6 0.5"
+              event-animate="target:#kamera4; target:#kamera5; aevent:bettpos"></a-entity>
 
     <!-- Teppich wird eingebunden -->
     <a-entity id="teppich" collada-model="#teppich" position="0 0.14 -18.3" scale="4 6 6" rotation="0 90 0"></a-entity>
@@ -108,7 +127,7 @@
     <!-- Insel - Plane und Bild vom Sand wird eingebunden  -->
     <a-circle src="#sand" height="20" width="20" scale="9 9 9" rotation="-90 0 0"></a-circle>
 
-     <!-- Palmen werden eingebunden-->
+    <!-- Palmen werden eingebunden-->
     <a-entity id="atree" collada-model="#treethree" position="3.6 0 -6" scale="0.4 0.4 0.4" rotation="0 30 0" ></a-entity>
     <a-entity id="btree" collada-model="#treethree" position="5.4 0 -6" scale="0.4 0.4 0.4" rotation="0 30 0"></a-entity>
     <a-entity id="ctree" collada-model="#treethree" position="8.3 0 -0.8" scale="0.4 0.4 0.4" rotation="0 30 0"></a-entity>
@@ -139,20 +158,18 @@
     <a-entity id="moai" collada-model="#moai" position="6.3 1.4 -2.1" rotation="0 300 0" scale="3 3 3"></a-entity>
 
 
-    <!-- Wegweiser zum Moai und zur Brücke wird eingebunden -->
-    <a-entity id="sign" collada-model="#sign" position="2.03 0 -1.9" rotation="0 -40 0" scale="0.05 0.05 0.05"></a-entity>
-    <!-- Transparentes Bild fuer Animation zum Steg-->
-    <a-image id="trans" collada-model="#trans" position="1.408 1.426 -1.956" scale="1 0.5 1" visible="false" event-animate="target:#kamera1; aevent:steg"></a-image>
-    <!-- Transparentes Bild fuer Animation zum Moai-->
-    <a-image id="transzwei" collada-model="#trans" position="2.212 1.530 -1.469" scale="1 0.5 1" visible="false" event-animate="target:#kamera2; aevent:moai"></a-image>
-
+    <!-- Wegweiser zum Moai und zur Brücke wird eingebunden und animiert-->
+    <a-entity id="sign011" collada-model="#sign011" position="2.2 1 -2.2" rotation="0 -40 0" scale="1 1 1"></a-entity>
+    <a-entity id="sign012" collada-model="#sign012" position="1.75 1.8 -2.4" rotation="0 -40 0" scale="1 1 1" event-animate="target:#kamera1; aevent:steg"></a-entity>
+    <a-entity id="sign013" collada-model="#sign013" position="2.37 1.5 -1.9" rotation="0 -40 0" scale="1 1 1" event-animate="target:#kamera2; aevent:moai"></a-entity>
+    
 
     <!-- Wegweiser 2 zum Haus wird eingebunden -->
-    <a-entity id="sign02" collada-model="#sign02" position="1.7 0 -6.16" rotation="0 -40 0" scale="0.07 0.07 0.07" event-animate="target:#kamera3; aevent:beachh"></a-entity>
-    
+    <a-entity id="sign02" collada-model="#sign02" position="1.7 1.8 -6.9" rotation="0 -40 0" scale="1.5 1.5 1.5" event-animate="target:#kamera3; aevent:beachh"></a-entity>
+
     <!-- Flasche wird eingebunden-->
     <a-entity id="flasche" collada-model="#flasche" position="-2.17 0.1 -6.67" scale="0.3 0.3 0.3" rotation="90 0 0"
-                event-animate="target:#post; aevent:visletter">
+              event-animate="target:#post; aevent:visletter">
     </a-entity>
 
 
