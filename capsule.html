@@ -13,25 +13,20 @@
 <a-scene>
 <!-- Alle Objekte, Bilder,Sounds und Videos werden geladen-->
     <a-assets>
-        <!--Kapsel Innenraum-->
         <a-asset-item id="capsuleinside" src="objekte/capsuleinside.dae"></a-asset-item>
-        <!--Stuhl -->
         <a-asset-item id="chair" src="objekte/capsulechair.dae"></a-asset-item>
-        <!-- Bilder im Cockpit-->
         <a-image id="img-warning" src="bilder/warning_signal_word.png"></a-image>
         <!--<a-image id="img-landing" src="bilder/landing.png"></a-image>-->
         <a-image id="img-radio" src="bilder/radio.png"></a-image>
-        <!--<a-image id="img-cockpit_screen_01" src="bilder/cockpit_screen_01.jpg"></a-image>-->
+        <a-image id="img-baby" src="bilder/baby.jpg"></a-image>
         <a-image id="img-ring" src="bilder/ring.png"></a-image>
         <a-image id="img-cockpit_screen_02" src="bilder/cockpit_screen_02.jpg"></a-image>
-        <!--Bild zum Szenenwechsel-->
         <a-image id="img-opendoor" src="bilder/opendoor.png"></a-image>
         <!--<a-image id="img-earth2" src="bilder/earth2.jpg"></a-image>-->
-        <!-- Video Landung-->
         <video id="vid-earth" src="video/erde.mp4" autoplay="true"></video>
-        <!--Sounds in der Kapsel-->
         <audio id="bombe" src="sounds/bombetimer.mp3" preload="auto"></audio>
         <audio id="funk" src="sounds/funkkontakt.mp3"></audio>
+        <audio id="missing" src="sounds/missing.mp3"></audio>
 
     </a-assets>
 
@@ -149,6 +144,11 @@
     <!-- Radiosound/ -Bild wird eingebunden-->
     <a-image src="#img-radio" position="-2.109 5.511 -3.682" rotation="0 45 0" scale="0.8 0.6 0.8"
              sound="src: #funk; on: click">
+    </a-image>
+
+    <!-- Baby Bild und Sound-->
+    <a-image src="#img-baby" position="-1 3.9 -3.3" rotation="-30 30 0" scale="0.6 0.6 0.6"
+             sound="src: #missing; on: click">
     </a-image>
 
     <!-- Bilder in der Kapsel werden eingebunden-->
