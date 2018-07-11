@@ -35,6 +35,7 @@
         <a-image id="sand" src="bilder/sand.jpg"></a-image>
         <a-image id="trans" src="bilder/transparent.png"></a-image>
         <audio id="waves" src="sounds/waves.mp3" preload="auto"></audio>
+        <audio id="moaisound" src="sounds/moaisound.mp3" preload="auto"></audio>
 
     </a-assets>
 
@@ -75,12 +76,11 @@
         ></a-animation>
         <a-animation
                 id="kamera5"
-                attribute="rotation"
-                from="0 0 0"
-                to="90 180 0"
-                delay="8000"
-                dur="8000"
-                begin="bettpos"
+                attribute="position"
+                from="0.0 1.5 -16.7"
+                to="-1.79 1.5 -18.27"
+                dur="5000"
+                begin="tischpos"
         ></a-animation>
 
     </a-entity>
@@ -113,16 +113,27 @@
 
     <!-- Bett wird eingebunden -->
     <a-entity id="bett" collada-model="#bett" position="0 1 -21.95" scale="0.7 0.6 0.5"
-              event-animate="target:#kamera4; target:#kamera5; aevent:bettpos"></a-entity>
+              event-animate="target:#kamera4; aevent:bettpos"></a-entity>
 
     <!-- Teppich wird eingebunden -->
     <a-entity id="teppich" collada-model="#teppich" position="0 0.14 -18.3" scale="4 6 6" rotation="0 90 0"></a-entity>
 
     <!-- Stuhl wird eingebunden-->
-    <a-entity id="stuhl" collada-model="#stuhl" position="-1.88 0.56 -20" rotation="0 -90 0"></a-entity>
+    <a-entity id="stuhl" collada-model="#stuhl" position="-1.88 0.56 -20" rotation="0 -90 0"
+              event-animate="target:#stuhlpos; aevent:stuhlmove">
+        <a-animation
+                id="stuhlpos"
+                attribute="position"
+                begin="stuhlmove"
+                dur="100"
+                from="-1.88 0.56 -20"
+                to="-2.6 0.56 -20">
+        </a-animation>
+    </a-entity>
 
     <!-- Tisch wird eingebunden-->
-    <a-entity id="tisch" collada-model="#tisch" position="-2.8 0.8 -20"></a-entity>
+    <a-entity id="tisch" collada-model="#tisch" position="-2.8 0.8 -20"
+              event-animate="target:#kamera5; aevent:tischpos"></a-entity>
 
     <!-- Insel - Plane und Bild vom Sand wird eingebunden  -->
     <a-circle src="#sand" height="20" width="20" scale="9 9 9" rotation="-90 0 0"></a-circle>
@@ -155,7 +166,8 @@
 
 
     <!-- Moai wird eingebunden-->
-    <a-entity id="moai" collada-model="#moai" position="6.3 1.4 -2.1" rotation="0 300 0" scale="3 3 3"></a-entity>
+    <a-entity id="moai" collada-model="#moai" position="6.3 1.4 -2.1" rotation="0 300 0" scale="3 3 3"
+              sound="src: #moaisound; on: click"></a-entity>
 
 
     <!-- Wegweiser zum Moai und zur Brücke wird eingebunden und animiert-->
