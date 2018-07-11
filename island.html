@@ -22,8 +22,10 @@
         <a-asset-item id="beachhouse" src="objekte/beachhouse.dae"></a-asset-item>
         <a-asset-item id="bett" src="objekte/bett.dae"></a-asset-item>
         <a-asset-item id="teppich" src="objekte/teppich.dae"></a-asset-item>
+        <a-asset-item id="cockroach" src="objekte/cockroach.dae"></a-asset-item>
         <a-asset-item id="stuhl" src="objekte/stuhl.dae"></a-asset-item>
         <a-asset-item id="tisch" src="objekte/tisch.dae"></a-asset-item>
+        <a-asset-item id="book" src="objekte/book.dae"></a-asset-item>
         <a-asset-item id="moai" src="objekte/moai.dae"></a-asset-item>
         <a-asset-item id="sign011" src="objekte/sign011.dae"></a-asset-item>
         <a-asset-item id="sign012" src="objekte/sign012.dae"></a-asset-item>
@@ -118,6 +120,20 @@
     <!-- Teppich wird eingebunden -->
     <a-entity id="teppich" collada-model="#teppich" position="0 0.14 -18.3" scale="4 6 6" rotation="0 90 0"></a-entity>
 
+    <!-- Kakerlake wird eingebunden -->
+    <a-entity id="cockroach" collada-model="#cockroach" position="0 0.3 -18.8" scale="0.015 0.015 0.015"
+              event-animate="target:#cockroachpos; aevent:cockroachmov">
+        <a-animation
+                id="cockroachpos"
+                begin="cockroachmov"
+                attribute="position"
+                dur="6000"
+                from="0 0.3 -18.8"
+                to="7.6 0.3 -18.8">
+        </a-animation>
+    </a-entity>
+
+
     <!-- Stuhl wird eingebunden-->
     <a-entity id="stuhl" collada-model="#stuhl" position="-1.88 0.56 -20" rotation="0 -90 0"
               event-animate="target:#stuhlpos; aevent:stuhlmove">
@@ -134,6 +150,27 @@
     <!-- Tisch wird eingebunden-->
     <a-entity id="tisch" collada-model="#tisch" position="-2.8 0.8 -20"
               event-animate="target:#kamera5; aevent:tischpos"></a-entity>
+
+    <!-- Buch wird eingebunden-->
+    <a-entity id="book" collada-model="#book" position="-3.1 1 -20" rotation="40 40 0"
+              event-animate="target:#bookrot; target:#bookpos; aevent:bookmove">
+        <a-animation
+                id="bookrot"
+                begin="bookmove"
+                attribute="rotation"
+                dur="4000"
+                from="40 40 0"
+                to="180 40 0">
+        </a-animation>
+        <a-animation
+                id="bookpos"
+                begin="bookmove"
+                attribute="position"
+                dur="4000"
+                from="-3.1 1 -20"
+                to="-3.1 0.9 -20">
+        </a-animation>
+    </a-entity>
 
     <!-- Insel - Plane und Bild vom Sand wird eingebunden  -->
     <a-circle src="#sand" height="20" width="20" scale="9 9 9" rotation="-90 0 0"></a-circle>
@@ -167,7 +204,7 @@
 
     <!-- Moai wird eingebunden-->
     <a-entity id="moai" collada-model="#moai" position="6.3 1.4 -2.1" rotation="0 300 0" scale="3 3 3"
-              sound="src: #moaisound; on: click"></a-entity>
+              sound="src:#moaisound; on: click"></a-entity>
 
 
     <!-- Wegweiser zum Moai und zur Brücke wird eingebunden und animiert-->
@@ -198,7 +235,7 @@
 
 
     <!-- Sound wird eingebunden-->
-    <a-sound src="#waves" autoplay="true" volume="0.1"></a-sound>
+    <a-sound src="#waves" autoplay="true" loop="true" volume="0.1"></a-sound>
 
 
     <!-- Skybox wird eingebunden-->
