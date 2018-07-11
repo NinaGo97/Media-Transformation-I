@@ -37,7 +37,12 @@
         <a-image id="sand" src="bilder/sand.jpg"></a-image>
         <a-image id="trans" src="bilder/transparent.png"></a-image>
         <audio id="waves" src="sounds/waves.mp3" preload="auto"></audio>
-        <audio id="moaisound" src="sounds/moaisound.mp3" preload="auto"></audio>
+        <audio id="moaisound" src="sounds/moaisound.mp3"></audio>
+        <audio id="bug" src="sounds/bug.mp3"></audio>
+        <audio id="blop" src="sounds/blop.mp3"></audio>
+        <audio id="bubble" src="sounds/bubble.mp3"></audio>
+        <audio id="chairmoving" src="sounds/chairmoving.mp3"></audio>
+        <audio id="sleep" src="sounds/sleep.mp3"></audio>
 
     </a-assets>
 
@@ -92,7 +97,8 @@
     <a-entity id="bridge" collada-model="#bridge" position="0 0.15 -11.5" scale="0.05 0.07 0.05"></a-entity>
 
     <!-- Fisch wird eingebunden -->
-    <a-entity id="fish" collada-model="#fish" position="2.6 0.2 -11.5" scale="1 1 1" rotation="0 0 -90">
+    <a-entity id="fish" collada-model="#fish" position="2.6 0.2 -11.5" scale="1 1 1" rotation="0 0 -90"
+              sound="src:#bubble; on: click">
         <a-animation
                 attribute="position"
                 dur="6000"
@@ -115,14 +121,14 @@
 
     <!-- Bett wird eingebunden -->
     <a-entity id="bett" collada-model="#bett" position="0 1 -21.95" scale="0.7 0.6 0.5"
-              event-animate="target:#kamera4; aevent:bettpos"></a-entity>
+              event-animate="target:#kamera4; aevent:bettpos" sound="src:#sleep; on: click"></a-entity>
 
     <!-- Teppich wird eingebunden -->
     <a-entity id="teppich" collada-model="#teppich" position="0 0.14 -18.3" scale="4 6 6" rotation="0 90 0"></a-entity>
 
     <!-- Kakerlake wird eingebunden -->
     <a-entity id="cockroach" collada-model="#cockroach" position="0 0.3 -18.8" scale="0.015 0.015 0.015"
-              event-animate="target:#cockroachpos; aevent:cockroachmov">
+              event-animate="target:#cockroachpos; aevent:cockroachmov" sound="src:#bug; on: click">
         <a-animation
                 id="cockroachpos"
                 begin="cockroachmov"
@@ -136,7 +142,7 @@
 
     <!-- Stuhl wird eingebunden-->
     <a-entity id="stuhl" collada-model="#stuhl" position="-1.88 0.56 -20" rotation="0 -90 0"
-              event-animate="target:#stuhlpos; aevent:stuhlmove">
+              event-animate="target:#stuhlpos; aevent:stuhlmove" sound="src:#chairmoving; on: click">
         <a-animation
                 id="stuhlpos"
                 attribute="position"
@@ -218,7 +224,7 @@
 
     <!-- Flasche wird eingebunden-->
     <a-entity id="flasche" collada-model="#flasche" position="-2.17 0.1 -6.67" scale="0.3 0.3 0.3" rotation="90 0 0"
-              event-animate="target:#post; aevent:visletter">
+              event-animate="target:#post; aevent:visletter" sound="src:#blop; on: click">
     </a-entity>
 
 
