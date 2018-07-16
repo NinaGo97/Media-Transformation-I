@@ -14,24 +14,24 @@
 
     <a-assets>
         <!-- Alle Objekte, Bilder und Sounds werden geladen-->
-        <a-asset-item id="treethree" src="objekte/treethree.dae"></a-asset-item>
+        <a-asset-item id="palm" src="objekte/treethree.dae"></a-asset-item>
         <a-asset-item id="coconut" src="objekte/coconut.dae"></a-asset-item>
-        <a-asset-item id="kapsel" src="objekte/kapsel.dae"></a-asset-item>
+        <a-asset-item id="capsule" src="objekte/capsule.dae"></a-asset-item>
         <a-asset-item id="bridge" src="objekte/bridge.dae"></a-asset-item>
         <a-asset-item id="fish" src="objekte/fish.dae"></a-asset-item>
         <a-asset-item id="beachhouse" src="objekte/beachhouse.dae"></a-asset-item>
-        <a-asset-item id="bett" src="objekte/bett.dae"></a-asset-item>
-        <a-asset-item id="teppich" src="objekte/teppich.dae"></a-asset-item>
+        <a-asset-item id="bed" src="objekte/bed.dae"></a-asset-item>
+        <a-asset-item id="carpet" src="objekte/carpet.dae"></a-asset-item>
         <a-asset-item id="cockroach" src="objekte/cockroach.dae"></a-asset-item>
-        <a-asset-item id="stuhl" src="objekte/stuhl.dae"></a-asset-item>
-        <a-asset-item id="tisch" src="objekte/tisch.dae"></a-asset-item>
+        <a-asset-item id="chair" src="objekte/chair.dae"></a-asset-item>
+        <a-asset-item id="table" src="objekte/table.dae"></a-asset-item>
         <a-asset-item id="book" src="objekte/book.dae"></a-asset-item>
         <a-asset-item id="moai" src="objekte/moai.dae"></a-asset-item>
         <a-asset-item id="sign011" src="objekte/sign011.dae"></a-asset-item>
         <a-asset-item id="sign012" src="objekte/sign012.dae"></a-asset-item>
         <a-asset-item id="sign013" src="objekte/sign013.dae"></a-asset-item>
         <a-asset-item id="sign02" src="objekte/sign02.dae"></a-asset-item>
-        <a-asset-item id="flasche" src="objekte/Flasche.dae"></a-asset-item>
+        <a-asset-item id="bottle" src="objekte/bottle.dae"></a-asset-item>
         <a-asset-item id="letter" src="objekte/letter.dae"></a-asset-item>
         <a-image id="img-sky" src="bilder/skyearth.png"></a-image>
         <a-image id="sand" src="bilder/sand.jpg"></a-image>
@@ -48,46 +48,46 @@
 
 
     <!-- Kamera/ Cursor -- Startposition -->
-    <a-entity id="kamera"
+    <a-entity id="camera"
               position ="0 1.5 0"
               rotation ="0 0 0"
               camera look-controls wasd-controls>
         <a-cursor material="color: white"></a-cursor>
         <a-animation
-                id="kamera1"
+                id="camera1"
                 attribute="position"
                 to="0 1.5 -3.4"
                 dur="8000"
                 begin="steg"
         ></a-animation>
         <a-animation
-                id="kamera2"
+                id="camera2"
                 attribute="position"
                 to="4.064 1.5 -1.160"
                 dur="8000"
                 begin="moai"
         ></a-animation>
         <a-animation
-                id="kamera3"
+                id="camera3"
                 attribute="position"
                 to="0.0 1.5 -16.7"
                 dur="11000"
                 begin="beachh"
         ></a-animation>
         <a-animation
-                id="kamera4"
+                id="camera4"
                 attribute="position"
                 to="0.0 1.5 -22.7"
                 dur="8000"
-                begin="bettpos"
+                begin="bedpos"
         ></a-animation>
         <a-animation
-                id="kamera5"
+                id="camera5"
                 attribute="position"
                 from="0.0 1.5 -16.7"
                 to="-1.79 1.5 -18.27"
                 dur="5000"
-                begin="tischpos"
+                begin="tablepos"
         ></a-animation>
 
     </a-entity>
@@ -120,11 +120,11 @@
     <a-entity id="beachhouse" collada-model="#beachhouse" position="0 0.15 -14.2" scale="5 4 4"></a-entity>
 
     <!-- Bett wird eingebunden -->
-    <a-entity id="bett" collada-model="#bett" position="0 1 -21.95" scale="0.7 0.6 0.5"
-              event-animate="target:#kamera4; aevent:bettpos" sound="src:#sleep; on: click"></a-entity>
+    <a-entity id="bed" collada-model="#bed" position="0 1 -21.95" scale="0.7 0.6 0.5"
+              event-animate="target:#camera4; aevent:bedpos" sound="src:#sleep; on: click"></a-entity>
 
     <!-- Teppich wird eingebunden -->
-    <a-entity id="teppich" collada-model="#teppich" position="0 0.14 -18.3" scale="4 6 6" rotation="0 90 0"></a-entity>
+    <a-entity id="carpet" collada-model="#carpet" position="0 0.14 -18.3" scale="4 6 6" rotation="0 90 0"></a-entity>
 
     <!-- Kakerlake wird eingebunden -->
     <a-entity id="cockroach" collada-model="#cockroach" position="0 0.3 -18.8" scale="0.015 0.015 0.015"
@@ -141,12 +141,12 @@
 
 
     <!-- Stuhl wird eingebunden-->
-    <a-entity id="stuhl" collada-model="#stuhl" position="-1.88 0.56 -20" rotation="0 -90 0"
-              event-animate="target:#stuhlpos; aevent:stuhlmove" sound="src:#chairmoving; on: click">
+    <a-entity id="chair" collada-model="#chair" position="-1.88 0.56 -20" rotation="0 -90 0"
+              event-animate="target:#chairpos; aevent:chairmove" sound="src:#chairmoving; on: click">
         <a-animation
-                id="stuhlpos"
+                id="chairpos"
                 attribute="position"
-                begin="stuhlmove"
+                begin="chairmove"
                 dur="100"
                 from="-1.88 0.56 -20"
                 to="-2.6 0.56 -20">
@@ -154,8 +154,8 @@
     </a-entity>
 
     <!-- Tisch wird eingebunden-->
-    <a-entity id="tisch" collada-model="#tisch" position="-2.8 0.8 -20"
-              event-animate="target:#kamera5; aevent:tischpos"></a-entity>
+    <a-entity id="table" collada-model="#table" position="-2.8 0.8 -20"
+              event-animate="target:#camera5; aevent:tablepos"></a-entity>
 
     <!-- Buch wird eingebunden-->
     <a-entity id="book" collada-model="#book" position="-3.1 1 -20" rotation="40 40 0"
@@ -182,13 +182,13 @@
     <a-circle src="#sand" height="20" width="20" scale="9 9 9" rotation="-90 0 0"></a-circle>
 
     <!-- Palmen werden eingebunden-->
-    <a-entity id="atree" collada-model="#treethree" position="3.6 0 -6" scale="0.4 0.4 0.4" rotation="0 30 0" ></a-entity>
-    <a-entity id="btree" collada-model="#treethree" position="5.4 0 -6" scale="0.4 0.4 0.4" rotation="0 30 0"></a-entity>
-    <a-entity id="ctree" collada-model="#treethree" position="8.3 0 -0.8" scale="0.4 0.4 0.4" rotation="0 30 0"></a-entity>
-    <a-entity id="dtree" collada-model="#treethree" position="-5.1 0 -5" scale="0.4 0.4 0.4" rotation="0 30 0"></a-entity>
-    <a-entity id="etree" collada-model="#treethree" position="0.7 0 7.2" scale="0.4 0.4 0.4" rotation="0 30 0"></a-entity>
-    <a-entity id="ftree" collada-model="#treethree" position="-0.7 0 6.8" scale="0.4 0.4 0.4" rotation="0 20 0"></a-entity>
-    <a-entity id="gtree" collada-model="#treethree" position="2.5 0 6"  scale="0.4 0.4 0.4" rotation="0 10 0"></a-entity>
+    <a-entity id="atree" collada-model="#palm" position="3.6 0 -6" scale="0.4 0.4 0.4" rotation="0 30 0" ></a-entity>
+    <a-entity id="btree" collada-model="#palm" position="5.4 0 -6" scale="0.4 0.4 0.4" rotation="0 30 0"></a-entity>
+    <a-entity id="ctree" collada-model="#palm" position="8.3 0 -0.8" scale="0.4 0.4 0.4" rotation="0 30 0"></a-entity>
+    <a-entity id="dtree" collada-model="#palm" position="-5.1 0 -5" scale="0.4 0.4 0.4" rotation="0 30 0"></a-entity>
+    <a-entity id="etree" collada-model="#palm" position="0.7 0 7.2" scale="0.4 0.4 0.4" rotation="0 30 0"></a-entity>
+    <a-entity id="ftree" collada-model="#palm" position="-0.7 0 6.8" scale="0.4 0.4 0.4" rotation="0 20 0"></a-entity>
+    <a-entity id="gtree" collada-model="#palm" position="2.5 0 6"  scale="0.4 0.4 0.4" rotation="0 10 0"></a-entity>
 
 
     <!-- Kokosnuss wird eingebunden -->
@@ -205,7 +205,7 @@
 
 
     <!-- Kapsel wird eingebunden-->
-    <a-entity id="kapsel" collada-model="#kapsel" position="-1.6 0.8 0 2 0" rotation="180 180 0"></a-entity>
+    <a-entity id="capsule" collada-model="#capsule" position="-1.6 0.8 0 2 0" rotation="180 180 0"></a-entity>
 
 
     <!-- Moai wird eingebunden-->
@@ -215,15 +215,15 @@
 
     <!-- Wegweiser zum Moai und zur Brücke wird eingebunden und animiert-->
     <a-entity id="sign011" collada-model="#sign011" position="2.2 1 -2.2" rotation="0 -40 0" scale="1 1 1"></a-entity>
-    <a-entity id="sign012" collada-model="#sign012" position="1.75 1.8 -2.4" rotation="0 -40 0" scale="1 1 1" event-animate="target:#kamera1; aevent:steg"></a-entity>
-    <a-entity id="sign013" collada-model="#sign013" position="2.37 1.5 -1.9" rotation="0 -40 0" scale="1 1 1" event-animate="target:#kamera2; aevent:moai"></a-entity>
+    <a-entity id="sign012" collada-model="#sign012" position="1.75 1.8 -2.4" rotation="0 -40 0" scale="1 1 1" event-animate="target:#camera1; aevent:steg"></a-entity>
+    <a-entity id="sign013" collada-model="#sign013" position="2.37 1.5 -1.9" rotation="0 -40 0" scale="1 1 1" event-animate="target:#camera2; aevent:moai"></a-entity>
     
 
     <!-- Wegweiser 2 zum Haus wird eingebunden -->
-    <a-entity id="sign02" collada-model="#sign02" position="1.7 1.8 -6.9" rotation="0 -40 0" scale="1.5 1.5 1.5" event-animate="target:#kamera3; aevent:beachh"></a-entity>
+    <a-entity id="sign02" collada-model="#sign02" position="1.7 1.8 -6.9" rotation="0 -40 0" scale="1.5 1.5 1.5" event-animate="target:#camera3; aevent:beachh"></a-entity>
 
     <!-- Flasche wird eingebunden-->
-    <a-entity id="flasche" collada-model="#flasche" position="-2.17 0.1 -6.67" scale="0.3 0.3 0.3" rotation="90 0 0"
+    <a-entity id="bottle" collada-model="#bottle" position="-2.17 0.1 -6.67" scale="0.3 0.3 0.3" rotation="90 0 0"
               event-animate="target:#post; aevent:visletter" sound="src:#blop; on: click">
     </a-entity>
 
