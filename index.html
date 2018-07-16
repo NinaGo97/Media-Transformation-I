@@ -21,6 +21,7 @@
         <a-image id="img-interface" src="pictures/interface.png"></a-image>
         <a-image id="img-milkyway" src="pictures/milkyway.jpg"></a-image>
         <a-image id="img-opendoor" src="pictures/open_door.png"></a-image>
+        <a-image id="img-trans" src="pictures/tranparent.png"></a-image>
         <a-image id="img-lensflare" src="pictures/lensflare.png"></a-image>
         <a-image id="img-exit" src="pictures/exit.png"></a-image>
         <a-sphere id="img-earth" src="pictures/earth.jpg"></a-sphere>
@@ -40,7 +41,7 @@
 
 
     <!-- Kamera/ Cursor -- Startposition-->
-    <a-entity id="kamera"
+    <a-entity id="camera"
               position ="0 0 3"
               rotation ="-20 0 0"
               camera look-controls wasd-controls>
@@ -57,10 +58,6 @@
                          repeat="indefinite">
             </a-animation>
         </a-image>
-        <!-- Sicht durch Helm -- Seitliche Ränder -->
-        <a-entity geometry="primitive: ring; radiusInner: 2.95; radiusOuter: 4"
-                  material="side: double; color: #1a1a1a" position="0 0 -2" >
-        </a-entity>
 
 
         <!-- Kamerafahrt zur Raumstation -->
@@ -81,6 +78,11 @@
                      dur="6000"
                      delay="3500">
         </a-animation>
+        <!-- Sicht durch Helm -- Seitliche Ränder -->
+        <a-entity geometry="primitive: ring; radiusInner: 2.95; radiusOuter: 4"
+                  material="side: double; color: #1a1a1a" position="0 0 -2" >
+        </a-entity>
+
 
 
     </a-entity>
@@ -151,7 +153,7 @@
 
     <!--Spaceship wird eingebunden und animiert-->
 
-    <a-entity collada-model="#spaceship"  position="-3.9685 -2.6 -1.5" rotation="-20 220 10" scale="1 1 1" sound="src: #suprise; on: click">
+    <a-entity id="spaceship" collada-model="#spaceship"  position="-3.9685 -2.6 -1.5" rotation="-20 220 10" scale="1 1 1" sound="src: #suprise; on: click">
         <!--Höhenänderung -- Schwerelosigkeit-->
         <a-animation attribute="position"
                      dur="4000"
@@ -164,7 +166,7 @@
 
 
     <!--Spacestation wird eingebunden und animiert-->
-    <a-entity collada-model="#spacestation"  position="-29.2 -2 -27.4" rotation="-7 160.9 18" scale="2 2 2">
+    <a-entity id="spacestation" collada-model="#spacestation"  position="-29.2 -2 -27.4" rotation="-7 160.9 18" scale="2 2 2">
         <!--Höhenänderung -- Schwerelosigkeit-->
         <a-animation attribute="position"
                      delay="1000"
@@ -174,19 +176,18 @@
                      direction="alternate"
                      repeat="indefinite"></a-animation>
     </a-entity>
-    <!-- link="href: space_room.html" in entity -->
 
 
     <!-- Animation zur Raumstation-->
 
-    <a-image src="#img-exit" position="-10.001 -0.328 -7.503" rotation="0 0 0" scale="0 0 0" visible="false" event-animate="target:#raumstation; target2:#opendoor; target3:#bildrsweg; target4:#szwechsel; aevent:zumraumschiff" sound="src: #heartbeat; on: click">
+    <a-image id="transspacestation" src="#img-trans" position="-10.001 -0.328 -7.503" rotation="0 20 0" scale="0 0 0" visible="false" event-animate="target:#raumstation; target2:#opendoor; target3:#bildrsweg; target4:#szwechsel; aevent:zumraumschiff" sound="src: #heartbeat; on: click">
 
         <a-animation
                 id="bildrs"
                 attribute="scale"
                 begin="astrowegnow"
                 dur="15000"
-                to="3 3 3">
+                to="3.5 3.5 3.5">
         </a-animation>
 
         <a-animation
@@ -234,6 +235,14 @@
     <a-entity id="astronaut" collada-model="#astronaut"  position="0.110 -2.148 -1.024" rotation="-20 10 0" scale="0.6 0.6 0.6" >
         
         <!--Astronaut fliegt weg-->
+        <a-animation
+                attribute="position"
+                from="0.110 -2.148 -1.024"
+                to="0.110 -1.9 -1.024"
+                direction="alternate"
+                repeat="indefinite"
+                dur="2100"
+        ></a-animation>
         <a-animation
                 begin="astrowegnow"
                 delay="3000"
