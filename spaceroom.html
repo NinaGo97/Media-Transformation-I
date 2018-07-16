@@ -13,9 +13,9 @@
     <!--Alle Objekte, Bilder und Sounds werden geladen-->
     <a-assets>
         <a-asset-item id="roomspacestation" src="objects/roomspacestation.dae"></a-asset-item>
-        <a-asset-item id="feuerloescher" src="objects/feuerloescher.dae"></a-asset-item>
-        <a-asset-item id="flasche" src="objects/flasche.dae"></a-asset-item>
-        <a-asset-item id="bleistift" src="objects/bleistift.dae"></a-asset-item>
+        <a-asset-item id="extinguisher" src="objects/extinguisher.dae"></a-asset-item>
+        <a-asset-item id="bottle" src="objects/bottle.dae"></a-asset-item>
+        <a-asset-item id="pencil" src="objects/pencil.dae"></a-asset-item>
         <a-image id="img-exit" src="pictures/exit.png"></a-image>
         <audio id="sirene" src="sounds/sirene_leave.mp3" preload="auto"></audio>
     </a-assets>
@@ -25,7 +25,7 @@
     <a-sky color="white"></a-sky>
 
     <!-- Kamera -->
-    <a-entity id="kamera"
+    <a-entity id="camera"
               position ="21.9 4 -0.116"
               rotation ="0 90 0"
               camera look-controls wasd-controls>
@@ -139,7 +139,7 @@
 
 
     <!--Feuerloescher wird eingebunden und animiert-->
-    <a-entity collada-model="#feuerloescher" position="16.5 3.6 1" rotation="10 90 -15" scale="0.2 0.2 0.2" >
+    <a-entity collada-model="#extinguisher" position="16.5 3.6 1" rotation="10 90 -15" scale="0.2 0.2 0.2" >
         <a-animation attribute="position"
                      dur="2000"
                      from="16.5 3.6 1"
@@ -156,7 +156,7 @@
     </a-entity>
 
     <!--Flasche wird eingebunden und animiert-->
-    <a-entity collada-model="#flasche" position="-15.187 3.686 -1.5" scale="0.2 0.2 0.2">
+    <a-entity collada-model="#bottle" position="-15.187 3.686 -1.5" scale="0.2 0.2 0.2">
         <!-- Animation Flasche fliegt nach vorne-->
         <a-animation attribute="position"
                      dur="6000"
@@ -175,7 +175,7 @@
 
 
     <!--Bleistift wird eingebunden und animiert-->
-    <a-entity collada-model="#bleistift" position="-7 3.6 1" scale="0.2 0.2 0.2">
+    <a-entity collada-model="#pencil" position="-7 3.6 1" scale="0.2 0.2 0.2">
         <a-animation attribute="position"
                      dur="5000"
                      from="-7 2.5 1"
