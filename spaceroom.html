@@ -26,7 +26,7 @@
 
     <!-- Kamera -->
     <a-entity id="camera"
-              position ="21.9 4 -0.116"
+              position ="-0.216 4 20.867"
               rotation ="0 90 0"
               camera look-controls wasd-controls>
         <a-cursor></a-cursor>
@@ -34,51 +34,44 @@
         <!-- Kamera Animation -->
         <a-animation begin="cameraPos1"
                      attribute="position"
-                     from="21.9 4 -0.116"
-                     to="17 4 -0.116"
+                     to="-0.216 4 15.381"
                      dur="10000">
         </a-animation>
         <a-animation begin="cameraPos2"
                      attribute="position"
-                     from="17 4 -0.116"
-                     to="12 4 -0.116"
+                     to="-0.216 4 9.194"
                      dur="10000">
         </a-animation>
         <a-animation begin="cameraPos3"
                      attribute="position"
-                     from="12 4 -0.116"
-                     to="7 4 -0.116"
+                     to="-0.216 4 3.847"
                      dur="10000">
         </a-animation>
         <a-animation begin="cameraPos4"
                      attribute="position"
-                     from="7 4 -0.116"
-                     to="2 4 -0.116"
+                     to="-0.216 4 -2.387"
                      dur="10000">
         </a-animation>
         <a-animation begin="cameraPos5"
                      attribute="position"
-                     from="2 4 -0.116"
-                     to="-3 4 -0.116"
+                     to="-0.216 4 -7.866"
                      dur="10000">
         </a-animation>
         <a-animation begin="cameraPos6"
                      attribute="position"
-                     from="-3 4 -0.116"
-                     to="-8 4 -0.116"
+                     to="-0.216 4 -12.827"
                      dur="10000">
         </a-animation>
         <a-animation begin="cameraPos7"
                      attribute="position"
-                     from="-8 4 -0.116"
-                     to="-13 4 -0.116"
+                     to="-0.216 4 -15.566"
                      dur="10000">
         </a-animation>
 
     </a-entity>
 
     <!-- Bild für Szenenwechsel wird eingebunden-->
-    <a-image src="#img-exit" position="-21.5 4.7 -0.14" rotation="0 90 0" scale="2 2 2" visible="true">
+    <a-image src="#img-exit" position="0.055 4.575 -21.626" rotation="0 0 0" scale="2 2 2" visible="true">
         <a-animation attribute="visible"
                      delay="300"
                      dur="800"
@@ -90,18 +83,18 @@
 
 
     <!-- Transblock für Szenenwechsel -->
-    <a-image src="#img-exit" link="href: capsule.html" position="-19 4.7 -0.14" rotation="0 90 0" scale="2 2 2" visible="false"></a-image>
+    <a-image src="#img-exittwo" link="href: capsule.html" position="0.055 4.575 -21.626" rotation="0 90 0" scale="2 0.2 0.2" visible="false"></a-image>
 
     <!-- Licht -->
     <!-- Licht hinten -->
     <a-light light="type: point; color: #fff; intensity: 0.5; penumbra: 0.10; angle: 60.00"
-             position="21.257 4.15 0.046"
+             position="-0.053 -11.883 -27.367"
              rotation="9.17 0.57 -2.86"
              decay=" 1.00"
              distance="0.00">
     </a-light>
     <a-light light="type: point; color: #fff; intensity: 0.5; penumbra: 0.10; angle: 60.00"
-             position="18.5 4.15 0.046"
+             position="-0.267 -6.556 0.046"
              rotation="9.17 0.57 -2.86"
              decay=" 1.00"
              distance="0.00">
@@ -109,7 +102,7 @@
 
     <!-- Licht vorne -->
     <a-light light="type: point; color: #fff; intensity: 0.5; penumbra: 0.10; angle: 60.00"
-             position="-27 4.15 0.046"
+             position="0.496 3.896 20.378"
              rotation="9.17 90 -2.86"
              decay=" 1.00"
              distance="0.00"
@@ -119,7 +112,7 @@
 
     <!-- rotes Alarmlicht -->
     <a-light light="type: point; color: red; intensity: 0.5; penumbra: 0.10; angle: 60.00"
-             position="15 7.5 0"
+             position="-0.580 3.919 -5.211"
              rotation="0 0 0"
              decay=" 1.00"
              distance="0.00"
@@ -134,16 +127,17 @@
 
 
     <!--Spacestation ROOM wird eingebunden-->
-    <a-entity collada-model="#roomspacestation"  position="0 0 0" rotation="0 0 0" scale="0.1 0.1 0.1">
+    <a-entity collada-model="#roomspacestation"  position="0 0 0" rotation="0 90 0" scale="0.1 0.1 0.1">
     </a-entity>
 
 
     <!--Feuerloescher wird eingebunden und animiert-->
-    <a-entity collada-model="#extinguisher" position="16.5 3.6 1" rotation="10 90 -15" scale="0.2 0.2 0.2" >
-        <a-animation attribute="position"
+    <a-entity id="extinguisher" collada-model="#extinguisher" position="-1.312 3.422 13.640" rotation="10 90 -15" scale="0.2 0.2 0.2" >
+       <a-animation
+                     attribute="position"
                      dur="2000"
-                     from="16.5 3.6 1"
-                     to="16.5 4.1 1"
+                     from="-1.312 3.422 13.640"
+                     to="-1.312 3.634 13.640"
                      direction="alternate"
                      repeat="indefinite">
         </a-animation>
@@ -156,39 +150,33 @@
     </a-entity>
 
     <!--Flasche wird eingebunden und animiert-->
-    <a-entity collada-model="#bottle" position="-15.187 3.686 -1.5" scale="0.2 0.2 0.2">
-        <!-- Animation Flasche fliegt nach vorne-->
+    <a-entity id="bottle" collada-model="#bottle" position="-1.725 2.997 -16.307" scale="0.2 0.2 0.2">
+        <!-- Animation Flasche fliegt nach vorne -->
         <a-animation attribute="position"
                      dur="6000"
-                     from="-15 3.686 -1.5"
-                     to="20 3.686 -1.5"
+                     from="-1.725 2.997 -16.307"
+                     to="-1.725 2.4 -16.307"
                      direction="alternate"
-                     repeat="indefinite">
-        </a-animation>
-        <a-animation attribute="rotation"
-                     dur="7000"
-                     fill="forwards"
-                     to="360 360 0"
                      repeat="indefinite">
         </a-animation>
     </a-entity>
 
 
     <!--Bleistift wird eingebunden und animiert-->
-    <a-entity collada-model="#pencil" position="-7 3.6 1" scale="0.2 0.2 0.2">
+    <a-entity id="pencil" collada-model="#pencil" position="1.241 3.282 -4.5" scale="0.2 0.2 0.2">
         <a-animation attribute="position"
                      dur="5000"
-                     from="-7 2.5 1"
-                     to="-7 5.5 1"
+                     from="1.241 3.282 -4.5"
+                     to="1.241 4 -4.5"
                      direction="alternate"
                      repeat="indefinite">
-        </a-animation>
+        </a-animation><!--
         <a-animation attribute="rotation"
                      dur="7000"
                      fill="forwards"
                      to="360 360 0"
                      repeat="indefinite">
-        </a-animation>
+        </a-animation>-->
     </a-entity>
 
     <!--Kugelschreiber wird eingebunden und animiert
@@ -201,7 +189,7 @@
 
     <!-- Wegweiser Pfeile werden eingebunden und animiert -->
     <!-- Pfeil 1 -->
-    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="16.5 1.596 -0.08" rotation="270 90 0" material="color : red" event-animate="target:#kamera; aevent:cameraPos1">
+    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="0.028 1.596 14.558" rotation="270 0 0" material="color : red" event-animate="target:#camera; aevent:cameraPos1">
         <a-animation attribute="material.color"
                      from="red"
                      to="white"
@@ -209,7 +197,7 @@
                      repeat="indefinite">
         </a-animation>
     </a-entity>
-    <a-entity geometry="primitive: plane; height: 0.5; width: 0.5" position="15.88 1.6 -0.08" rotation="270 90 45" scale="1.1 1.1 1.1" material="color: red">
+    <a-entity geometry="primitive: plane; height: 0.5; width: 0.5" position="0.028 1.596 14.083" rotation="270 90 45" scale="1.1 1.1 1.1" material="color: red">
         <a-animation attribute="material.color"
                      from="red"
                      to="white"
@@ -219,7 +207,7 @@
     </a-entity>
 
     <!-- Pfeil 2 -->
-    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="11.5 1.596 -0.08" rotation="270 90 0" material="color : red" event-animate="target:#kamera; aevent:cameraPos2">
+    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="0.028 1.596 8.769" rotation="270 0 0" material="color : red" event-animate="target:#camera; aevent:cameraPos2">
         <a-animation attribute="material.color"
                      from="red"
                      to="white"
@@ -227,7 +215,7 @@
                      repeat="indefinite">
         </a-animation>
     </a-entity>
-    <a-entity geometry="primitive: plane; height: 0.5; width: 0.5" position="10.88 1.6 -0.08" rotation="270 90 45" scale="1.1 1.1 1.1" material="color: red">
+    <a-entity geometry="primitive: plane; height: 0.5; width: 0.5" position="0.028 1.596 8.269" rotation="270 90 45" scale="1.1 1.1 1.1" material="color: red">
         <a-animation attribute="material.color"
                      from="red"
                      to="white"
@@ -237,7 +225,7 @@
     </a-entity>
 
     <!-- Pfeil 3 -->
-    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="6.5 1.596 -0.08" rotation="270 90 0" material="color : red" event-animate="target:#kamera; aevent:cameraPos3">
+    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="0.028 1.596 3.373" rotation="270 0 0" material="color : red" event-animate="target:#camera; aevent:cameraPos3">
         <a-animation attribute="material.color"
                      from="red"
                      to="white"
@@ -245,7 +233,7 @@
                      repeat="indefinite">
         </a-animation>
     </a-entity>
-    <a-entity geometry="primitive: plane; height: 0.5; width: 0.5" position="5.88 1.6 -0.08" rotation="270 90 45" scale="1.1 1.1 1.1" material="color: red">
+    <a-entity geometry="primitive: plane; height: 0.5; width: 0.5" position="0.028 1.596 2.873" rotation="270 90 45" scale="1.1 1.1 1.1" material="color: red">
         <a-animation attribute="material.color"
                      from="red"
                      to="white"
@@ -255,7 +243,7 @@
     </a-entity>
 
     <!-- Pfeil 4 -->
-    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="1.5 1.596 -0.08" rotation="270 90 0" material="color : red" event-animate="target:#kamera; aevent:cameraPos4">
+    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="0.028 1.596 -2.670" rotation="270 0 0" material="color : red" event-animate="target:#camera; aevent:cameraPos4">
         <a-animation attribute="material.color"
                      from="red"
                      to="white"
@@ -263,7 +251,7 @@
                      repeat="indefinite">
         </a-animation>
     </a-entity>
-    <a-entity geometry="primitive: plane; height: 0.5; width: 0.5" position="0.88 1.6 -0.08" rotation="270 90 45" scale="1.1 1.1 1.1" material="color: red">
+    <a-entity geometry="primitive: plane; height: 0.5; width: 0.5" position="0.028 1.596 -3.170" rotation="270 90 45" scale="1.1 1.1 1.1" material="color: red">
         <a-animation attribute="material.color"
                      from="red"
                      to="white"
@@ -273,7 +261,7 @@
     </a-entity>
 
     <!-- Pfeil 5 -->
-    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="-4.5 1.596 -0.08" rotation="270 90 0" material="color : red" event-animate="target:#kamera; aevent:cameraPos5">
+    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="0.028 1.596 -7.766" rotation="270 0 0" material="color : red" event-animate="target:#camera; aevent:cameraPos5">
         <a-animation attribute="material.color"
                      from="red"
                      to="white"
@@ -281,7 +269,7 @@
                      repeat="indefinite">
         </a-animation>
     </a-entity>
-    <a-entity geometry="primitive: plane; height: 0.5; width: 0.5" position="-5.1 1.6 -0.08" rotation="270 90 45" scale="1.1 1.1 1.1" material="color: red">
+    <a-entity geometry="primitive: plane; height: 0.5; width: 0.5" position="0.028 1.596 -8.266" rotation="270 90 45" scale="1.1 1.1 1.1" material="color: red">
         <a-animation attribute="material.color"
                      from="red"
                      to="white"
@@ -291,7 +279,7 @@
     </a-entity>
 
     <!-- Pfeil 6 -->
-    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="-9.5 1.596 -0.08" rotation="270 90 0" material="color : red" event-animate="target:#kamera; aevent:cameraPos6">
+    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="0.028 1.596 -16.467" rotation="270 0 0" material="color : red" event-animate="target:#camera; aevent:cameraPos6">
         <a-animation attribute="material.color"
                      from="red"
                      to="white"
@@ -299,7 +287,7 @@
                      repeat="indefinite">
         </a-animation>
     </a-entity>
-    <a-entity geometry="primitive: plane; height: 0.5; width: 0.5" position="-10.12 1.6 -0.08" rotation="270 90 45" scale="1.1 1.1 1.1" material="color: red">
+    <a-entity geometry="primitive: plane; height: 0.5; width: 0.5" position="0.028 1.596 -16.967" rotation="270 90 45" scale="1.1 1.1 1.1" material="color: red">
         <a-animation attribute="material.color"
                      from="red"
                      to="white"
@@ -309,7 +297,7 @@
     </a-entity>
 
     <!-- Pfeil 7 -->
-    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="-14.5 1.596 -0.08" rotation="270 90 0" material="color : red" event-animate="target:#kamera; aevent:cameraPos7">
+    <a-entity geometry="primitive: plane; height: 1; width: 0.5" position="0.028 1.596 -12.753" rotation="270 0 0" material="color : red" event-animate="target:#camera; aevent:cameraPos7">
         <a-animation attribute="material.color"
                      from="red"
                      to="white"
@@ -317,7 +305,7 @@
                      repeat="indefinite">
         </a-animation>
     </a-entity>
-    <a-entity geometry="primitive: plane; height: 0.5; width: 0.5" position="-15.12 1.6 -0.08" rotation="270 90 45" scale="1.1 1.1 1.1" material="color: red">
+    <a-entity geometry="primitive: plane; height: 0.5; width: 0.5" position="0.028 1.596 -13.253" rotation="270 90 45" scale="1.1 1.1 1.1" material="color: red">
         <a-animation attribute="material.color"
                      from="red"
                      to="white"
