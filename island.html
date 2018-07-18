@@ -43,6 +43,7 @@
         <audio id="bubble" src="sounds/bubble.mp3"></audio>
         <audio id="chairmoving" src="sounds/chairmoving.mp3"></audio>
         <audio id="sleep" src="sounds/sleep.mp3"></audio>
+        <audio id="seebook" src="sounds/seebook.mp3"></audio>
 
     </a-assets>
 
@@ -166,7 +167,8 @@
 
     <!-- Buch wird eingebunden-->
     <a-entity id="book" collada-model="#book" position="-3.1 1 -20" rotation="40 40 0"
-              event-animate="target:#bookrot; target:#bookpos; aevent:bookmove">
+              event-animate="target:#bookrot; target:#bookpos; aevent:bookmove"
+              sound="src:#seebook; on: click">
         <a-animation
                 id="bookrot"
                 begin="bookmove"
