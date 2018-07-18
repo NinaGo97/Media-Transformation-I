@@ -50,7 +50,7 @@
 
 
     <!-- Sound wird eingebunden-->
-    <a-entity sound="src:#bombe; autoplay: true"></a-entity>
+    <a-entity sound="src:#bombe; autoplay: true" loop="true"></a-entity>
 
     <!-- Skybox wird eingebunden-->
     <a-sky color="black"></a-sky>
@@ -122,17 +122,17 @@
     </a-image>-->
 
     <!-- Bild für Szenenwechsel wird eingebunden-->
-    <a-image src="#img-opendoor" position="1.9 4.2 -4" rotation="-30 0 0" scale="0.8 0.6 0.8" visible="false">
+    <a-image src="#img-opendoor" position="1.9 4.2 -4" rotation="-30 0 0" scale="1 0.8 1" visible="false">
         <a-animation
                 attribute="visible"
                 from="false"
                 to="true"
-                delay="52000">
+                delay="50000">
         </a-animation>
     </a-image>
 
     <!-- Transbock OpenDoor zum Szenenwechsel-->
-    <a-image link="href: island.html" src="#img-opendoor" position="1.9 4.3 -3.2" scale="1 1 1" visible="false">
+    <a-image link="href: island.html" src="#img-opendoor" position="1.9 4.3 -3.2" scale="0.4 0.4 0.4" visible="false">
         <a-animation
                 attribute="visible"
                 from="false"
