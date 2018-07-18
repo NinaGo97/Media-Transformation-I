@@ -20,6 +20,7 @@
         <a-asset-item id="spaceship" src="objects/spaceship.dae"></a-asset-item>
         <a-image id="img-interface" src="pictures/interface.png"></a-image>
         <a-image id="img-milkyway" src="pictures/milkyway.jpg"></a-image>
+        <a-image id="img-meteorite" src="pictures/meteorite.jpg"></a-image>
         <a-image id="img-opendoor" src="pictures/open_door.png"></a-image>
         <a-image id="img-trans" src="pictures/tranparent.png"></a-image>
         <a-image id="img-lensflare" src="pictures/lensflare.png"></a-image>
@@ -225,11 +226,18 @@
                 dur="4000"
                 id="szwechsel">
         </a-animation>
-
     </a-image>
 
 
-
+    <!-- Meteorit -->
+    <a-sphere src="#img-meteorite" radius="0.2" height="0.2" position="0 9.3 0.7" scale="2.5 2.5 2.5">
+        <a-animation
+                attribute="position"
+                to="0 -16 0"
+                delay="26500"
+                dur="13000">
+        </a-animation>
+    </a-sphere>
 
     <!--Astronaut wird eingebunden und animiert-->
     <a-entity id="astronaut" collada-model="#astronaut"  position="0.110 -2.148 -1.024" rotation="-20 10 0" scale="0.6 0.6 0.6" >
