@@ -26,46 +26,46 @@
 
     <!-- Kamera -->
     <a-entity id="camera"
-              position ="-0.216 4 20.867"
-              rotation ="0 90 0"
+              position ="0 4 20.867"
+              rotation ="0 0 0"
               camera look-controls wasd-controls>
         <a-cursor></a-cursor>
 
         <!-- Kamera Animation -->
         <a-animation begin="cameraPos1"
                      attribute="position"
-                     to="-0.216 4 15.381"
-                     dur="10000">
+                     to="0 4 15.381"
+                     dur="8000">
         </a-animation>
         <a-animation begin="cameraPos2"
                      attribute="position"
-                     to="-0.216 4 9.194"
-                     dur="10000">
+                     to="0 4 9.194"
+                     dur="8000">
         </a-animation>
         <a-animation begin="cameraPos3"
                      attribute="position"
-                     to="-0.216 4 3.847"
-                     dur="10000">
+                     to="0 4 3.847"
+                     dur="8000">
         </a-animation>
         <a-animation begin="cameraPos4"
                      attribute="position"
-                     to="-0.216 4 -2.387"
-                     dur="10000">
+                     to="0 4 -2.387"
+                     dur="8000">
         </a-animation>
         <a-animation begin="cameraPos5"
                      attribute="position"
-                     to="-0.216 4 -7.866"
-                     dur="10000">
+                     to="0 4 -7.866"
+                     dur="8000">
         </a-animation>
         <a-animation begin="cameraPos6"
                      attribute="position"
-                     to="-0.216 4 -12.827"
-                     dur="10000">
+                     to="0 4 -12.827"
+                     dur="8000">
         </a-animation>
         <a-animation begin="cameraPos7"
                      attribute="position"
-                     to="-0.216 4 -15.566"
-                     dur="10000">
+                     to="0 4 -15.566"
+                     dur="8000">
         </a-animation>
 
     </a-entity>
@@ -83,18 +83,18 @@
 
 
     <!-- Transblock für Szenenwechsel -->
-    <a-image src="#img-exittwo" link="href: capsule.html" position="0.055 4.575 -21.626" rotation="0 90 0" scale="2 0.2 0.2" visible="false"></a-image>
+    <a-image src="#img-exit" link="href: capsule.html" position="0.055 4.575 -21" rotation="0 0 0" scale="0.6 0.6 0.6" visible="false"></a-image>
 
     <!-- Licht -->
     <!-- Licht hinten -->
     <a-light light="type: point; color: #fff; intensity: 0.5; penumbra: 0.10; angle: 60.00"
-             position="-0.053 -11.883 -27.367"
+             position="-0.053 7.5 12.3"
              rotation="9.17 0.57 -2.86"
              decay=" 1.00"
              distance="0.00">
     </a-light>
     <a-light light="type: point; color: #fff; intensity: 0.5; penumbra: 0.10; angle: 60.00"
-             position="-0.267 -6.556 0.046"
+             position="-0.3 5 14.1"
              rotation="9.17 0.57 -2.86"
              decay=" 1.00"
              distance="0.00">
@@ -102,7 +102,7 @@
 
     <!-- Licht vorne -->
     <a-light light="type: point; color: #fff; intensity: 0.5; penumbra: 0.10; angle: 60.00"
-             position="0.496 3.896 20.378"
+             position="0.5 3.9 -24.7"
              rotation="9.17 90 -2.86"
              decay=" 1.00"
              distance="0.00"
@@ -112,7 +112,7 @@
 
     <!-- rotes Alarmlicht -->
     <a-light light="type: point; color: red; intensity: 0.5; penumbra: 0.10; angle: 60.00"
-             position="-0.580 3.919 -5.211"
+             position="-0.6 4 21"
              rotation="0 0 0"
              decay=" 1.00"
              distance="0.00"
@@ -319,4 +319,3 @@
 
 </body>
 </html>
- 
