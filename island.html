@@ -70,7 +70,7 @@
         <a-animation
                 id="camera3"
                 attribute="position"
-                to="0.0 1.5 -16.7"
+                to="0 1.5 -16.7"
                 dur="11000"
                 begin="beachh"
         ></a-animation>
@@ -88,6 +88,13 @@
                 to="-1.79 1.5 -18.27"
                 dur="5000"
                 begin="tablepos"
+        ></a-animation>
+        <a-animation
+                id="camera6"
+                attribute="position"
+                to="0 1.5 0"
+                dur="5000"
+                begin="startpos"
         ></a-animation>
 
     </a-entity>
@@ -205,7 +212,8 @@
 
 
     <!-- Kapsel wird eingebunden-->
-    <a-entity id="capsule" collada-model="#capsule" position="-1.6 0.8 0 2 0" rotation="180 180 0"></a-entity>
+    <a-entity id="capsule" collada-model="#capsule" position="-1.6 0.8 0 2 0" rotation="180 180 0"
+              event-animate="target:#camera6; aevent:startpos"></a-entity>
 
 
     <!-- Moai wird eingebunden-->
