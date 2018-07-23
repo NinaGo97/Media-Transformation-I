@@ -10,17 +10,23 @@ Wir haben den Film Gravity als VR Erfahrung transformiert. Ziel ist die Erschaff
   - 1.3 Easter-Egg: Durch anklicken des Spaceships wird ein Sound ausgelöst
   - 1.4 Durch klicken auf die Spacestation wird eine Kamerafahrt zu dieser ausgelöst. - unterstützt von Sound 
   - 1.5 Durch klicken auf das Bild "Open Door" wird der Szenenwechsel eingeleitet.
+  
+  ![Alt text](screenshots/space.jpg?raw=true "space")
    
 # 2. Szene: Raumstation Maschinenraum
   - 2.1 Sirnen Sound und Anweisung sich mit Hilfe der Pfeile durch den Raum zu bewegen. 
   - 2.2 Durch anklicken der Pfeile gelangt man Stück für Stück durch die Schleuse - es ist auch möglich Pfeile zu überspringen 
   - 2.3 Durch anklicken des Bildes "Exit" wird der Szenenwechsel eingeleitet
   
+  ![Alt text](screenshots/spacestation.jpg?raw=true "spacestation")
+  
 # 3. Szene: Landungskapsel
   - 3.1 Man setzt sich auf den Stuhl, während ein Video zur Landung abgespielt wird
   - 3.2 Das Bild des Babys, Radio Contact und die leuchtenden Knöpfe lösen durch Klick Animationen aus
   - 3.3 Nach Ende des Videos/ der Landung erscheint ein "Open Door" Bild
   - 3.4 Szenenwechsel durch Anklicken des Bildes
+  
+  ![Alt text](screenshots/capsule.jpg?raw=true "capsule")
 
 # 4. Szene: Insel
   - 4.1 Angekommen auf der Insel, kann diese erkundet werden.
@@ -31,6 +37,8 @@ Wir haben den Film Gravity als VR Erfahrung transformiert. Ziel ist die Erschaff
   - 4.3.1 Angekommen im Strandhaus: Interaktionen mit Kakerlake, Buch und Stuhl
   - 4.3.1.1 Kamerafahrten bei Klick auf Tisch und Bett
   - 4.4 Angekommen im Bett: Ende
+  
+  ![Alt text](screenshots/island.jpg?raw=true "island")
 
 # Technologien
 - A-Frame: HTML und JavaScript
