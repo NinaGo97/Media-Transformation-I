@@ -18,7 +18,7 @@ Wir haben den Film Gravity als VR Erfahrung transformiert. Ziel ist die Erschaff
   - 2.2 Durch anklicken der Pfeile gelangt man Stück für Stück durch die Schleuse - es ist auch möglich Pfeile zu überspringen 
   - 2.3 Durch anklicken des Bildes "Exit" wird der Szenenwechsel eingeleitet
   
-  ![Alt text](screenshots/spacestation.jpg?raw=true "spacestation")
+  ![Alt text](screenshots/spaceship.jpg?raw=true "spacestation")
   
 # 3. Szene: Landungskapsel
   - 3.1 Man setzt sich auf den Stuhl, während ein Video zur Landung abgespielt wird
