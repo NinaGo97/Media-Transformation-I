@@ -41,5 +41,5 @@ Wir haben den Film Gravity als VR Erfahrung transformiert. Ziel ist die Erschaff
   ![Alt text](screenshots/island.jpg?raw=true "island")
 
 # Technologien
-- A-Frame: HTML und JavaScript
-- Blender, Sketch Up und 3DS Max
+- Web-VR Framework: A-Frame --> HTML und JavaScript
+- Modellierung: Blender, Sketch Up und 3DS Max
