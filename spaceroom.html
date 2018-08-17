@@ -16,6 +16,7 @@
         <a-asset-item id="extinguisher" src="objects/extinguisher.dae"></a-asset-item>
         <a-asset-item id="bottle" src="objects/bottle.dae"></a-asset-item>
         <a-asset-item id="pencil" src="objects/pencil.dae"></a-asset-item>
+        <a-asset-item id="toy" src="objects/spaceshiptoy.dae"></a-asset-item>
         <a-image id="img-exit" src="pictures/exit.png"></a-image>
         <audio id="sirene" src="sounds/sirene_leave.mp3" preload="auto"></audio>
         <audio id="extinguisher_sound" src="sounds/extinguishing.mp3"></audio>
@@ -181,6 +182,26 @@
                      repeat="indefinite">
         </a-animation>-->
     </a-entity>
+
+    <!--Spielzeug wird eingebunden und animiert-->
+    <a-entity id="toy" collada-model="#toy" position="1.186 3.312 6.635" scale="0.3 0.3 0.3" rotation="-20 160 30" event-animate="target:#toyroll; aevent:toyturn">
+        <a-animation attribute="position"
+                     dur="5000"
+                     from="1.186 3.312 6.635"
+                     to="1.4 3.1 6.635"
+                     direction="alternate"
+                     repeat="indefinite">
+        </a-animation>
+        <a-animation
+                id="toyroll"
+                    attribute="rotation"
+                    begin="toyturn"
+                    dur="4000"
+                    to="-20 520 30"
+
+        ></a-animation>
+    </a-entity>
+
 
     <!--Kugelschreiber wird eingebunden und animiert
     <a-assets>
