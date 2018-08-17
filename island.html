@@ -136,7 +136,7 @@
 
     <!-- Kakerlake wird eingebunden -->
     <a-entity id="cockroach" collada-model="#cockroach" position="0 0.3 -18.8" scale="0.015 0.015 0.015"
-              event-animate="target:#cockroachpos; aevent:cockroachmov" sound="src:#bug; on: click">
+              event-animate="target:#cockroachpos; target2:#cockroachvis; aevent:cockroachmov" sound="src:#bug; on: click">
         <a-animation
                 id="cockroachpos"
                 begin="cockroachmov"
@@ -145,6 +145,13 @@
                 from="0 0.3 -18.8"
                 to="7.6 0.3 -18.8">
         </a-animation>
+        <a-animation
+                id="cockroachvis"
+                begin="cockroachmov"
+                attribute="visible"
+                to="false"
+                delay="2900"
+            ></a-animation>
     </a-entity>
 
 
@@ -156,7 +163,6 @@
                 attribute="position"
                 begin="chairmove"
                 dur="100"
-                from="-1.88 0.56 -20"
                 to="-2.6 0.56 -20">
         </a-animation>
     </a-entity>
@@ -174,7 +180,6 @@
                 begin="bookmove"
                 attribute="rotation"
                 dur="4000"
-                from="40 40 0"
                 to="180 40 0">
         </a-animation>
         <a-animation
@@ -182,7 +187,6 @@
                 begin="bookmove"
                 attribute="position"
                 dur="4000"
-                from="-3.1 1 -20"
                 to="-3.1 0.9 -20">
         </a-animation>
     </a-entity>
@@ -207,7 +211,6 @@
                 attribute="position"
                 begin="cocofall"
                 dur="100"
-                from="2.6 2.2 -5.6"
                 to="2.6 0.12 -5.6">
         </a-animation>
     </a-entity>
