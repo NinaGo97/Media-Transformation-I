@@ -36,7 +36,7 @@ Wir haben den Film Gravity als VR Erfahrung transformiert. Ziel ist die Erschaff
   - 4.3 Klick auf Wegweiser "Beachhouse": Kamerafahrt in das Strandhaus
   - 4.3.1 Angekommen im Strandhaus: Interaktionen mit Kakerlake, Buch und Stuhl
   - 4.3.1.1 Kamerafahrten bei Klick auf Tisch und Bett
-  - 4.4 Angekommen im Bett: Ende
+  - 4.4 Angekommen im Bett: Klick auf den roten Kreis, um zum Abspann zu gelangen
   
   ![Alt text](screenshots/island.jpg?raw=true "island")
   
