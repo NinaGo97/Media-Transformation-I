@@ -40,7 +40,10 @@ Wir haben den Film Gravity als VR Erfahrung transformiert. Ziel ist die Erschaff
   
   ![Alt text](screenshots/island.jpg?raw=true "island")
   
-# 5. Szene: Abspann 
+# 5. Szene: Abspann
+  - 5.1 Abspann Text mit Namen
+  
+  ![Alt text](screenshots/credits.jpg?raw=true "credits")
 
 # Technologien
 - Web-VR Framework: A-Frame --> HTML und JavaScript
