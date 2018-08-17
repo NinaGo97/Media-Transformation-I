@@ -44,6 +44,7 @@
         <audio id="chairmoving" src="sounds/chairmoving.mp3"></audio>
         <audio id="sleep" src="sounds/sleep.mp3"></audio>
         <audio id="seebook" src="sounds/seebook.mp3"></audio>
+        <audio id="explosion" src="sounds/explosion.mp3"></audio>
 
     </a-assets>
 
@@ -205,7 +206,7 @@
 
 
     <!-- Kokosnuss wird eingebunden -->
-    <a-entity id="coconut" collada-model="#coconut" position="2.6 2.2 -5.6" scale="0.8 0.8 0.8" event-animate="target:#coco; aevent:cocofall">
+    <a-entity id="coconut" collada-model="#coconut" position="2.6 2.2 -5.6" scale="0.8 0.8 0.8" event-animate="target:#coco; aevent:cocofall" sound="src:#explosion; on: click">
         <a-animation
                 id="coco"
                 attribute="position"
