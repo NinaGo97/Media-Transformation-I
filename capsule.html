@@ -11,7 +11,7 @@
 
 
 <a-scene>
-<!-- Alle Objekte, Bilder,Sounds und Videos werden geladen-->
+    <!-- Alle Objekte, Bilder,Sounds und Videos werden geladen-->
     <a-assets>
         <a-asset-item id="capsuleinside" src="objects/capsuleinside.dae"></a-asset-item>
         <a-asset-item id="chair" src="objects/capsulechair.dae"></a-asset-item>
@@ -75,7 +75,7 @@
                      repeat="indefinite">
         </a-animation>
     </a-box>
-    
+
     <!-- Knopf mit Animation -->
     <a-box id="bbutton" position="3.07 3.513 -2.968" material="color: blue" depth="1" height="1" width="1" scale="0.2 0.2 0.2" sound="src: #starwars; on: click">
         <!--Farbwechsel/Blinken-->
@@ -86,7 +86,7 @@
                      repeat="indefinite">
         </a-animation>
     </a-box>
-    
+
     <!-- Knopf mit Animation -->
     <a-box id="cbutton" position="2.285 7.188 -4.121" rotation="30 0 0" material="color: yellow" depth="1" height="1" width="1" scale="0.2 0.2 0.2">
         <!--Farbwechsel/Blinken-->
@@ -110,7 +110,7 @@
         </a-animation>
     </a-image>
 
-    <!-- Bild für die Landung wird eingebunden--> 
+    <!-- Bild für die Landung wird eingebunden-->
     <!-- VIDEO ON CLICK? video="src: #vid-earth; on: click" -->
     <!--<a-image src="#img-landing" position="1.9 4.2 -4" rotation="-30 0 0" scale="0.8 0.6 0.8">
         <a-animation attribute="visible"
@@ -153,7 +153,16 @@
     </a-image>
 
     <!-- Bilder in der Kapsel werden eingebunden-->
-    <a-image id="img_ring" src="#img-ring" position="-3 5.54 -2.77" rotation="0 45 0" scale="1.5 1.5 1.5"></a-image>
+    <a-image id="img_ring" src="#img-ring" position="-3 5.54 -2.77" rotation="0 45 0" scale="1.5 1.5 1.5" event-animate="target:#ring; aevent:ringrot">
+        <a-animation
+                id="ring"
+                begin="ringrot"
+                attribute="rotation"
+                from="0 45 0"
+                to="0 45 360"
+                repeat="2"
+        ></a-animation>
+    </a-image>
     <a-image id="img_cockpit" src="#img-cockpit_screen_02" position="6.54 5.6 -3" rotation="0 -45 0" scale="1.5 1.5 1.5"></a-image>
     <!--<a-image src="#img-earth2" position="1.955 5.658 -4.005" scale="6.3 2 1.8"></a-image> -->
 
@@ -187,6 +196,6 @@
 
 
 </a-scene>
-    
+
 </body>
 </html>
