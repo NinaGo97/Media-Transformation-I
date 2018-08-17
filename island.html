@@ -131,6 +131,10 @@
     <!-- Bett wird eingebunden -->
     <a-entity id="bed" collada-model="#bed" position="0 1 -21.95" scale="0.7 0.6 0.5"
               event-animate="target:#camera4; aevent:bedpos" sound="src:#sleep; on: click"></a-entity>
+    
+    <!-- Szenenwechsel aus Bett -->
+    <a-entity id="szwechsel" link="on: click; href: credits.html" position="0 1.4 -23.7" scale="0.2 0.2 0.2" rotation="0 180 0"></a-entity>
+    <a-entity position="1.2 1.7 -23.7" scale="3 3 3" text="value: Das Ende:;"></a-entity>
 
     <!-- Teppich wird eingebunden -->
     <a-entity id="carpet" collada-model="#carpet" position="0 0.14 -18.3" scale="4 6 6" rotation="0 90 0"></a-entity>
