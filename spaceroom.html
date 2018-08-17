@@ -18,7 +18,9 @@
         <a-asset-item id="pencil" src="objects/pencil.dae"></a-asset-item>
         <a-image id="img-exit" src="pictures/exit.png"></a-image>
         <audio id="sirene" src="sounds/sirene_leave.mp3" preload="auto"></audio>
+        <audio id="extinguisher_sound" src="sounds/extinguishing.mp3" volume="0.2"></audio>
     </a-assets>
+
 
 
     <!-- Skybox wird eingebunden-->
@@ -132,7 +134,7 @@
 
 
     <!--Feuerloescher wird eingebunden und animiert-->
-    <a-entity id="extinguisher" collada-model="#extinguisher" position="-1.312 3.422 13.640" rotation="10 90 -15" scale="0.2 0.2 0.2" >
+    <a-entity id="extinguisher" collada-model="#extinguisher" position="-1.312 3.422 13.640" rotation="10 90 -15" scale="0.2 0.2 0.2" sound="src: #extinguisher_sound; on: click" event-animate="target:#extinguisher_pos; aevent:moveextinguisher">
        <a-animation
                      attribute="position"
                      dur="2000"
@@ -141,12 +143,13 @@
                      direction="alternate"
                      repeat="indefinite">
         </a-animation>
-        <!-- <a-animation attribute="rotation"
-                      dur="10000"
-                      fill="forwards"
-                      to="360 0 0"
-                      repeat="indefinite">
-         </a-animation> -->
+        <a-animation
+                    id="extinguisher_pos"
+                    attribute="position"
+                    to="-1.312 3.422 34"
+                    dur="5500"
+                    begin="moveextinguisher"
+            ></a-animation>
     </a-entity>
 
     <!--Flasche wird eingebunden und animiert-->
