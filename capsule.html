@@ -28,6 +28,9 @@
         <audio id="funk" src="sounds/radiocontact.mp3"></audio>
         <audio id="starwars" src="sounds/starwars.mp3"></audio>
         <audio id="missing" src="sounds/missing.mp3"></audio>
+        <audio id="peep" src="sounds/peep.mp3"></audio>
+        <audio id="censor" src="sounds/censor.mp3"></audio>
+        <audio id="danger" src="sounds/danger.mp3"></audio>
 
     </a-assets>
 
@@ -66,7 +69,7 @@
 
 
     <!-- Knopf mit Animation -->
-    <a-box id="abutton" position="0.864 3.513 -2.372" material="color: red" depth="1" height="1" width="1" scale="0.2 0.2 0.2">
+    <a-box id="abutton" position="0.864 3.513 -2.372" material="color: red" depth="1" height="1" width="1" scale="0.2 0.2 0.2" sound="src: #peep; on: click">
         <!--Farbwechsel/Blinken-->
         <a-animation attribute="material.color"
                      from="red"
@@ -100,7 +103,7 @@
 
 
     <!--Bild wird eingebunden und animiert-->
-    <a-image id="img_warning" src="#img-warning" position="4.419 5.876 -4" scale="0.8 0.4 0.8">
+    <a-image id="img_warning" src="#img-warning" position="4.419 5.876 -4" scale="0.8 0.4 0.8" sound="src: #danger; on: click">
         <a-animation attribute="visible"
                      delay="300"
                      dur="800"
@@ -163,7 +166,7 @@
                 repeat="2"
         ></a-animation>
     </a-image>
-    <a-image id="img_cockpit" src="#img-cockpit_screen_02" position="6.54 5.6 -3" rotation="0 -45 0" scale="1.5 1.5 1.5"></a-image>
+    <a-image id="img_cockpit" src="#img-cockpit_screen_02" position="6.54 5.6 -3" rotation="0 -45 0" scale="1.5 1.5 1.5" sound="src: #censor; on: click"></a-image>
     <!--<a-image src="#img-earth2" position="1.955 5.658 -4.005" scale="6.3 2 1.8"></a-image> -->
 
 
