@@ -18,7 +18,7 @@
         <a-asset-item id="pencil" src="objects/pencil.dae"></a-asset-item>
         <a-image id="img-exit" src="pictures/exit.png"></a-image>
         <audio id="sirene" src="sounds/sirene_leave.mp3" preload="auto"></audio>
-        <audio id="extinguisher_sound" src="sounds/extinguishing.mp3" volume="0.2"></audio>
+        <audio id="extinguisher_sound" src="sounds/extinguishing.mp3"></audio>
     </a-assets>
 
 
@@ -73,7 +73,7 @@
     </a-entity>
 
     <!-- Bild für Szenenwechsel wird eingebunden-->
-    <a-image src="#img-exit" position="0.055 4.575 -21.626" rotation="0 0 0" scale="2 2 2" visible="true">
+    <a-image id="img_exit" src="#img-exit" position="0.055 4.575 -21.626" rotation="0 0 0" scale="2 2 2" visible="true">
         <a-animation attribute="visible"
                      delay="300"
                      dur="800"
@@ -85,7 +85,7 @@
 
 
     <!-- Transblock für Szenenwechsel -->
-    <a-image src="#img-exit" link="href: capsule.html" position="0.055 4.575 -21" rotation="0 0 0" scale="0.6 0.6 0.6" visible="false"></a-image>
+    <a-image id="img_trans" src="#img-exit" link="href: capsule.html" position="0.055 4.575 -21" rotation="0 0 0" scale="0.6 0.6 0.6" visible="false"></a-image>
 
     <!-- Licht -->
     <!-- Licht hinten -->
@@ -125,16 +125,16 @@
 
 
     <!-- Sound wird eingebunden -->
-    <a-entity sound="src:#sirene; autoplay: true"></a-entity>
+    <a-entity id="sirene" sound="src:#sirene; autoplay: true"></a-entity>
 
 
     <!--Spacestation ROOM wird eingebunden-->
-    <a-entity collada-model="#roomspacestation"  position="0 0 0" rotation="0 90 0" scale="0.1 0.1 0.1">
+    <a-entity id="roomspacestation" collada-model="#roomspacestation"  position="0 0 0" rotation="0 90 0" scale="0.1 0.1 0.1">
     </a-entity>
 
 
     <!--Feuerloescher wird eingebunden und animiert-->
-    <a-entity id="extinguisher" collada-model="#extinguisher" position="-1.312 3.422 13.640" rotation="10 90 -15" scale="0.2 0.2 0.2" sound="src: #extinguisher_sound; on: click" event-animate="target:#extinguisher_pos; aevent:moveextinguisher">
+    <a-entity id="extinguisher" collada-model="#extinguisher" position="-1.312 3.422 13.640" rotation="10 90 -15" scale="0.2 0.2 0.2" sound="src: #extinguisher_sound; on: click; volume: 0.5" event-animate="target:#extinguisher_pos; aevent:moveextinguisher">
        <a-animation
                      attribute="position"
                      dur="2000"
@@ -147,7 +147,7 @@
                     id="extinguisher_pos"
                     attribute="position"
                     to="-1.312 3.422 34"
-                    dur="5500"
+                    dur="7000"
                     begin="moveextinguisher"
             ></a-animation>
     </a-entity>
