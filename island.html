@@ -188,7 +188,7 @@
     </a-entity>
 
     <!-- Insel - Plane und Bild vom Sand wird eingebunden  -->
-    <a-circle src="#sand" height="20" width="20" scale="9 9 9" rotation="-90 0 0"></a-circle>
+    <a-circle id="sand" src="#sand" height="20" width="20" scale="9 9 9" rotation="-90 0 0"></a-circle>
 
     <!-- Palmen werden eingebunden-->
     <a-entity id="atree" collada-model="#palm" position="3.6 0 -6" scale="0.4 0.4 0.4" rotation="0 30 0" ></a-entity>
@@ -251,11 +251,11 @@
 
 
     <!-- Sound wird eingebunden-->
-    <a-sound src="#waves" autoplay="true" loop="true" volume="0.1"></a-sound>
+    <a-sound id="waves" src="#waves" autoplay="true" loop="true" volume="0.1"></a-sound>
 
 
     <!-- Skybox wird eingebunden-->
-    <a-sky src="#img-sky" position="0 -200 0"></a-sky>
+    <a-sky id="sky" src="#img-sky" position="0 -200 0"></a-sky>
 
 
 
