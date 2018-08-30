@@ -4,6 +4,8 @@ Gruppe: Annika Fischer, Nina Gollwig und Anita Wichert
 
 Wir haben den Film Gravity als VR Erfahrung transformiert. Ziel ist die Erschaffung einer außergewöhnlichen Atmosphäre und die Immersion in das Geschehen.
 
+Empfohlener Browser: Chrome
+
 # 1. Szene: Weltall
   - 1.1 Es wird ein Sound abgespielt während man den Sonnenaufgang beobachten und sich umschauen kann.
   - 1.2 Wenn auf den Astronauten geklickt wird, löst dieser sich mit der Schnur - unterstützt von Sound, der sagt sich zur Raumstation zu begeben 
@@ -15,14 +17,15 @@ Wir haben den Film Gravity als VR Erfahrung transformiert. Ziel ist die Erschaff
    
 # 2. Szene: Raumstation Maschinenraum
   - 2.1 Sirnen Sound und Anweisung sich mit Hilfe der Pfeile durch den Raum zu bewegen. 
-  - 2.2 Durch anklicken der Pfeile gelangt man Stück für Stück durch die Schleuse - es ist auch möglich Pfeile zu überspringen 
+  - 2.2 Durch anklicken der Pfeile gelangt man Stück für Stück durch die Schleuse - es ist auch möglich Pfeile zu überspringen
+  - 2.3 Interaktion mit Feuerlöscher und Spielzeug-Raumschiff
   - 2.3 Durch anklicken des Bildes "Exit" wird der Szenenwechsel eingeleitet
   
   ![Alt text](screenshots/spaceship.jpg?raw=true "spacestation")
   
 # 3. Szene: Landungskapsel
   - 3.1 Man setzt sich auf den Stuhl, während ein Video zur Landung abgespielt wird
-  - 3.2 Das Bild des Babys, Radio Contact und die leuchtenden Knöpfe lösen durch Klick Animationen aus
+  - 3.2 Das Bild des Babys, Radio Contact, Radar-Rad, Warning-Signal, Anzeigeleuchte und die leuchtenden Knöpfe lösen durch Klick Animationen aus
   - 3.3 Nach Ende des Videos/ der Landung erscheint ein "Open Door" Bild
   - 3.4 Szenenwechsel durch Anklicken des Bildes
   
@@ -41,7 +44,7 @@ Wir haben den Film Gravity als VR Erfahrung transformiert. Ziel ist die Erschaff
   ![Alt text](screenshots/island.jpg?raw=true "island")
   
 # 5. Szene: Abspann
-  - 5.1 Abspann Text mit Namen
+  - 5.1 Abspann Text mit Namen und Hintergrundmusik
   
   ![Alt text](screenshots/credits.jpg?raw=true "credits")
 
