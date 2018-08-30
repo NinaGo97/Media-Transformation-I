@@ -11,7 +11,7 @@ Empfohlener Browser: Chrome
   - 1.2 Wenn auf den Astronauten geklickt wird, löst dieser sich mit der Schnur - unterstützt von Sound, der sagt sich zur Raumstation zu begeben 
   - 1.3 Easter-Egg: Durch anklicken des Spaceships wird ein Sound ausgelöst
   - 1.4 Durch klicken auf die Spacestation wird eine Kamerafahrt zu dieser ausgelöst. - unterstützt von Sound 
-  - 1.5 Durch klicken auf das Bild "Open Door" wird der Szenenwechsel eingeleitet.
+  - 1.5 Durch klicken auf das Bild "Open Door" wird der Szenenwechsel eingeleitet. (! Bei Problemen bitte kurz über oder unter das Bild klicken)
   
   ![Alt text](screenshots/space.jpg?raw=true "space")
    
