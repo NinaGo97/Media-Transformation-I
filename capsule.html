@@ -2,203 +2,287 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="apple-mobile-web-app-capable" content="yes">
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
-    <title>Capsule</title>
+    <title>Island</title>
+    <!--<script src="a-ocean.js" type="text/a-ocean"></script>-->
     <script src="javascript.js" type="text/javascript"></script>
 </head>
 <body>
 
 
 <a-scene>
-    <!-- Alle Objekte, Bilder,Sounds und Videos werden geladen-->
+
     <a-assets>
-        <a-asset-item id="capsuleinside" src="objects/capsuleinside.dae"></a-asset-item>
-        <a-asset-item id="chair" src="objects/capsulechair.dae"></a-asset-item>
-        <a-image id="img-warning" src="pictures/warning_signal_word.png"></a-image>
-        <!--<a-image id="img-landing" src="pictures/landing.png"></a-image>-->
-        <a-image id="img-radio" src="pictures/radio.png"></a-image>
-        <a-image id="img-baby" src="pictures/baby.jpg"></a-image>
-        <a-image id="img-ring" src="pictures/ring.png"></a-image>
-        <a-image id="img-cockpit_screen_02" src="pictures/cockpit_screen_02.jpg"></a-image>
-        <a-image id="img-opendoor" src="pictures/opendoor.png"></a-image>
-        <!--<a-image id="img-earth2" src="pictures/earth2.jpg"></a-image>-->
-        <video id="vid-earth" src="video/erde.mp4" autoplay="true"></video>
-        <a-asset-item id="bombe" src="sounds/bombetimer.mp3" response-type="arraybuffer"></a-asset-item>
-        <a-asset-item id="funk" src="sounds/radiocontact.mp3" response-type="arraybuffer"></a-asset-item>
-        <a-asset-item id="starwars" src="sounds/starwars.mp3" response-type="arraybuffer"></a-asset-item>
-        <a-asset-item id="missing" src="sounds/missing.mp3" response-type="arraybuffer"></a-asset-item>
-        <a-asset-item id="peep" src="sounds/peep.mp3" response-type="arraybuffer"></a-asset-item>
-        <a-asset-item id="censor" src="sounds/censor.mp3" response-type="arraybuffer"></a-asset-item>
-        <a-asset-item id="danger" src="sounds/danger.mp3" response-type="arraybuffer"></a-asset-item>
+        <!-- Alle Objekte, Bilder und Sounds werden geladen-->
+        <a-asset-item id="palm" src="objects/treethree.dae"></a-asset-item>
+        <a-asset-item id="coconut" src="objects/coconut.dae"></a-asset-item>
+        <a-asset-item id="capsule" src="objects/capsule.dae"></a-asset-item>
+        <a-asset-item id="bridge" src="objects/bridge.dae"></a-asset-item>
+        <a-asset-item id="fish" src="objects/fish.dae"></a-asset-item>
+        <a-asset-item id="beachhouse" src="objects/beachhouse.dae"></a-asset-item>
+        <a-asset-item id="bed" src="objects/bed.dae"></a-asset-item>
+        <a-asset-item id="carpet" src="objects/carpet.dae"></a-asset-item>
+        <a-asset-item id="cockroach" src="objects/cockroach.dae"></a-asset-item>
+        <a-asset-item id="chair" src="objects/chair.dae"></a-asset-item>
+        <a-asset-item id="table" src="objects/table.dae"></a-asset-item>
+        <a-asset-item id="book" src="objects/book.dae"></a-asset-item>
+        <a-asset-item id="moai" src="objects/moai.dae"></a-asset-item>
+        <a-asset-item id="sign011" src="objects/sign011.dae"></a-asset-item>
+        <a-asset-item id="sign012" src="objects/sign012.dae"></a-asset-item>
+        <a-asset-item id="sign013" src="objects/sign013.dae"></a-asset-item>
+        <a-asset-item id="sign02" src="objects/sign02.dae"></a-asset-item>
+        <a-asset-item id="bottle" src="objects/bottle.dae"></a-asset-item>
+        <a-asset-item id="letter" src="objects/letter.dae"></a-asset-item>
+        <a-image id="img-sky" src="pictures/skyearth.png"></a-image>
+        <a-image id="sand" src="pictures/sand.jpg"></a-image>
+        <a-image id="trans" src="pictures/transparent.png"></a-image>
+        <a-asset-item id="waves" src="sounds/waves.mp3" response-type="arraybuffer"></a-asset-item>
+        <a-asset-item id="moaisound" src="sounds/moaisound.mp3" response-type="arraybuffer"></a-asset-item>
+        <a-asset-item id="bug" src="sounds/bug.mp3" response-type="arraybuffer"></a-asset-item>
+        <a-asset-item id="blop" src="sounds/blop.mp3" response-type="arraybuffer"></a-asset-item>
+        <a-asset-item id="bubble" src="sounds/bubble.mp3" response-type="arraybuffer"></a-asset-item>
+        <a-asset-item id="chairmoving" src="sounds/chairmoving.mp3" response-type="arraybuffer"></a-asset-item>
+        <a-asset-item id="sleep" src="sounds/sleep.mp3" response-type="arraybuffer"></a-asset-item>
+        <a-asset-item id="seebook" src="sounds/seebook.mp3" response-type="arraybuffer"></a-asset-item>
+        <a-asset-item id="explosion" src="sounds/explosion.mp3" response-type="arraybuffer"></a-asset-item>
 
     </a-assets>
 
 
     <!-- Kamera/ Cursor -- Startposition -->
     <a-entity id="camera"
-              position ="1.9 5.3 3.73"
-              rotation ="-6.5 0 0"
+              position ="0 1.5 0"
+              rotation ="0 0 0"
               camera look-controls wasd-controls>
         <a-cursor material="color: white"></a-cursor>
+        <a-animation
+                id="camera1"
+                attribute="position"
+                to="0 1.5 -3.4"
+                dur="8000"
+                begin="steg"
+        ></a-animation>
+        <a-animation
+                id="camera2"
+                attribute="position"
+                to="4.064 1.5 -1.160"
+                dur="8000"
+                begin="moai"
+        ></a-animation>
+        <a-animation
+                id="camera3"
+                attribute="position"
+                to="0 1.5 -16.7"
+                dur="11000"
+                begin="beachh"
+        ></a-animation>
+        <a-animation
+                id="camera4"
+                attribute="position"
+                to="0.0 1.5 -22.7"
+                dur="8000"
+                begin="bedpos"
+        ></a-animation>
+        <a-animation
+                id="camera5"
+                attribute="position"
+                from="0.0 1.5 -16.7"
+                to="-1.79 1.5 -18.27"
+                dur="5000"
+                begin="tablepos"
+        ></a-animation>
+        <a-animation
+                id="camera6"
+                attribute="position"
+                to="0 1.5 0"
+                dur="5000"
+                begin="startpos"
+        ></a-animation>
 
-        <!-- Animation Kamera zum Stuhl -->
-        <a-animation attribute="position"
-                     from="1.9 5.3 3.73"
-                     to="1.9 5.3 1.2"
-                     delay="1000"
-                     dur="3000">
+    </a-entity>
+
+
+    <!-- Brücke wird eingebunden -->
+    <a-entity id="bridge" collada-model="#bridge" position="0 0.15 -11.5" scale="0.05 0.07 0.05"></a-entity>
+
+    <!-- Fisch wird eingebunden -->
+    <a-entity id="fish" collada-model="#fish" position="2.6 0.2 -11.5" scale="1 1 1" rotation="0 0 -90"
+              sound="src:#bubble; on: click">
+        <a-animation
+                attribute="position"
+                dur="6000"
+                from="2.6 -3.0 -11.5"
+                to="2.6 1 -11.5"
+                direction="alternate"
+                repeat="indefinite">
         </a-animation>
+        <a-animation
+                attribute="rotation"
+                dur="10000"
+                from="0 0 -90"
+                to="0 0 -270"
+                repeat="indefinite">
+        </a-animation>
+    </a-entity>
 
+    <!-- Beachhouse wird eingebunden-->
+    <a-entity id="beachhouse" collada-model="#beachhouse" position="0 0.15 -14.2" scale="5 4 4"></a-entity>
+
+    <!-- Bett wird eingebunden -->
+    <a-entity id="bed" collada-model="#bed" position="0 1 -21.95" scale="0.7 0.6 0.5"
+              event-animate="target:#camera4; aevent:bedpos" sound="src:#sleep; on: click"></a-entity>
+    
+    <!-- Szenenwechsel aus Bett -->
+    <a-entity id="szwechsel" link="on: click; href: credits.html" position="0 1.4 -23.7" scale="0.2 0.2 0.2" rotation="0 180 0"></a-entity>
+    <a-entity position="1.2 1.7 -23.7" scale="3 3 3" text="value: Das Ende:;"></a-entity>
+
+    <!-- Teppich wird eingebunden -->
+    <a-entity id="carpet" collada-model="#carpet" position="0 0.14 -18.3" scale="4 6 6" rotation="0 90 0"></a-entity>
+
+    <!-- Kakerlake wird eingebunden -->
+    <a-entity id="cockroach" collada-model="#cockroach" position="0 0.3 -18.8" scale="0.015 0.015 0.015"
+              event-animate="target:#cockroachpos; target2:#cockroachvis; aevent:cockroachmov" sound="src:#bug; on: click">
+        <a-animation
+                id="cockroachpos"
+                begin="cockroachmov"
+                attribute="position"
+                dur="6000"
+                from="0 0.3 -18.8"
+                to="7.6 0.3 -18.8">
+        </a-animation>
+        <a-animation
+                id="cockroachvis"
+                begin="cockroachmov"
+                attribute="visible"
+                to="false"
+                delay="2900"
+            ></a-animation>
+    </a-entity>
+
+
+    <!-- Stuhl wird eingebunden-->
+    <a-entity id="chair" collada-model="#chair" position="-1.88 0.56 -20" rotation="0 -90 0"
+              event-animate="target:#chairpos; aevent:chairmove" sound="src:#chairmoving; on: click">
+        <a-animation
+                id="chairpos"
+                attribute="position"
+                begin="chairmove"
+                dur="100"
+                to="-2.6 0.56 -20">
+        </a-animation>
+    </a-entity>
+
+    <!-- Tisch wird eingebunden-->
+    <a-entity id="table" collada-model="#table" position="-2.8 0.8 -20"
+              event-animate="target:#camera5; aevent:tablepos"></a-entity>
+
+    <!-- Buch wird eingebunden-->
+    <a-entity id="book" collada-model="#book" position="-3.1 1 -20" rotation="40 40 0"
+              event-animate="target:#bookrot; target:#bookpos; aevent:bookmove"
+              sound="src:#seebook; on: click">
+        <a-animation
+                id="bookrot"
+                begin="bookmove"
+                attribute="rotation"
+                dur="4000"
+                to="180 40 0">
+        </a-animation>
+        <a-animation
+                id="bookpos"
+                begin="bookmove"
+                attribute="position"
+                dur="4000"
+                to="-3.1 0.9 -20">
+        </a-animation>
+    </a-entity>
+
+    <!-- Insel - Plane und Bild vom Sand wird eingebunden  -->
+    <a-circle id="sand" src="#sand" height="20" width="20" scale="9 9 9" rotation="-90 0 0"></a-circle>
+
+    <!-- Palmen werden eingebunden-->
+    <a-entity id="atree" collada-model="#palm" position="3.6 0 -6" scale="0.4 0.4 0.4" rotation="0 30 0" ></a-entity>
+    <a-entity id="btree" collada-model="#palm" position="5.4 0 -6" scale="0.4 0.4 0.4" rotation="0 30 0"></a-entity>
+    <a-entity id="ctree" collada-model="#palm" position="8.3 0 -0.8" scale="0.4 0.4 0.4" rotation="0 30 0"></a-entity>
+    <a-entity id="dtree" collada-model="#palm" position="-5.1 0 -5" scale="0.4 0.4 0.4" rotation="0 30 0"></a-entity>
+    <a-entity id="etree" collada-model="#palm" position="0.7 0 7.2" scale="0.4 0.4 0.4" rotation="0 30 0"></a-entity>
+    <a-entity id="ftree" collada-model="#palm" position="-0.7 0 6.8" scale="0.4 0.4 0.4" rotation="0 20 0"></a-entity>
+    <a-entity id="gtree" collada-model="#palm" position="2.5 0 6"  scale="0.4 0.4 0.4" rotation="0 10 0"></a-entity>
+
+
+    <!-- Kokosnuss wird eingebunden -->
+    <a-entity id="coconut" collada-model="#coconut" position="2.6 2.2 -5.6" scale="0.8 0.8 0.8" event-animate="target:#coco; aevent:cocofall" sound="src:#explosion; on: click">
+        <a-animation
+                id="coco"
+                attribute="position"
+                begin="cocofall"
+                dur="100"
+                to="2.6 0.12 -5.6">
+        </a-animation>
+    </a-entity>
+
+
+    <!-- Kapsel wird eingebunden-->
+    <a-entity id="capsule" collada-model="#capsule" position="-1.6 0.8 0 2 0" rotation="180 180 0"
+              event-animate="target:#camera6; aevent:startpos"></a-entity>
+
+
+    <!-- Moai wird eingebunden-->
+    <a-entity id="moai" collada-model="#moai" position="6.3 1.4 -2.1" rotation="0 300 0" scale="3 3 3"
+              sound="src:#moaisound; on: click"></a-entity>
+
+
+    <!-- Wegweiser zum Moai und zur Brücke wird eingebunden und animiert-->
+    <a-entity id="sign011" collada-model="#sign011" position="2.2 1 -2.2" rotation="0 -40 0" scale="1 1 1"></a-entity>
+    <a-entity id="sign012" collada-model="#sign012" position="1.75 1.8 -2.4" rotation="0 -40 0" scale="1 1 1" event-animate="target:#camera1; aevent:steg"></a-entity>
+    <a-entity id="sign013" collada-model="#sign013" position="2.37 1.5 -1.9" rotation="0 -40 0" scale="1 1 1" event-animate="target:#camera2; aevent:moai"></a-entity>
+    
+
+    <!-- Wegweiser 2 zum Haus wird eingebunden -->
+    <a-entity id="sign02" collada-model="#sign02" position="1.7 1.8 -6.9" rotation="0 -40 0" scale="1.5 1.5 1.5" event-animate="target:#camera3; aevent:beachh"></a-entity>
+
+    <!-- Flasche wird eingebunden-->
+    <a-entity id="bottle" collada-model="#bottle" position="-2.17 0.1 -6.67" scale="0.3 0.3 0.3" rotation="90 0 0"
+              event-animate="target:#post; aevent:visletter" sound="src:#blop; on: click">
+    </a-entity>
+
+
+    <!-- Brief für Flaschenpost wird eingebunden und animiert -->
+    <a-entity id="letter" collada-model="#letter" position="-1.7 0.116 -6.54" rotation="180 -180 120" scale="0.6 0.4 0.4" visible="false">
+        <a-animation
+                id="post"
+                attribute="visible"
+                begin="visletter"
+                from="false"
+                to="true">
+        </a-animation>
     </a-entity>
 
 
     <!-- Sound wird eingebunden-->
-    <a-entity id="bombe" sound="src:#bombe; autoplay: true loop: true"></a-entity>
+    <a-entity sound="src: #waves; autoplay: true loop: true volume: 0.1"></a-entity>
+
 
     <!-- Skybox wird eingebunden-->
-    <a-sky id="skybox_capsule" color="black"></a-sky>
+    <a-sky id="sky" src="#img-sky" position="0 -200 0"></a-sky>
 
-    <!-- Kapsel Innenraum wird eingebunden-->
-    <a-entity id="capsuleinside" collada-model="#capsuleinside"  position="1 1 1" scale="0.2 0.2 0.2">
-    </a-entity>
-
-
-    <!-- Stuhl wird eingebunden -->
-    <a-entity collada-model="#chair" position="2.065 4.351 1.694" scale="0.2 0.2 0.2"></a-entity>
-
-
-    <!-- Knopf mit Animation -->
-    <a-box id="abutton" position="0.864 3.513 -2.372" material="color: red" depth="1" height="1" width="1" scale="0.2 0.2 0.2" sound="src: #peep; on: click">
-        <!--Farbwechsel/Blinken-->
-        <a-animation attribute="material.color"
-                     from="red"
-                     to="blue"
-                     dur="1000"
-                     repeat="indefinite">
-        </a-animation>
-    </a-box>
-
-    <!-- Knopf mit Animation -->
-    <a-box id="bbutton" position="3.07 3.513 -2.968" material="color: blue" depth="1" height="1" width="1" scale="0.2 0.2 0.2" sound="src: #starwars; on: click">
-        <!--Farbwechsel/Blinken-->
-        <a-animation attribute="material.color"
-                     from="blue"
-                     to="red"
-                     dur="1000"
-                     repeat="indefinite">
-        </a-animation>
-    </a-box>
-
-    <!-- Knopf mit Animation -->
-    <a-box id="cbutton" position="2.285 7.188 -4.121" rotation="30 0 0" material="color: yellow" depth="1" height="1" width="1" scale="0.2 0.2 0.2">
-        <!--Farbwechsel/Blinken-->
-        <a-animation attribute="material.color"
-                     from="yellow"
-                     to="white"
-                     dur="1000"
-                     repeat="indefinite">
-        </a-animation>
-    </a-box>
-
-
-    <!--Bild wird eingebunden und animiert-->
-    <a-image id="img_warning" src="#img-warning" position="4.419 5.876 -4" scale="0.8 0.4 0.8" sound="src: #danger; on: click">
-        <a-animation attribute="visible"
-                     delay="300"
-                     dur="800"
-                     from="true"
-                     to="false"
-                     repeat="indefinite">
-        </a-animation>
-    </a-image>
-
-    <!-- Bild für die Landung wird eingebunden-->
-    <!-- VIDEO ON CLICK? video="src: #vid-earth; on: click" -->
-    <!--<a-image src="#img-landing" position="1.9 4.2 -4" rotation="-30 0 0" scale="0.8 0.6 0.8">
-        <a-animation attribute="visible"
-                     delay="300"
-                     dur="800"
-                     from="true"
-                     to="false"
-                     repeat="indefinite">
-        </a-animation>
-    </a-image>-->
-
-    <!-- Bild für Szenenwechsel wird eingebunden-->
-    <a-image id="img-opendoor_one" src="#img-opendoor" position="1.9 4.2 -4" rotation="-30 0 0" scale="1 0.8 1" visible="false">
-        <a-animation
-                attribute="visible"
-                from="false"
-                to="true"
-                delay="50000">
-        </a-animation>
-    </a-image>
-
-    <!-- Transbock OpenDoor zum Szenenwechsel-->
-    <a-image id="img-opendoor_two" link="href: island.html" src="#img-opendoor" position="1.9 4.3 -3.2" scale="0.4 0.4 0.4" visible="false">
-        <a-animation
-                attribute="visible"
-                from="false"
-                to="false"
-                delay="52000">
-        </a-animation>
-    </a-image>
-
-    <!-- Radiosound/ -Bild wird eingebunden-->
-    <a-image id="img_radio" src="#img-radio" position="-2.109 5.511 -3.682" rotation="0 45 0" scale="0.8 0.6 0.8"
-             sound="src: #funk; on: click">
-    </a-image>
-
-    <!-- Baby Bild und Sound-->
-    <a-image id="img_baby" src="#img-baby" position="-1 3.9 -3.3" rotation="-30 30 0" scale="0.6 0.6 0.6"
-             sound="src: #missing; on: click">
-    </a-image>
-
-    <!-- Bilder in der Kapsel werden eingebunden-->
-    <a-image id="img_ring" src="#img-ring" position="-3 5.54 -2.77" rotation="0 45 0" scale="1.5 1.5 1.5" event-animate="target:#ring; aevent:ringrot">
-        <a-animation
-                id="ring"
-                begin="ringrot"
-                attribute="rotation"
-                from="0 45 0"
-                to="0 45 360"
-                repeat="2"
-        ></a-animation>
-    </a-image>
-    <a-image id="img_cockpit" src="#img-cockpit_screen_02" position="6.54 5.6 -3" rotation="0 -45 0" scale="1.5 1.5 1.5" sound="src: #censor; on: click"></a-image>
-    <!--<a-image src="#img-earth2" position="1.955 5.658 -4.005" scale="6.3 2 1.8"></a-image> -->
-
-
-    <!-- Video für die Landung wird eingebunden-->
-    <a-video id="vid_earth" src="#vid-earth" position="1.955 5.658 -4.005" scale="6.3 2 1.8"  ></a-video>
-
-
-
-
-
-    <!-- Licht -->
-    <a-light id="lightone"
-             light="type: point; color: red; intensity: 0.6; penumbra: 0.10; angle: 60.00"
-             position="1.229 8.673 0"
-             rotation="0 0 0"
-             decay=" 1.00"
-             distance="0.00"
-             intensity="0.1"
-             visible="false">
-        <a-animation attribute="visible" delay="1000" dur="1000" from="true" to="false" repeat="indefinite"> </a-animation>
-    </a-light>
-
-    <a-light id="lighttwo"
-             light="type: point; color: white; intensity: 0.5; penumbra: 0.10; angle: 60.00"
-             position="1.229 8.673 0"
-             rotation="0 0 0"
-             decay=" 1.00"
-             distance="0.00"
-             intensity="0.5">
 
 
 </a-scene>
 
 </body>
 </html>
+<!-- Test -->
+<!-- a-ocean Komponent -->
+<!--<a-ocean width="200" depth="200" density="40" opacity="1" position="0 -0.4 0"></a-ocean>
+<a-ocean color="aqua" depth="100" width="100"></a-ocean>
+<a-ocean
+        width="50"
+        depth="50"
+        density="10"
+        color="#d9d0ae"
+        position="0 0 0"
+        opacity="1"
+        speed="0.1"
+        speedVariance="0.2">
+</a-ocean>-->
+ 
