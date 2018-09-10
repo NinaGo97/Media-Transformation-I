@@ -16,10 +16,10 @@
     <a-assets>
         <!-- Alle Objekte, Bilder und Sounds werden geladen-->
         <a-sky id="sky" src="pictures/stars_sky.jpg"></a-sky>
-        <audio id="creditmusic" src="sounds/creditmusic.mp3" preload="auto"></audio>
-
+        <a-asset-item id="creditmusic" src="sounds/creditmusic.mp3" response-type="arraybuffer"></a-asset-item>
     </a-assets>
 
+    
     <!-- Kamera -->
     <a-entity id="camera"
               position ="-0.1 0.28 -0.06"
@@ -34,7 +34,7 @@
 
 
     <!-- Sound wird eingebunden-->
-    <a-sound src="#creditmusic" autoplay="true" loop="true" volume="0.1"></a-sound>
+    <a-entity sound="src: #creditmusic; autoplay: true loop: true volume: 0.1"></a-entity>
 
     <!-- Abspann -->
     <a-entity position="0.07 0.1 -0.4" rotation="-30 0 0" text="value: Aus den entlegensten Bereichen;color:#ffff00"></a-entity>
@@ -61,4 +61,3 @@
 
 </body>
 </html>
-
