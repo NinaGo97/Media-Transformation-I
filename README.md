@@ -5,6 +5,7 @@ Gruppe: Annika Fischer, Nina Gollwig und Anita Wichert
 Wir haben den Film Gravity als VR Erfahrung transformiert. Ziel ist die Erschaffung einer außergewöhnlichen Atmosphäre und die Immersion in das Geschehen.
 
 WebVR Link: https://annika100.github.io/ 
+
 Empfohlener Browser: Chrome
 
 # 1. Szene: Weltall
