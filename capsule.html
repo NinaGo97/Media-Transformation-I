@@ -24,13 +24,13 @@
         <a-image id="img-opendoor" src="pictures/opendoor.png"></a-image>
         <!--<a-image id="img-earth2" src="pictures/earth2.jpg"></a-image>-->
         <video id="vid-earth" src="video/erde.mp4" autoplay="true"></video>
-        <audio id="bombe" src="sounds/bombetimer.mp3" preload="auto"></audio>
-        <audio id="funk" src="sounds/radiocontact.mp3"></audio>
-        <audio id="starwars" src="sounds/starwars.mp3"></audio>
-        <audio id="missing" src="sounds/missing.mp3"></audio>
-        <audio id="peep" src="sounds/peep.mp3"></audio>
-        <audio id="censor" src="sounds/censor.mp3"></audio>
-        <audio id="danger" src="sounds/danger.mp3"></audio>
+        <a-asset-item id="bombe" src="sounds/bombetimer.mp3" response-type="arraybuffer"></a-asset-item>
+        <a-asset-item id="funk" src="sounds/radiocontact.mp3" response-type="arraybuffer"></a-asset-item>
+        <a-asset-item id="starwars" src="sounds/starwars.mp3" response-type="arraybuffer"></a-asset-item>
+        <a-asset-item id="missing" src="sounds/missing.mp3" response-type="arraybuffer"></a-asset-item>
+        <a-asset-item id="peep" src="sounds/peep.mp3" response-type="arraybuffer"></a-asset-item>
+        <a-asset-item id="censor" src="sounds/censor.mp3" response-type="arraybuffer"></a-asset-item>
+        <a-asset-item id="danger" src="sounds/danger.mp3" response-type="arraybuffer"></a-asset-item>
 
     </a-assets>
 
@@ -54,7 +54,7 @@
 
 
     <!-- Sound wird eingebunden-->
-    <a-entity id="bombe" sound="src:#bombe; autoplay: true" loop="true"></a-entity>
+    <a-entity id="bombe" sound="src:#bombe; autoplay: true loop: true"></a-entity>
 
     <!-- Skybox wird eingebunden-->
     <a-sky id="skybox_capsule" color="black"></a-sky>
